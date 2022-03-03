@@ -1,7 +1,7 @@
 ﻿
 namespace Final_Project_CS
 {
-    partial class Form1
+    partial class Maintenance
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Final_Project_CS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Maintenance));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();

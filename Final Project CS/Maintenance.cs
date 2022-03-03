@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Final_Project_CS
 {
-    public partial class Form1 : Form
+    public partial class Maintenance : Form
     {
-        public Form1()
+        public Maintenance()
         {
             InitializeComponent();
         }
