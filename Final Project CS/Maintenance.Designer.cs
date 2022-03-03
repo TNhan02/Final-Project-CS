@@ -40,6 +40,10 @@ namespace Final_Project_CS
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.Date = new System.Windows.Forms.Label();
+            this.Time = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +51,8 @@ namespace Final_Project_CS
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.Time);
+            this.panel1.Controls.Add(this.Date);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
@@ -144,14 +150,32 @@ namespace Final_Project_CS
             this.imageList1.Images.SetKeyName(3, "package.png");
             this.imageList1.Images.SetKeyName(4, "report.png");
             // 
-            // Form1
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Location = new System.Drawing.Point(571, 23);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(38, 17);
+            this.Date.TabIndex = 2;
+            this.Date.Text = "Date";
+            // 
+            // Time
+            // 
+            this.Time.AutoSize = true;
+            this.Time.Location = new System.Drawing.Point(571, 54);
+            this.Time.Name = "Time";
+            this.Time.Size = new System.Drawing.Size(39, 17);
+            this.Time.TabIndex = 3;
+            this.Time.Text = "Time";
+            // 
+            // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 476);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "Maintenance";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -171,6 +195,10 @@ namespace Final_Project_CS
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label Time;
+        private System.Windows.Forms.Label Date;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
