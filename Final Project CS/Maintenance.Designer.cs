@@ -54,7 +54,6 @@ namespace Final_Project_CS
             this.reportPage = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.cashregisterPage.SuspendLayout();
@@ -291,6 +290,7 @@ namespace Final_Project_CS
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Text = "Maintenance";
+            this.Load += new System.EventHandler(this.Maintenance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -315,7 +315,6 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.Label Date;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;

@@ -17,5 +17,11 @@ namespace Final_Project_CS
             InitializeComponent();
         }
 
+        private void Maintenance_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            Date.Text = DateTime.Now.ToLongDateString();
+            Time.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
