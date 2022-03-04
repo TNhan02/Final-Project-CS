@@ -180,6 +180,7 @@ namespace Final_Project_CS
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -198,21 +199,18 @@ namespace Final_Project_CS
             this.Name.HeaderText = "Name";
             this.Name.MinimumWidth = 6;
             this.Name.Name = "Name";
-            this.Name.Width = 125;
             // 
             // Quantity
             // 
             this.Quantity.HeaderText = "Quantity";
             this.Quantity.MinimumWidth = 6;
             this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 125;
             // 
             // Price
             // 
             this.Price.HeaderText = "Price";
             this.Price.MinimumWidth = 6;
             this.Price.Name = "Price";
-            this.Price.Width = 125;
             // 
             // button2
             // 
@@ -292,8 +290,7 @@ namespace Final_Project_CS
             this.ClientSize = new System.Drawing.Size(931, 493);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
-            //this.Name = "Maintenance";
-            this.Text = "Form1";
+            this.Text = "Maintenance";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -321,15 +318,15 @@ namespace Final_Project_CS
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }
 
