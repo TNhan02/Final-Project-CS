@@ -12,9 +12,11 @@ namespace Final_Project_CS
 {
     public partial class Maintenance : Form
     {
+        CashRegister cas = new CashRegister();
         public Maintenance()
         {
             InitializeComponent();
         }
+
     }
 }
