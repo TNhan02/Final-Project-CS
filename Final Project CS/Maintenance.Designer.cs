@@ -32,18 +32,18 @@ namespace Final_Project_CS
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Maintenance));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Time = new System.Windows.Forms.Label();
+            this.Date = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.mainPage = new System.Windows.Forms.TabPage();
+            this.productsPage = new System.Windows.Forms.TabPage();
+            this.addPage = new System.Windows.Forms.TabPage();
+            this.cashregisterPage = new System.Windows.Forms.TabPage();
+            this.reportPage = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.Date = new System.Windows.Forms.Label();
-            this.Time = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,24 @@ namespace Final_Project_CS
             this.panel1.Size = new System.Drawing.Size(927, 90);
             this.panel1.TabIndex = 0;
             // 
+            // Time
+            // 
+            this.Time.AutoSize = true;
+            this.Time.Location = new System.Drawing.Point(571, 54);
+            this.Time.Name = "Time";
+            this.Time.Size = new System.Drawing.Size(39, 17);
+            this.Time.TabIndex = 3;
+            this.Time.Text = "Time";
+            // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Location = new System.Drawing.Point(571, 23);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(38, 17);
+            this.Date.TabIndex = 2;
+            this.Date.Text = "Date";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -71,11 +89,11 @@ namespace Final_Project_CS
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.mainPage);
+            this.tabControl1.Controls.Add(this.productsPage);
+            this.tabControl1.Controls.Add(this.addPage);
+            this.tabControl1.Controls.Add(this.cashregisterPage);
+            this.tabControl1.Controls.Add(this.reportPage);
             this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.ItemSize = new System.Drawing.Size(135, 35);
             this.tabControl1.Location = new System.Drawing.Point(3, 98);
@@ -85,60 +103,60 @@ namespace Final_Project_CS
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 1;
             // 
-            // tabPage1
+            // mainPage
             // 
-            this.tabPage1.ImageIndex = 2;
-            this.tabPage1.Location = new System.Drawing.Point(4, 39);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(919, 323);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Main";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.mainPage.ImageIndex = 2;
+            this.mainPage.Location = new System.Drawing.Point(4, 39);
+            this.mainPage.Name = "mainPage";
+            this.mainPage.Padding = new System.Windows.Forms.Padding(3);
+            this.mainPage.Size = new System.Drawing.Size(919, 323);
+            this.mainPage.TabIndex = 0;
+            this.mainPage.Text = "Main";
+            this.mainPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // productsPage
             // 
-            this.tabPage2.ImageIndex = 3;
-            this.tabPage2.Location = new System.Drawing.Point(4, 39);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(919, 323);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Products";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.productsPage.ImageIndex = 3;
+            this.productsPage.Location = new System.Drawing.Point(4, 39);
+            this.productsPage.Name = "productsPage";
+            this.productsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.productsPage.Size = new System.Drawing.Size(919, 323);
+            this.productsPage.TabIndex = 1;
+            this.productsPage.Text = "Products";
+            this.productsPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // addPage
             // 
-            this.tabPage3.ImageIndex = 0;
-            this.tabPage3.Location = new System.Drawing.Point(4, 39);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(919, 323);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Add Product";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.addPage.ImageIndex = 0;
+            this.addPage.Location = new System.Drawing.Point(4, 39);
+            this.addPage.Name = "addPage";
+            this.addPage.Padding = new System.Windows.Forms.Padding(3);
+            this.addPage.Size = new System.Drawing.Size(919, 323);
+            this.addPage.TabIndex = 2;
+            this.addPage.Text = "Add Product";
+            this.addPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // cashregisterPage
             // 
-            this.tabPage4.ImageIndex = 1;
-            this.tabPage4.Location = new System.Drawing.Point(4, 39);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(919, 323);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Cash Register";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.cashregisterPage.ImageIndex = 1;
+            this.cashregisterPage.Location = new System.Drawing.Point(4, 39);
+            this.cashregisterPage.Name = "cashregisterPage";
+            this.cashregisterPage.Padding = new System.Windows.Forms.Padding(3);
+            this.cashregisterPage.Size = new System.Drawing.Size(919, 323);
+            this.cashregisterPage.TabIndex = 3;
+            this.cashregisterPage.Text = "Cash Register";
+            this.cashregisterPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // reportPage
             // 
-            this.tabPage5.ImageIndex = 4;
-            this.tabPage5.Location = new System.Drawing.Point(4, 39);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(919, 323);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Report";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.reportPage.ImageIndex = 4;
+            this.reportPage.Location = new System.Drawing.Point(4, 39);
+            this.reportPage.Name = "reportPage";
+            this.reportPage.Padding = new System.Windows.Forms.Padding(3);
+            this.reportPage.Size = new System.Drawing.Size(919, 323);
+            this.reportPage.TabIndex = 4;
+            this.reportPage.Text = "Report";
+            this.reportPage.UseVisualStyleBackColor = true;
             // 
             // imageList1
             // 
@@ -149,24 +167,6 @@ namespace Final_Project_CS
             this.imageList1.Images.SetKeyName(2, "home (1).png");
             this.imageList1.Images.SetKeyName(3, "package.png");
             this.imageList1.Images.SetKeyName(4, "report.png");
-            // 
-            // Date
-            // 
-            this.Date.AutoSize = true;
-            this.Date.Location = new System.Drawing.Point(571, 23);
-            this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(38, 17);
-            this.Date.TabIndex = 2;
-            this.Date.Text = "Date";
-            // 
-            // Time
-            // 
-            this.Time.AutoSize = true;
-            this.Time.Location = new System.Drawing.Point(571, 54);
-            this.Time.Name = "Time";
-            this.Time.Size = new System.Drawing.Size(39, 17);
-            this.Time.TabIndex = 3;
-            this.Time.Text = "Time";
             // 
             // Maintenance
             // 
@@ -189,11 +189,11 @@ namespace Final_Project_CS
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage mainPage;
+        private System.Windows.Forms.TabPage productsPage;
+        private System.Windows.Forms.TabPage addPage;
+        private System.Windows.Forms.TabPage cashregisterPage;
+        private System.Windows.Forms.TabPage reportPage;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.Label Date;
