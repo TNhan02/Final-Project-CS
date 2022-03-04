@@ -292,7 +292,7 @@ namespace Final_Project_CS
             this.ClientSize = new System.Drawing.Size(931, 493);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
-            this.Name = "Maintenance";
+            //this.Name = "Maintenance";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
