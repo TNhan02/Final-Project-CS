@@ -40,7 +40,7 @@ namespace Final_Project_CS
             this.reportPage = new System.Windows.Forms.TabPage();
             this.cashregisterPage = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ShoppingCart = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,7 @@ namespace Final_Project_CS
             this.productsPage = new System.Windows.Forms.TabPage();
             this.mainPage = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.ProductList = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,14 +67,19 @@ namespace Final_Project_CS
             this.button5 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.cashregisterPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
             this.productsPage.SuspendLayout();
             this.mainPage.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -140,14 +145,11 @@ namespace Final_Project_CS
             // cashregisterPage
             // 
             this.cashregisterPage.AutoScroll = true;
+            this.cashregisterPage.Controls.Add(this.groupBox2);
             this.cashregisterPage.Controls.Add(this.label4);
-            this.cashregisterPage.Controls.Add(this.dataGridView1);
+            this.cashregisterPage.Controls.Add(this.ShoppingCart);
             this.cashregisterPage.Controls.Add(this.button2);
             this.cashregisterPage.Controls.Add(this.button1);
-            this.cashregisterPage.Controls.Add(this.textBox2);
-            this.cashregisterPage.Controls.Add(this.textBox1);
-            this.cashregisterPage.Controls.Add(this.label3);
-            this.cashregisterPage.Controls.Add(this.label2);
             this.cashregisterPage.ImageIndex = 1;
             this.cashregisterPage.Location = new System.Drawing.Point(4, 39);
             this.cashregisterPage.Name = "cashregisterPage";
@@ -166,21 +168,21 @@ namespace Final_Project_CS
             this.label4.TabIndex = 8;
             this.label4.Text = "Shopping Cart";
             // 
-            // dataGridView1
+            // ShoppingCart
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ShoppingCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ShoppingCart.ColumnHeadersHeight = 29;
+            this.ShoppingCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.ShoppingCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Name,
             this.Quantity,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(334, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(578, 261);
-            this.dataGridView1.TabIndex = 7;
+            this.ShoppingCart.Location = new System.Drawing.Point(334, 34);
+            this.ShoppingCart.Name = "ShoppingCart";
+            this.ShoppingCart.RowHeadersWidth = 51;
+            this.ShoppingCart.RowTemplate.Height = 24;
+            this.ShoppingCart.Size = new System.Drawing.Size(578, 261);
+            this.ShoppingCart.TabIndex = 7;
             // 
             // Name
             // 
@@ -211,7 +213,7 @@ namespace Final_Project_CS
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(66, 90);
+            this.button1.Location = new System.Drawing.Point(82, 143);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 32);
             this.button1.TabIndex = 5;
@@ -220,14 +222,14 @@ namespace Final_Project_CS
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 62);
+            this.textBox2.Location = new System.Drawing.Point(76, 66);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(173, 22);
             this.textBox2.TabIndex = 4;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 32);
+            this.textBox1.Location = new System.Drawing.Point(76, 26);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(173, 22);
             this.textBox1.TabIndex = 3;
@@ -235,7 +237,7 @@ namespace Final_Project_CS
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 62);
+            this.label3.Location = new System.Drawing.Point(6, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 2;
@@ -244,7 +246,7 @@ namespace Final_Project_CS
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 32);
+            this.label2.Location = new System.Drawing.Point(13, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 1;
@@ -257,7 +259,7 @@ namespace Final_Project_CS
             this.productsPage.Controls.Add(this.button3);
             this.productsPage.Controls.Add(this.groupBox1);
             this.productsPage.Controls.Add(this.label5);
-            this.productsPage.Controls.Add(this.dataGridView2);
+            this.productsPage.Controls.Add(this.ProductList);
             this.productsPage.ImageIndex = 3;
             this.productsPage.Location = new System.Drawing.Point(4, 39);
             this.productsPage.Name = "productsPage";
@@ -295,15 +297,21 @@ namespace Final_Project_CS
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 1;
             // 
-            // dataGridView2
+            // ProductList
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(395, 50);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(473, 310);
-            this.dataGridView2.TabIndex = 0;
+            this.ProductList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.ProductList.ColumnHeadersHeight = 29;
+            this.ProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PName,
+            this.PPrice,
+            this.PQuantity});
+            this.ProductList.Location = new System.Drawing.Point(395, 50);
+            this.ProductList.Name = "ProductList";
+            this.ProductList.RowHeadersWidth = 51;
+            this.ProductList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.ProductList.RowTemplate.Height = 24;
+            this.ProductList.Size = new System.Drawing.Size(473, 310);
+            this.ProductList.TabIndex = 0;
             // 
             // label5
             // 
@@ -427,6 +435,40 @@ namespace Final_Project_CS
             this.label10.TabIndex = 1;
             this.label10.Text = "We are providing most modern smartphone with the most suitable price";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Location = new System.Drawing.Point(25, 34);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(255, 103);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Add";
+            // 
+            // PName
+            // 
+            this.PName.HeaderText = "Name";
+            this.PName.MinimumWidth = 6;
+            this.PName.Name = "PName";
+            this.PName.Width = 125;
+            // 
+            // PPrice
+            // 
+            this.PPrice.HeaderText = "Price";
+            this.PPrice.MinimumWidth = 6;
+            this.PPrice.Name = "PPrice";
+            this.PPrice.Width = 125;
+            // 
+            // PQuantity
+            // 
+            this.PQuantity.HeaderText = "Quantity";
+            this.PQuantity.MinimumWidth = 6;
+            this.PQuantity.Name = "PQuantity";
+            this.PQuantity.Width = 125;
+            // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -441,15 +483,17 @@ namespace Final_Project_CS
             this.panel1.PerformLayout();
             this.cashregisterPage.ResumeLayout(false);
             this.cashregisterPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).EndInit();
             this.productsPage.ResumeLayout(false);
             this.productsPage.PerformLayout();
             this.mainPage.ResumeLayout(false);
             this.mainPage.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -465,7 +509,7 @@ namespace Final_Project_CS
         private System.Windows.Forms.TabPage reportPage;
         private System.Windows.Forms.TabPage cashregisterPage;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ShoppingCart;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
@@ -489,9 +533,13 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView ProductList;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PQuantity;
     }
 }
 
