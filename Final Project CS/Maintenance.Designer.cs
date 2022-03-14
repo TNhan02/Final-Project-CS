@@ -39,6 +39,11 @@ namespace Final_Project_CS
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.reportPage = new System.Windows.Forms.TabPage();
             this.cashregisterPage = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ShoppingCart = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,40 +51,35 @@ namespace Final_Project_CS
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.productsPage = new System.Windows.Forms.TabPage();
-            this.mainPage = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.ProductList = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ProductList = new System.Windows.Forms.DataGridView();
             this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mainPage = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
             this.cashregisterPage.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
             this.productsPage.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
             this.mainPage.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -159,6 +159,51 @@ namespace Final_Project_CS
             this.cashregisterPage.Text = "Cash Register";
             this.cashregisterPage.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Location = new System.Drawing.Point(25, 34);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(255, 103);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Add";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(76, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(173, 22);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Quantity";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(76, 66);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(173, 22);
+            this.textBox2.TabIndex = 4;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -220,38 +265,6 @@ namespace Final_Project_CS
             this.button1.Text = "Add to Cart";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(76, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 22);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(76, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 22);
-            this.textBox1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Quantity";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Name";
-            // 
             // productsPage
             // 
             this.productsPage.Controls.Add(this.button5);
@@ -269,87 +282,32 @@ namespace Final_Project_CS
             this.productsPage.Text = "Products";
             this.productsPage.UseVisualStyleBackColor = true;
             // 
-            // mainPage
+            // button5
             // 
-            this.mainPage.Controls.Add(this.label10);
-            this.mainPage.Controls.Add(this.label9);
-            this.mainPage.ImageIndex = 2;
-            this.mainPage.Location = new System.Drawing.Point(4, 39);
-            this.mainPage.Name = "mainPage";
-            this.mainPage.Padding = new System.Windows.Forms.Padding(3);
-            this.mainPage.Size = new System.Drawing.Size(919, 363);
-            this.mainPage.TabIndex = 0;
-            this.mainPage.Text = "Main";
-            this.mainPage.UseVisualStyleBackColor = true;
+            this.button5.Location = new System.Drawing.Point(207, 190);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(85, 35);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Add";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // button4
             // 
-            this.tabControl1.Controls.Add(this.mainPage);
-            this.tabControl1.Controls.Add(this.productsPage);
-            this.tabControl1.Controls.Add(this.cashregisterPage);
-            this.tabControl1.Controls.Add(this.reportPage);
-            this.tabControl1.ImageList = this.imageList1;
-            this.tabControl1.ItemSize = new System.Drawing.Size(135, 35);
-            this.tabControl1.Location = new System.Drawing.Point(3, 83);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(927, 406);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 1;
+            this.button4.Location = new System.Drawing.Point(116, 190);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(85, 35);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Edit";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // ProductList
+            // button3
             // 
-            this.ProductList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.ProductList.ColumnHeadersHeight = 29;
-            this.ProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PName,
-            this.PPrice,
-            this.PQuantity});
-            this.ProductList.Location = new System.Drawing.Point(395, 50);
-            this.ProductList.Name = "ProductList";
-            this.ProductList.RowHeadersWidth = 51;
-            this.ProductList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.ProductList.RowTemplate.Height = 24;
-            this.ProductList.Size = new System.Drawing.Size(473, 310);
-            this.ProductList.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(390, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 29);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Product List";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 20);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Price";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Quantity";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Name";
+            this.button3.Location = new System.Drawing.Point(25, 190);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(85, 35);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -367,12 +325,12 @@ namespace Final_Project_CS
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Product";
             // 
-            // textBox3
+            // textBox5
             // 
-            this.textBox3.Location = new System.Drawing.Point(83, 30);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 27);
-            this.textBox3.TabIndex = 5;
+            this.textBox5.Location = new System.Drawing.Point(83, 98);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(175, 27);
+            this.textBox5.TabIndex = 7;
             // 
             // textBox4
             // 
@@ -381,49 +339,97 @@ namespace Final_Project_CS
             this.textBox4.Size = new System.Drawing.Size(175, 27);
             this.textBox4.TabIndex = 6;
             // 
-            // textBox5
+            // textBox3
             // 
-            this.textBox5.Location = new System.Drawing.Point(83, 98);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(175, 27);
-            this.textBox5.TabIndex = 7;
+            this.textBox3.Location = new System.Drawing.Point(83, 30);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(175, 27);
+            this.textBox3.TabIndex = 5;
             // 
-            // button3
+            // label6
             // 
-            this.button3.Location = new System.Drawing.Point(25, 190);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 35);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(11, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Name";
             // 
-            // button4
+            // label8
             // 
-            this.button4.Location = new System.Drawing.Point(116, 190);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 35);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 96);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 20);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Quantity";
             // 
-            // button5
+            // label7
             // 
-            this.button5.Location = new System.Drawing.Point(207, 190);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 35);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 20);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Price";
             // 
-            // label9
+            // label5
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 39);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(369, 29);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "WELCOME TO TECHIN SHOP";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(390, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 29);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Product List";
+            // 
+            // ProductList
+            // 
+            this.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProductList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.ProductList.ColumnHeadersHeight = 29;
+            this.ProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PName,
+            this.PPrice,
+            this.PQuantity});
+            this.ProductList.Location = new System.Drawing.Point(395, 50);
+            this.ProductList.Name = "ProductList";
+            this.ProductList.RowHeadersWidth = 51;
+            this.ProductList.RowTemplate.Height = 24;
+            this.ProductList.Size = new System.Drawing.Size(497, 310);
+            this.ProductList.TabIndex = 0;
+            // 
+            // PName
+            // 
+            this.PName.HeaderText = "Name";
+            this.PName.MinimumWidth = 6;
+            this.PName.Name = "PName";
+            // 
+            // PPrice
+            // 
+            this.PPrice.HeaderText = "Price";
+            this.PPrice.MinimumWidth = 6;
+            this.PPrice.Name = "PPrice";
+            // 
+            // PQuantity
+            // 
+            this.PQuantity.HeaderText = "Quantity";
+            this.PQuantity.MinimumWidth = 6;
+            this.PQuantity.Name = "PQuantity";
+            // 
+            // mainPage
+            // 
+            this.mainPage.Controls.Add(this.label10);
+            this.mainPage.Controls.Add(this.label9);
+            this.mainPage.ImageIndex = 2;
+            this.mainPage.Location = new System.Drawing.Point(4, 39);
+            this.mainPage.Name = "mainPage";
+            this.mainPage.Padding = new System.Windows.Forms.Padding(3);
+            this.mainPage.Size = new System.Drawing.Size(919, 363);
+            this.mainPage.TabIndex = 0;
+            this.mainPage.Text = "Main";
+            this.mainPage.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -435,39 +441,30 @@ namespace Final_Project_CS
             this.label10.TabIndex = 1;
             this.label10.Text = "We are providing most modern smartphone with the most suitable price";
             // 
-            // groupBox2
+            // label9
             // 
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Location = new System.Drawing.Point(25, 34);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(255, 103);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Add";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 39);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(369, 29);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "WELCOME TO TECHIN SHOP";
             // 
-            // PName
+            // tabControl1
             // 
-            this.PName.HeaderText = "Name";
-            this.PName.MinimumWidth = 6;
-            this.PName.Name = "PName";
-            this.PName.Width = 125;
-            // 
-            // PPrice
-            // 
-            this.PPrice.HeaderText = "Price";
-            this.PPrice.MinimumWidth = 6;
-            this.PPrice.Name = "PPrice";
-            this.PPrice.Width = 125;
-            // 
-            // PQuantity
-            // 
-            this.PQuantity.HeaderText = "Quantity";
-            this.PQuantity.MinimumWidth = 6;
-            this.PQuantity.Name = "PQuantity";
-            this.PQuantity.Width = 125;
+            this.tabControl1.Controls.Add(this.mainPage);
+            this.tabControl1.Controls.Add(this.productsPage);
+            this.tabControl1.Controls.Add(this.cashregisterPage);
+            this.tabControl1.Controls.Add(this.reportPage);
+            this.tabControl1.ImageList = this.imageList1;
+            this.tabControl1.ItemSize = new System.Drawing.Size(135, 35);
+            this.tabControl1.Location = new System.Drawing.Point(3, 83);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(927, 406);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.TabIndex = 1;
             // 
             // Maintenance
             // 
@@ -476,24 +473,23 @@ namespace Final_Project_CS
             this.ClientSize = new System.Drawing.Size(931, 493);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
-            this.Name = "Maintenance";
             this.Text = "Maintenance";
             this.Load += new System.EventHandler(this.Maintenance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.cashregisterPage.ResumeLayout(false);
             this.cashregisterPage.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).EndInit();
             this.productsPage.ResumeLayout(false);
             this.productsPage.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
             this.mainPage.ResumeLayout(false);
             this.mainPage.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
