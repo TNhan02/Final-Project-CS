@@ -131,6 +131,10 @@ namespace Final_Project_CS
             this.imageList1.Images.SetKeyName(3, "package.png");
             this.imageList1.Images.SetKeyName(4, "report.png");
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // reportPage
             // 
             this.reportPage.ImageIndex = 4;
@@ -258,7 +262,7 @@ namespace Final_Project_CS
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(82, 143);
+            this.button1.Location = new System.Drawing.Point(89, 143);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 32);
             this.button1.TabIndex = 5;
@@ -377,15 +381,17 @@ namespace Final_Project_CS
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(390, 18);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(328, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 29);
+            this.label5.Size = new System.Drawing.Size(114, 25);
             this.label5.TabIndex = 1;
             this.label5.Text = "Product List";
             // 
             // ProductList
             // 
+            this.ProductList.AllowUserToAddRows = false;
+            this.ProductList.AllowUserToDeleteRows = false;
             this.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.ProductList.ColumnHeadersHeight = 29;
@@ -393,11 +399,12 @@ namespace Final_Project_CS
             this.PName,
             this.PPrice,
             this.PQuantity});
-            this.ProductList.Location = new System.Drawing.Point(395, 50);
+            this.ProductList.Location = new System.Drawing.Point(333, 41);
             this.ProductList.Name = "ProductList";
+            this.ProductList.ReadOnly = true;
             this.ProductList.RowHeadersWidth = 51;
             this.ProductList.RowTemplate.Height = 24;
-            this.ProductList.Size = new System.Drawing.Size(497, 310);
+            this.ProductList.Size = new System.Drawing.Size(559, 310);
             this.ProductList.TabIndex = 0;
             // 
             // PName
@@ -405,18 +412,21 @@ namespace Final_Project_CS
             this.PName.HeaderText = "Name";
             this.PName.MinimumWidth = 6;
             this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
             // 
             // PPrice
             // 
             this.PPrice.HeaderText = "Price";
             this.PPrice.MinimumWidth = 6;
             this.PPrice.Name = "PPrice";
+            this.PPrice.ReadOnly = true;
             // 
             // PQuantity
             // 
             this.PQuantity.HeaderText = "Quantity";
             this.PQuantity.MinimumWidth = 6;
             this.PQuantity.Name = "PQuantity";
+            this.PQuantity.ReadOnly = true;
             // 
             // mainPage
             // 
