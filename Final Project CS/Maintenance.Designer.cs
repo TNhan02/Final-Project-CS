@@ -232,7 +232,7 @@ namespace Final_Project_CS
             this.ShoppingCart.Name = "ShoppingCart";
             this.ShoppingCart.RowHeadersWidth = 51;
             this.ShoppingCart.RowTemplate.Height = 24;
-            this.ShoppingCart.Size = new System.Drawing.Size(578, 261);
+            this.ShoppingCart.Size = new System.Drawing.Size(578, 270);
             this.ShoppingCart.TabIndex = 7;
             // 
             // Name
@@ -255,7 +255,7 @@ namespace Final_Project_CS
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(544, 301);
+            this.button2.Location = new System.Drawing.Point(550, 310);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 32);
             this.button2.TabIndex = 6;
