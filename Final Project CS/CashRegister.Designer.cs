@@ -30,15 +30,15 @@ namespace Final_Project_CS
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addQuantity = new System.Windows.Forms.TextBox();
+            this.addName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.checkoutButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.addName = new System.Windows.Forms.TextBox();
-            this.addQuantity = new System.Windows.Forms.TextBox();
             this.addcartButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -56,6 +56,38 @@ namespace Final_Project_CS
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add to Cart";
+            // 
+            // addQuantity
+            // 
+            this.addQuantity.Location = new System.Drawing.Point(95, 65);
+            this.addQuantity.Name = "addQuantity";
+            this.addQuantity.Size = new System.Drawing.Size(134, 22);
+            this.addQuantity.TabIndex = 3;
+            // 
+            // addName
+            // 
+            this.addName.Location = new System.Drawing.Point(95, 34);
+            this.addName.Name = "addName";
+            this.addName.Size = new System.Drawing.Size(134, 22);
+            this.addName.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Quantity";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name";
             // 
             // dataGridView1
             // 
@@ -101,38 +133,6 @@ namespace Final_Project_CS
             this.checkoutButton.Text = "Proceed to Checkout";
             this.checkoutButton.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Quantity";
-            // 
-            // addName
-            // 
-            this.addName.Location = new System.Drawing.Point(95, 34);
-            this.addName.Name = "addName";
-            this.addName.Size = new System.Drawing.Size(134, 22);
-            this.addName.TabIndex = 2;
-            // 
-            // addQuantity
-            // 
-            this.addQuantity.Location = new System.Drawing.Point(95, 65);
-            this.addQuantity.Name = "addQuantity";
-            this.addQuantity.Size = new System.Drawing.Size(134, 22);
-            this.addQuantity.TabIndex = 3;
-            // 
             // addcartButton
             // 
             this.addcartButton.Location = new System.Drawing.Point(105, 159);
@@ -151,6 +151,7 @@ namespace Final_Project_CS
             this.Controls.Add(this.checkoutButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
+            this.Name = "CashRegister";
             this.Text = "CashRegister";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
