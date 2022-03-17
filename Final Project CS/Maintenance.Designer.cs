@@ -32,6 +32,7 @@ namespace Final_Project_CS
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Maintenance));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.Time = new System.Windows.Forms.Label();
             this.Date = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -86,6 +87,7 @@ namespace Final_Project_CS
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.Time);
             this.panel1.Controls.Add(this.Date);
             this.panel1.Controls.Add(this.label1);
@@ -94,10 +96,19 @@ namespace Final_Project_CS
             this.panel1.Size = new System.Drawing.Size(927, 75);
             this.panel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(509, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 32);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Staff Login";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Time
             // 
             this.Time.AutoSize = true;
-            this.Time.Location = new System.Drawing.Point(570, 40);
+            this.Time.Location = new System.Drawing.Point(656, 40);
             this.Time.Name = "Time";
             this.Time.Size = new System.Drawing.Size(39, 17);
             this.Time.TabIndex = 3;
@@ -106,7 +117,7 @@ namespace Final_Project_CS
             // Date
             // 
             this.Date.AutoSize = true;
-            this.Date.Location = new System.Drawing.Point(571, 23);
+            this.Date.Location = new System.Drawing.Point(657, 23);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(38, 17);
             this.Date.TabIndex = 2;
@@ -449,7 +460,7 @@ namespace Final_Project_CS
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(21, 146);
+            this.label11.Location = new System.Drawing.Point(21, 125);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(250, 20);
             this.label11.TabIndex = 2;
@@ -471,9 +482,9 @@ namespace Final_Project_CS
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(20, 35);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(369, 29);
+            this.label9.Size = new System.Drawing.Size(400, 29);
             this.label9.TabIndex = 0;
-            this.label9.Text = "WELCOME TO TECHIN SHOP";
+            this.label9.Text = "WELCOME TO SHOPPING MALL";
             // 
             // tabControl1
             // 
@@ -561,6 +572,7 @@ namespace Final_Project_CS
         private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn PQuantity;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button1;
     }
 }
 
