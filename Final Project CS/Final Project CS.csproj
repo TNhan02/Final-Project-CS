@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="CashRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="CashRegister.Designer.cs">
+      <DependentUpon>CashRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loginpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginpage.Designer.cs">
+      <DependentUpon>Loginpage.cs</DependentUpon>
     </Compile>
     <Compile Include="Maintenance.cs">
       <SubType>Form</SubType>
@@ -61,8 +67,17 @@
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CashRegister.resx">
+      <DependentUpon>CashRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loginpage.resx">
+      <DependentUpon>Loginpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance.resx">
       <DependentUpon>Maintenance.cs</DependentUpon>

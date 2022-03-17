@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Final_Project_CS
 {
-    public partial class Login : Form
+    public partial class Loginpage : Form
     {
-        public Login()
+        Maintenance main = new Maintenance();
+        public Loginpage()
         {
             InitializeComponent();
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            main.Show();
         }
     }
 }
