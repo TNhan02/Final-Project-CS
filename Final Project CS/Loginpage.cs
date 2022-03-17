@@ -20,6 +20,7 @@ namespace Final_Project_CS
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             main.Show();
         }
     }

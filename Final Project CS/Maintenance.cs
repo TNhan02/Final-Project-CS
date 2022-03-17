@@ -12,9 +12,21 @@ namespace Final_Project_CS
 {
     public partial class Maintenance : Form
     {
+        CashRegister cashForm = new CashRegister();
+        Report reportForm = new Report();
         public Maintenance()
         {
             InitializeComponent();
+        }
+
+        private void cashButton_Click(object sender, EventArgs e)
+        {
+            cashForm.Show();
+        }
+
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            reportForm.Show();
         }
     }
 }
