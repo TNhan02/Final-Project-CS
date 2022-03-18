@@ -21,7 +21,7 @@ namespace Final_Project_CS
             };
             Label textLabel = new Label() { Left = 50, Top = 20, Text = text };
             TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 200 };
-            Button confirmation = new Button() { Text = "Ok", Left = 200, Width = 100, Top = 70, DialogResult = DialogResult.OK };
+            Button confirmation = new Button() { Text = "Ok", Left = 100, Width = 100, Top = 70, DialogResult = DialogResult.OK };
             confirmation.Click += (sender, e) => { AskBuyer.Close(); };
             AskBuyer.Controls.Add(textBox);
             AskBuyer.Controls.Add(confirmation);
