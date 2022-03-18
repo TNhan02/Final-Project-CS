@@ -78,6 +78,7 @@ namespace Final_Project_CS
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(140, 22);
             this.password.TabIndex = 3;
+            this.password.UseSystemPasswordChar = true;
             // 
             // loginButton
             // 

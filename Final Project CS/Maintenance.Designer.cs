@@ -40,14 +40,14 @@ namespace Final_Project_CS
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductList = new System.Windows.Forms.DataGridView();
             this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,20 +154,23 @@ namespace Final_Project_CS
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
-            // dataGridView1
+            // ProductList
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductList.AllowUserToAddRows = false;
+            this.ProductList.AllowUserToDeleteRows = false;
+            this.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PName,
             this.PPrice,
             this.PQuantity});
-            this.dataGridView1.Location = new System.Drawing.Point(327, 144);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(536, 302);
-            this.dataGridView1.TabIndex = 2;
+            this.ProductList.Location = new System.Drawing.Point(327, 144);
+            this.ProductList.Name = "ProductList";
+            this.ProductList.ReadOnly = true;
+            this.ProductList.RowHeadersWidth = 51;
+            this.ProductList.RowTemplate.Height = 24;
+            this.ProductList.Size = new System.Drawing.Size(536, 302);
+            this.ProductList.TabIndex = 2;
             // 
             // PName
             // 
@@ -202,7 +205,7 @@ namespace Final_Project_CS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 476);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ProductList);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "Maintenance";
@@ -211,7 +214,7 @@ namespace Final_Project_CS
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,7 +226,7 @@ namespace Final_Project_CS
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ProductList;
         private System.Windows.Forms.DataGridViewTextBoxColumn PName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
         private System.Windows.Forms.TextBox addPQuantity;

@@ -34,14 +34,15 @@ namespace Final_Project_CS
             this.addName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ShoppingCart = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.addcartButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -89,44 +90,49 @@ namespace Final_Project_CS
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
-            // dataGridView1
+            // ShoppingCart
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ShoppingCart.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.ShoppingCart.AllowUserToAddRows = false;
+            this.ShoppingCart.AllowUserToDeleteRows = false;
+            this.ShoppingCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ShoppingCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ShoppingCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Name,
             this.Quantity,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(349, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(430, 351);
-            this.dataGridView1.TabIndex = 1;
+            this.ShoppingCart.Location = new System.Drawing.Point(306, 41);
+            this.ShoppingCart.Name = "ShoppingCart";
+            this.ShoppingCart.ReadOnly = true;
+            this.ShoppingCart.RowHeadersWidth = 51;
+            this.ShoppingCart.RowTemplate.Height = 24;
+            this.ShoppingCart.Size = new System.Drawing.Size(482, 351);
+            this.ShoppingCart.TabIndex = 1;
             // 
             // Name
             // 
             this.Name.HeaderText = "Name";
             this.Name.MinimumWidth = 6;
             this.Name.Name = "Name";
-            this.Name.Width = 125;
+            this.Name.ReadOnly = true;
             // 
             // Quantity
             // 
             this.Quantity.HeaderText = "Quantity";
             this.Quantity.MinimumWidth = 6;
             this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 125;
+            this.Quantity.ReadOnly = true;
             // 
             // Price
             // 
             this.Price.HeaderText = "Price";
             this.Price.MinimumWidth = 6;
             this.Price.Name = "Price";
-            this.Price.Width = 125;
+            this.Price.ReadOnly = true;
             // 
             // checkoutButton
             // 
-            this.checkoutButton.Location = new System.Drawing.Point(473, 392);
+            this.checkoutButton.Location = new System.Drawing.Point(456, 398);
             this.checkoutButton.Name = "checkoutButton";
             this.checkoutButton.Size = new System.Drawing.Size(209, 31);
             this.checkoutButton.TabIndex = 2;
@@ -143,27 +149,39 @@ namespace Final_Project_CS
             this.addcartButton.Text = "Add to Cart";
             this.addcartButton.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(301, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Shopping Cart";
+            // 
             // CashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.addcartButton);
             this.Controls.Add(this.checkoutButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ShoppingCart);
             this.Controls.Add(this.groupBox1);
             this.Text = "CashRegister";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ShoppingCart;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
@@ -173,5 +191,6 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addcartButton;
+        private System.Windows.Forms.Label label3;
     }
 }
