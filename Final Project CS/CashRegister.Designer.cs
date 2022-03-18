@@ -132,6 +132,7 @@ namespace Final_Project_CS
             this.checkoutButton.TabIndex = 2;
             this.checkoutButton.Text = "Proceed to Checkout";
             this.checkoutButton.UseVisualStyleBackColor = true;
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
             // 
             // addcartButton
             // 

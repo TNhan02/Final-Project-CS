@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace Final_Project_CS
 {
@@ -15,6 +16,13 @@ namespace Final_Project_CS
         public CashRegister()
         {
             InitializeComponent();
+        }
+
+        private void checkoutButton_Click(object sender, EventArgs e)
+        {
+            //adding buyer information and payment method (cash or card)
+            //and then transfer transaction information to the report folder
+            string buyer_info = Interaction.InputBox("Message", "Title", "Default value", -1, -1);
         }
     }
 }
