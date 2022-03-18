@@ -20,9 +20,9 @@ namespace Final_Project_CS
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
-            //adding buyer information and payment method (cash or card)
+            //adding buyer information
             //and then transfer transaction information to the report folder
-            string buyer_info = Interaction.InputBox("Message", "Title", "Default value", -1, -1);
+            string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
         }
     }
 }

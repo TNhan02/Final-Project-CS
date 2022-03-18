@@ -152,7 +152,6 @@ namespace Final_Project_CS
             this.Controls.Add(this.checkoutButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "CashRegister";
             this.Text = "CashRegister";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
