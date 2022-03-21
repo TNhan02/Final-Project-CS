@@ -24,10 +24,5 @@ namespace Final_Project_CS
             //and then transfer transaction information to the report folder
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
