@@ -58,35 +58,35 @@ namespace Final_Project_CS
             this.groupBox1.Controls.Add(this.addName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(41, 51);
+            this.groupBox1.Location = new System.Drawing.Point(34, 51);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(312, 140);
+            this.groupBox1.Size = new System.Drawing.Size(306, 133);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add to Cart";
             // 
             // addQuantity
             // 
-            this.addQuantity.Location = new System.Drawing.Point(119, 81);
+            this.addQuantity.Location = new System.Drawing.Point(105, 81);
             this.addQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addQuantity.Name = "addQuantity";
-            this.addQuantity.Size = new System.Drawing.Size(166, 23);
+            this.addQuantity.Size = new System.Drawing.Size(180, 23);
             this.addQuantity.TabIndex = 3;
             // 
             // addName
             // 
-            this.addName.Location = new System.Drawing.Point(119, 42);
+            this.addName.Location = new System.Drawing.Point(105, 42);
             this.addName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addName.Name = "addName";
-            this.addName.Size = new System.Drawing.Size(166, 23);
+            this.addName.Size = new System.Drawing.Size(180, 23);
             this.addName.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 85);
+            this.label2.Location = new System.Drawing.Point(15, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 1;
@@ -152,7 +152,7 @@ namespace Final_Project_CS
             // 
             // addcartButton
             // 
-            this.addcartButton.Location = new System.Drawing.Point(131, 199);
+            this.addcartButton.Location = new System.Drawing.Point(122, 192);
             this.addcartButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addcartButton.Name = "addcartButton";
             this.addcartButton.Size = new System.Drawing.Size(116, 40);
@@ -173,20 +173,20 @@ namespace Final_Project_CS
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(378, 514);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 17);
+            this.label4.Size = new System.Drawing.Size(103, 18);
             this.label4.TabIndex = 5;
             this.label4.Text = "Items Amount:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(378, 553);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 17);
+            this.label5.Size = new System.Drawing.Size(91, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "Tax Amount:";
             // 
@@ -229,6 +229,7 @@ namespace Final_Project_CS
             this.checkoutButton.TabIndex = 11;
             this.checkoutButton.Text = "Pay Here";
             this.checkoutButton.UseVisualStyleBackColor = true;
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
             // 
             // CashRegister
             // 
@@ -248,6 +249,7 @@ namespace Final_Project_CS
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            //this.Name = "CashRegister";
             this.Text = "Cash Register";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

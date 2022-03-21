@@ -58,14 +58,14 @@ namespace Final_Project_CS
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(870, 102);
+            this.panel1.Size = new System.Drawing.Size(948, 102);
             this.panel1.TabIndex = 0;
             // 
             // reportButton
             // 
-            this.reportButton.Location = new System.Drawing.Point(680, 30);
+            this.reportButton.Location = new System.Drawing.Point(679, 29);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(113, 43);
+            this.reportButton.Size = new System.Drawing.Size(140, 45);
             this.reportButton.TabIndex = 2;
             this.reportButton.Text = "Report";
             this.reportButton.UseVisualStyleBackColor = true;
@@ -73,9 +73,9 @@ namespace Final_Project_CS
             // 
             // cashButton
             // 
-            this.cashButton.Location = new System.Drawing.Point(528, 29);
+            this.cashButton.Location = new System.Drawing.Point(501, 29);
             this.cashButton.Name = "cashButton";
-            this.cashButton.Size = new System.Drawing.Size(113, 44);
+            this.cashButton.Size = new System.Drawing.Size(140, 45);
             this.cashButton.TabIndex = 1;
             this.cashButton.Text = "Cash Register";
             this.cashButton.UseVisualStyleBackColor = true;
@@ -169,7 +169,7 @@ namespace Final_Project_CS
             this.ProductList.ReadOnly = true;
             this.ProductList.RowHeadersWidth = 51;
             this.ProductList.RowTemplate.Height = 24;
-            this.ProductList.Size = new System.Drawing.Size(536, 302);
+            this.ProductList.Size = new System.Drawing.Size(615, 337);
             this.ProductList.TabIndex = 2;
             // 
             // PName
@@ -177,18 +177,21 @@ namespace Final_Project_CS
             this.PName.HeaderText = "Name";
             this.PName.MinimumWidth = 6;
             this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
             // 
             // PPrice
             // 
             this.PPrice.HeaderText = "Price";
             this.PPrice.MinimumWidth = 6;
             this.PPrice.Name = "PPrice";
+            this.PPrice.ReadOnly = true;
             // 
             // PQuantity
             // 
             this.PQuantity.HeaderText = "Quantity";
             this.PQuantity.MinimumWidth = 6;
             this.PQuantity.Name = "PQuantity";
+            this.PQuantity.ReadOnly = true;
             // 
             // addButton
             // 
@@ -203,7 +206,7 @@ namespace Final_Project_CS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 476);
+            this.ClientSize = new System.Drawing.Size(954, 510);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.ProductList);
             this.Controls.Add(this.groupBox1);
