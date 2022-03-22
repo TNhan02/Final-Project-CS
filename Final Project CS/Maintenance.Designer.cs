@@ -41,9 +41,6 @@ namespace Final_Project_CS
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ProductList = new System.Windows.Forms.DataGridView();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -160,10 +157,6 @@ namespace Final_Project_CS
             this.ProductList.AllowUserToDeleteRows = false;
             this.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PName,
-            this.PPrice,
-            this.PQuantity});
             this.ProductList.Location = new System.Drawing.Point(327, 144);
             this.ProductList.Name = "ProductList";
             this.ProductList.ReadOnly = true;
@@ -171,27 +164,6 @@ namespace Final_Project_CS
             this.ProductList.RowTemplate.Height = 24;
             this.ProductList.Size = new System.Drawing.Size(615, 337);
             this.ProductList.TabIndex = 2;
-            // 
-            // PName
-            // 
-            this.PName.HeaderText = "Name";
-            this.PName.MinimumWidth = 6;
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
-            // 
-            // PPrice
-            // 
-            this.PPrice.HeaderText = "Price";
-            this.PPrice.MinimumWidth = 6;
-            this.PPrice.Name = "PPrice";
-            this.PPrice.ReadOnly = true;
-            // 
-            // PQuantity
-            // 
-            this.PQuantity.HeaderText = "Quantity";
-            this.PQuantity.MinimumWidth = 6;
-            this.PQuantity.Name = "PQuantity";
-            this.PQuantity.ReadOnly = true;
             // 
             // addButton
             // 
@@ -201,6 +173,7 @@ namespace Final_Project_CS
             this.addButton.TabIndex = 3;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // Maintenance
             // 
@@ -213,6 +186,7 @@ namespace Final_Project_CS
             this.Controls.Add(this.panel1);
             this.Name = "Maintenance";
             this.Text = "Maintenance";
+            this.Load += new System.EventHandler(this.Maintenance_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -230,13 +204,10 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView ProductList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
         private System.Windows.Forms.TextBox addPQuantity;
         private System.Windows.Forms.TextBox addPPrice;
         private System.Windows.Forms.TextBox addPName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PQuantity;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button reportButton;
         private System.Windows.Forms.Button cashButton;
