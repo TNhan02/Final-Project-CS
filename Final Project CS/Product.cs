@@ -8,6 +8,7 @@ namespace Final_Project_CS
 {
     public class Product
     {
+        public string ID { get; set; }
         public string Name { get; set; }
         public double Quantity { get; set; }
         public double Price { get; set; }
@@ -17,6 +18,7 @@ namespace Final_Project_CS
         {
             Product p = new Product();
 
+            p.ID = ID;
             p.Name = Name;
             p.Quantity = Quantity;
             p.Price = Price;

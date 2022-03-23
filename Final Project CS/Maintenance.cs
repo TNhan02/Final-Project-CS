@@ -24,21 +24,21 @@ namespace Final_Project_CS
         private List<Product> GetProducts()
         {
             var list = new List<Product>();
-            list.Add(new Product() { Name = "Iphone 11", Price = 600, Quantity = 100 });
-            list.Add(new Product() { Name = "Iphone 11 Pro", Price = 650, Quantity = 100 });
-            list.Add(new Product() { Name = "Iphone 11 Pro Max", Price = 750, Quantity = 100 });
-            list.Add(new Product() { Name = "Iphone 12", Price = 1000, Quantity = 100 });
-            list.Add(new Product() { Name = "Iphone 12 Pro", Price = 1100, Quantity = 100 });
-            list.Add(new Product() { Name = "Iphone 12 Pro Max", Price = 1250, Quantity = 100 });
-            list.Add(new Product() { Name = "Iphone 13", Price = 800, Quantity = 100 });
-            list.Add(new Product() { Name = "Iphone 13 Pro", Price = 950, Quantity = 100 });
-            list.Add(new Product() { Name = "Iphone 13 Pro Max", Price = 1285, Quantity = 100 });
-            list.Add(new Product() { Name = "Apple Watch series 5", Price = 400, Quantity = 100 });
-            list.Add(new Product() { Name = "Apple Watch series 6", Price = 490, Quantity = 100 });
-            list.Add(new Product() { Name = "Apple Watch series 7", Price = 600, Quantity = 100 });
-            list.Add(new Product() { Name = "Ipad M1 2020", Price = 765, Quantity = 100 });
-            list.Add(new Product() { Name = "Macbook M1 2022", Price = 1000, Quantity = 100 });
-            list.Add(new Product() { Name = "Macbook Pro M1 2022", Price = 1150, Quantity = 100 });
+            list.Add(new Product() { ID = "IP11", Name = "Iphone 11", Price = 600, Quantity = 100 });
+            list.Add(new Product() { ID = "IP11P", Name = "Iphone 11 Pro", Price = 650, Quantity = 100 });
+            list.Add(new Product() { ID = "IP11PM", Name = "Iphone 11 Pro Max", Price = 750, Quantity = 100 });
+            list.Add(new Product() { ID ="IP12", Name = "Iphone 12", Price = 1000, Quantity = 100 });
+            list.Add(new Product() { ID="IP12P", Name = "Iphone 12 Pro", Price = 1100, Quantity = 100 });
+            list.Add(new Product() { ID = "IP12PM",Name = "Iphone 12 Pro Max", Price = 1250, Quantity = 100 });
+            list.Add(new Product() { ID = "IP13", Name = "Iphone 13", Price = 800, Quantity = 100 });
+            list.Add(new Product() { ID = "IP13P", Name  = "Iphone 13 Pro", Price = 950, Quantity = 100 });
+            list.Add(new Product() { ID = "IP13PM", Name = "Iphone 13 Pro Max", Price = 1285, Quantity = 100 });
+            list.Add(new Product() { ID = "W5", Name = "Apple Watch series 5", Price = 400, Quantity = 100 });
+            list.Add(new Product() { ID = "W6", Name = "Apple Watch series 6", Price = 490, Quantity = 100 });
+            list.Add(new Product() { ID = "W7", Name = "Apple Watch series 7", Price = 600, Quantity = 100 });
+            list.Add(new Product() { ID = "IM1", Name = "Ipad M1 2020", Price = 765, Quantity = 100 });
+            list.Add(new Product() { ID = "M1", Name = "Macbook M1 2022", Price = 1000, Quantity = 100 });
+            list.Add(new Product() { ID = "MPM1", Name = "Macbook Pro M1 2022", Price = 1150, Quantity = 100 });
             return list;
         }
         private void Maintenance_Load(object sender, EventArgs e)
@@ -68,7 +68,5 @@ namespace Final_Project_CS
             ProductList.Rows.Add(p.Name, p.Price, p.Quantity);
             productList.Add(p);
         }
-
-        
     }
 }

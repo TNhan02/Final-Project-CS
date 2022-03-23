@@ -29,10 +29,6 @@ namespace Final_Project_CS
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.reportButton = new System.Windows.Forms.Button();
-            this.cashButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.addPQuantity = new System.Windows.Forms.TextBox();
             this.addPPrice = new System.Windows.Forms.TextBox();
@@ -42,51 +38,14 @@ namespace Final_Project_CS
             this.label2 = new System.Windows.Forms.Label();
             this.ProductList = new System.Windows.Forms.DataGridView();
             this.addButton = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cashButton = new System.Windows.Forms.Button();
+            this.reportButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightBlue;
-            this.panel1.Controls.Add(this.reportButton);
-            this.panel1.Controls.Add(this.cashButton);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(948, 102);
-            this.panel1.TabIndex = 0;
-            // 
-            // reportButton
-            // 
-            this.reportButton.Location = new System.Drawing.Point(679, 29);
-            this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(140, 45);
-            this.reportButton.TabIndex = 2;
-            this.reportButton.Text = "Report";
-            this.reportButton.UseVisualStyleBackColor = true;
-            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
-            // 
-            // cashButton
-            // 
-            this.cashButton.Location = new System.Drawing.Point(501, 29);
-            this.cashButton.Name = "cashButton";
-            this.cashButton.Size = new System.Drawing.Size(140, 45);
-            this.cashButton.TabIndex = 1;
-            this.cashButton.Text = "Cash Register";
-            this.cashButton.UseVisualStyleBackColor = true;
-            this.cashButton.Click += new System.EventHandler(this.cashButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(340, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Product Maintenance Software";
             // 
             // groupBox1
             // 
@@ -175,6 +134,47 @@ namespace Final_Project_CS
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(340, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Product Maintenance Software";
+            // 
+            // cashButton
+            // 
+            this.cashButton.Location = new System.Drawing.Point(501, 29);
+            this.cashButton.Name = "cashButton";
+            this.cashButton.Size = new System.Drawing.Size(140, 45);
+            this.cashButton.TabIndex = 1;
+            this.cashButton.Text = "Cash Register";
+            this.cashButton.UseVisualStyleBackColor = true;
+            this.cashButton.Click += new System.EventHandler(this.cashButton_Click);
+            // 
+            // reportButton
+            // 
+            this.reportButton.Location = new System.Drawing.Point(679, 29);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Size = new System.Drawing.Size(140, 45);
+            this.reportButton.TabIndex = 2;
+            this.reportButton.Text = "Report";
+            this.reportButton.UseVisualStyleBackColor = true;
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.reportButton);
+            this.panel1.Controls.Add(this.cashButton);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(3, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(948, 102);
+            this.panel1.TabIndex = 0;
+            // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,19 +187,16 @@ namespace Final_Project_CS
             this.Name = "Maintenance";
             this.Text = "Maintenance";
             this.Load += new System.EventHandler(this.Maintenance_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -209,7 +206,9 @@ namespace Final_Project_CS
         private System.Windows.Forms.TextBox addPName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Button reportButton;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cashButton;
+        private System.Windows.Forms.Button reportButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }
