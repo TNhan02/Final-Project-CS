@@ -237,9 +237,9 @@ namespace Final_Project_CS
             // searchButton
             // 
             this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.searchButton.Location = new System.Drawing.Point(99, 362);
+            this.searchButton.Location = new System.Drawing.Point(103, 313);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(116, 23);
+            this.searchButton.Size = new System.Drawing.Size(102, 23);
             this.searchButton.TabIndex = 12;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -248,7 +248,7 @@ namespace Final_Project_CS
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(49, 336);
+            this.label7.Location = new System.Drawing.Point(43, 287);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 17);
             this.label7.TabIndex = 13;
@@ -256,7 +256,7 @@ namespace Final_Project_CS
             // 
             // productSearch
             // 
-            this.productSearch.Location = new System.Drawing.Point(119, 333);
+            this.productSearch.Location = new System.Drawing.Point(113, 284);
             this.productSearch.Name = "productSearch";
             this.productSearch.Size = new System.Drawing.Size(166, 23);
             this.productSearch.TabIndex = 14;
@@ -282,7 +282,6 @@ namespace Final_Project_CS
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            //this.Name = "CashRegister";
             this.Text = "Cash Register";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
