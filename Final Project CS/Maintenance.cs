@@ -29,7 +29,7 @@ namespace Final_Project_CS
             list.Add(new Product() { ID = "IP11PM", Name = "Iphone 11 Pro Max", Price = 750, Quantity = 100 });
             list.Add(new Product() { ID ="IP12", Name = "Iphone 12", Price = 1000, Quantity = 100 });
             list.Add(new Product() { ID="IP12P", Name = "Iphone 12 Pro", Price = 1100, Quantity = 100 });
-            list.Add(new Product() { ID = "IP12PM",Name = "Iphone 12 Pro Max", Price = 1250, Quantity = 100 });
+            list.Add(new Product() { ID = "IP12PM", Name = "Iphone 12 Pro Max", Price = 1250, Quantity = 100 });
             list.Add(new Product() { ID = "IP13", Name = "Iphone 13", Price = 800, Quantity = 100 });
             list.Add(new Product() { ID = "IP13P", Name  = "Iphone 13 Pro", Price = 950, Quantity = 100 });
             list.Add(new Product() { ID = "IP13PM", Name = "Iphone 13 Pro Max", Price = 1285, Quantity = 100 });

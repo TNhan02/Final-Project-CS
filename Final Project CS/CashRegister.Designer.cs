@@ -48,9 +48,9 @@ namespace Final_Project_CS
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.checkoutButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.searchButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.productSearch = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
             this.SuspendLayout();
@@ -234,14 +234,16 @@ namespace Final_Project_CS
             this.checkoutButton.UseVisualStyleBackColor = true;
             this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
             // 
-            // button1
+            // searchButton
             // 
-            this.button1.Location = new System.Drawing.Point(99, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.searchButton.Location = new System.Drawing.Point(99, 362);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(116, 23);
+            this.searchButton.TabIndex = 12;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // label7
             // 
@@ -252,21 +254,21 @@ namespace Final_Project_CS
             this.label7.TabIndex = 13;
             this.label7.Text = "Product";
             // 
-            // textBox4
+            // productSearch
             // 
-            this.textBox4.Location = new System.Drawing.Point(119, 333);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(166, 23);
-            this.textBox4.TabIndex = 14;
+            this.productSearch.Location = new System.Drawing.Point(119, 333);
+            this.productSearch.Name = "productSearch";
+            this.productSearch.Size = new System.Drawing.Size(166, 23);
+            this.productSearch.TabIndex = 14;
             // 
             // CashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 632);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.productSearch);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.checkoutButton);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -280,6 +282,7 @@ namespace Final_Project_CS
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            //this.Name = "CashRegister";
             this.Text = "Cash Register";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -310,8 +313,8 @@ namespace Final_Project_CS
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button checkoutButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox productSearch;
     }
 }
