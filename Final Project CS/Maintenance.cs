@@ -61,6 +61,7 @@ namespace Final_Project_CS
         private void addButton_Click(object sender, EventArgs e)
         {
             Product p = new Product();
+            p.ID = addPID.Text;
             p.Name = addPName.Text;
             p.Price = Convert.ToDouble(addPPrice.Text);
             p.Quantity = Convert.ToDouble(addPQuantity.Text);

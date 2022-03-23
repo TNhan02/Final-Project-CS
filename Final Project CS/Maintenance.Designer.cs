@@ -30,9 +30,6 @@ namespace Final_Project_CS
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.addPQuantity = new System.Windows.Forms.TextBox();
-            this.addPPrice = new System.Windows.Forms.TextBox();
-            this.addPName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +39,11 @@ namespace Final_Project_CS
             this.cashButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.addPID = new System.Windows.Forms.TextBox();
+            this.addPName = new System.Windows.Forms.TextBox();
+            this.addPPrice = new System.Windows.Forms.TextBox();
+            this.addPQuantity = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
             this.panel1.SuspendLayout();
@@ -52,41 +54,22 @@ namespace Final_Project_CS
             this.groupBox1.Controls.Add(this.addPQuantity);
             this.groupBox1.Controls.Add(this.addPPrice);
             this.groupBox1.Controls.Add(this.addPName);
+            this.groupBox1.Controls.Add(this.addPID);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(41, 159);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(254, 153);
+            this.groupBox1.Size = new System.Drawing.Size(254, 157);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Product";
             // 
-            // addPQuantity
-            // 
-            this.addPQuantity.Location = new System.Drawing.Point(88, 113);
-            this.addPQuantity.Name = "addPQuantity";
-            this.addPQuantity.Size = new System.Drawing.Size(131, 22);
-            this.addPQuantity.TabIndex = 5;
-            // 
-            // addPPrice
-            // 
-            this.addPPrice.Location = new System.Drawing.Point(88, 78);
-            this.addPPrice.Name = "addPPrice";
-            this.addPPrice.Size = new System.Drawing.Size(131, 22);
-            this.addPPrice.TabIndex = 4;
-            // 
-            // addPName
-            // 
-            this.addPName.Location = new System.Drawing.Point(88, 42);
-            this.addPName.Name = "addPName";
-            this.addPName.Size = new System.Drawing.Size(131, 22);
-            this.addPName.TabIndex = 3;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 116);
+            this.label4.Location = new System.Drawing.Point(6, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 17);
             this.label4.TabIndex = 2;
@@ -95,7 +78,7 @@ namespace Final_Project_CS
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 80);
+            this.label3.Location = new System.Drawing.Point(13, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 1;
@@ -104,7 +87,7 @@ namespace Final_Project_CS
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 39);
+            this.label2.Location = new System.Drawing.Point(13, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 0;
@@ -126,7 +109,7 @@ namespace Final_Project_CS
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(116, 318);
+            this.addButton.Location = new System.Drawing.Point(114, 322);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 28);
             this.addButton.TabIndex = 3;
@@ -175,6 +158,43 @@ namespace Final_Project_CS
             this.panel1.Size = new System.Drawing.Size(948, 102);
             this.panel1.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "ID";
+            // 
+            // addPID
+            // 
+            this.addPID.Location = new System.Drawing.Point(73, 28);
+            this.addPID.Name = "addPID";
+            this.addPID.Size = new System.Drawing.Size(159, 22);
+            this.addPID.TabIndex = 4;
+            // 
+            // addPName
+            // 
+            this.addPName.Location = new System.Drawing.Point(73, 58);
+            this.addPName.Name = "addPName";
+            this.addPName.Size = new System.Drawing.Size(159, 22);
+            this.addPName.TabIndex = 5;
+            // 
+            // addPPrice
+            // 
+            this.addPPrice.Location = new System.Drawing.Point(73, 89);
+            this.addPPrice.Name = "addPPrice";
+            this.addPPrice.Size = new System.Drawing.Size(159, 22);
+            this.addPPrice.TabIndex = 6;
+            // 
+            // addPQuantity
+            // 
+            this.addPQuantity.Location = new System.Drawing.Point(73, 120);
+            this.addPQuantity.Name = "addPQuantity";
+            this.addPQuantity.Size = new System.Drawing.Size(159, 22);
+            this.addPQuantity.TabIndex = 7;
+            // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -201,14 +221,16 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView ProductList;
-        private System.Windows.Forms.TextBox addPQuantity;
-        private System.Windows.Forms.TextBox addPPrice;
-        private System.Windows.Forms.TextBox addPName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cashButton;
         private System.Windows.Forms.Button reportButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox addPQuantity;
+        private System.Windows.Forms.TextBox addPPrice;
+        private System.Windows.Forms.TextBox addPName;
+        private System.Windows.Forms.TextBox addPID;
+        private System.Windows.Forms.Label label5;
     }
 }
