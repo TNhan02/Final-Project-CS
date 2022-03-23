@@ -44,9 +44,9 @@ namespace Final_Project_CS
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.itemsCount = new System.Windows.Forms.TextBox();
+            this.TaxAmount = new System.Windows.Forms.TextBox();
+            this.totalPay = new System.Windows.Forms.TextBox();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -203,26 +203,26 @@ namespace Final_Project_CS
             this.label6.TabIndex = 7;
             this.label6.Text = "TOTAL TO PAY:";
             // 
-            // textBox1
+            // itemsCount
             // 
-            this.textBox1.Location = new System.Drawing.Point(540, 508);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 23);
-            this.textBox1.TabIndex = 8;
+            this.itemsCount.Location = new System.Drawing.Point(540, 508);
+            this.itemsCount.Name = "itemsCount";
+            this.itemsCount.Size = new System.Drawing.Size(111, 23);
+            this.itemsCount.TabIndex = 8;
             // 
-            // textBox2
+            // TaxAmount
             // 
-            this.textBox2.Location = new System.Drawing.Point(540, 550);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 23);
-            this.textBox2.TabIndex = 9;
+            this.TaxAmount.Location = new System.Drawing.Point(540, 550);
+            this.TaxAmount.Name = "TaxAmount";
+            this.TaxAmount.Size = new System.Drawing.Size(111, 23);
+            this.TaxAmount.TabIndex = 9;
             // 
-            // textBox3
+            // totalPay
             // 
-            this.textBox3.Location = new System.Drawing.Point(540, 588);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(111, 23);
-            this.textBox3.TabIndex = 10;
+            this.totalPay.Location = new System.Drawing.Point(540, 588);
+            this.totalPay.Name = "totalPay";
+            this.totalPay.Size = new System.Drawing.Size(111, 23);
+            this.totalPay.TabIndex = 10;
             // 
             // checkoutButton
             // 
@@ -237,9 +237,9 @@ namespace Final_Project_CS
             // searchButton
             // 
             this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.searchButton.Location = new System.Drawing.Point(122, 307);
+            this.searchButton.Location = new System.Drawing.Point(122, 304);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(102, 23);
+            this.searchButton.Size = new System.Drawing.Size(102, 33);
             this.searchButton.TabIndex = 12;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -248,7 +248,7 @@ namespace Final_Project_CS
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 281);
+            this.label7.Location = new System.Drawing.Point(34, 278);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 17);
             this.label7.TabIndex = 13;
@@ -256,7 +256,7 @@ namespace Final_Project_CS
             // 
             // productSearch
             // 
-            this.productSearch.Location = new System.Drawing.Point(128, 278);
+            this.productSearch.Location = new System.Drawing.Point(128, 275);
             this.productSearch.Name = "productSearch";
             this.productSearch.Size = new System.Drawing.Size(191, 23);
             this.productSearch.TabIndex = 14;
@@ -270,9 +270,9 @@ namespace Final_Project_CS
             this.Controls.Add(this.label7);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.checkoutButton);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.totalPay);
+            this.Controls.Add(this.TaxAmount);
+            this.Controls.Add(this.itemsCount);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -282,7 +282,6 @@ namespace Final_Project_CS
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "CashRegister";
             this.Text = "Cash Register";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -309,9 +308,9 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox itemsCount;
+        private System.Windows.Forms.TextBox TaxAmount;
+        private System.Windows.Forms.TextBox totalPay;
         private System.Windows.Forms.Button checkoutButton;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Label label7;

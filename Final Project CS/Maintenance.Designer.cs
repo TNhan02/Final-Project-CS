@@ -30,6 +30,11 @@ namespace Final_Project_CS
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addPQuantity = new System.Windows.Forms.TextBox();
+            this.addPPrice = new System.Windows.Forms.TextBox();
+            this.addPName = new System.Windows.Forms.TextBox();
+            this.addPID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,11 +44,8 @@ namespace Final_Project_CS
             this.cashButton = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.addPID = new System.Windows.Forms.TextBox();
-            this.addPName = new System.Windows.Forms.TextBox();
-            this.addPPrice = new System.Windows.Forms.TextBox();
-            this.addPQuantity = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.searchPID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
             this.panel1.SuspendLayout();
@@ -65,6 +67,43 @@ namespace Final_Project_CS
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Product";
+            // 
+            // addPQuantity
+            // 
+            this.addPQuantity.Location = new System.Drawing.Point(73, 120);
+            this.addPQuantity.Name = "addPQuantity";
+            this.addPQuantity.Size = new System.Drawing.Size(159, 22);
+            this.addPQuantity.TabIndex = 7;
+            // 
+            // addPPrice
+            // 
+            this.addPPrice.Location = new System.Drawing.Point(73, 89);
+            this.addPPrice.Name = "addPPrice";
+            this.addPPrice.Size = new System.Drawing.Size(159, 22);
+            this.addPPrice.TabIndex = 6;
+            // 
+            // addPName
+            // 
+            this.addPName.Location = new System.Drawing.Point(73, 58);
+            this.addPName.Name = "addPName";
+            this.addPName.Size = new System.Drawing.Size(159, 22);
+            this.addPName.TabIndex = 5;
+            // 
+            // addPID
+            // 
+            this.addPID.Location = new System.Drawing.Point(73, 28);
+            this.addPID.Name = "addPID";
+            this.addPID.Size = new System.Drawing.Size(159, 22);
+            this.addPID.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "ID";
             // 
             // label4
             // 
@@ -99,12 +138,12 @@ namespace Final_Project_CS
             this.ProductList.AllowUserToDeleteRows = false;
             this.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductList.Location = new System.Drawing.Point(327, 144);
+            this.ProductList.Location = new System.Drawing.Point(327, 159);
             this.ProductList.Name = "ProductList";
             this.ProductList.ReadOnly = true;
             this.ProductList.RowHeadersWidth = 51;
             this.ProductList.RowTemplate.Height = 24;
-            this.ProductList.Size = new System.Drawing.Size(615, 337);
+            this.ProductList.Size = new System.Drawing.Size(615, 356);
             this.ProductList.TabIndex = 2;
             // 
             // addButton
@@ -158,48 +197,29 @@ namespace Final_Project_CS
             this.panel1.Size = new System.Drawing.Size(948, 102);
             this.panel1.TabIndex = 0;
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 17);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "ID";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(324, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 17);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Product ID";
             // 
-            // addPID
+            // searchPID
             // 
-            this.addPID.Location = new System.Drawing.Point(73, 28);
-            this.addPID.Name = "addPID";
-            this.addPID.Size = new System.Drawing.Size(159, 22);
-            this.addPID.TabIndex = 4;
-            // 
-            // addPName
-            // 
-            this.addPName.Location = new System.Drawing.Point(73, 58);
-            this.addPName.Name = "addPName";
-            this.addPName.Size = new System.Drawing.Size(159, 22);
-            this.addPName.TabIndex = 5;
-            // 
-            // addPPrice
-            // 
-            this.addPPrice.Location = new System.Drawing.Point(73, 89);
-            this.addPPrice.Name = "addPPrice";
-            this.addPPrice.Size = new System.Drawing.Size(159, 22);
-            this.addPPrice.TabIndex = 6;
-            // 
-            // addPQuantity
-            // 
-            this.addPQuantity.Location = new System.Drawing.Point(73, 120);
-            this.addPQuantity.Name = "addPQuantity";
-            this.addPQuantity.Size = new System.Drawing.Size(159, 22);
-            this.addPQuantity.TabIndex = 7;
+            this.searchPID.Location = new System.Drawing.Point(404, 121);
+            this.searchPID.Name = "searchPID";
+            this.searchPID.Size = new System.Drawing.Size(133, 22);
+            this.searchPID.TabIndex = 5;
             // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 510);
+            this.ClientSize = new System.Drawing.Size(954, 542);
+            this.Controls.Add(this.searchPID);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.ProductList);
             this.Controls.Add(this.groupBox1);
@@ -213,6 +233,7 @@ namespace Final_Project_CS
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -232,5 +253,7 @@ namespace Final_Project_CS
         private System.Windows.Forms.TextBox addPName;
         private System.Windows.Forms.TextBox addPID;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox searchPID;
     }
 }
