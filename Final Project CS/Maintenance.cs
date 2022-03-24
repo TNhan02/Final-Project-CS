@@ -52,5 +52,10 @@ namespace Final_Project_CS
                                           + "Quantity: " + products.Quantity + "\n");
             }
         }
+
+        private void addPID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
