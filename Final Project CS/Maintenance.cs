@@ -47,15 +47,10 @@ namespace Final_Project_CS
             foreach(var products in productList)
             {
                 File.AppendAllText(productFile, "ID: " + products.ID + "/"
-                                          + "Name: " + products.Name + "/"
-                                          + "Price: " + products.Price + "/"
-                                          + "Quantity: " + products.Quantity + "\n");
+                                              + "Name: " + products.Name + "/"
+                                              + "Price: " + products.Price + "/"
+                                              + "Quantity: " + products.Quantity + "\n");
             }
-        }
-
-        private void addPID_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
