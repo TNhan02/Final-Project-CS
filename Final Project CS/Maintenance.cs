@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Final_Project_CS
 {
@@ -15,18 +16,12 @@ namespace Final_Project_CS
         CashRegister cashForm = new CashRegister();
         Report reportForm = new Report();
         public List<Product> productList = new List<Product>();
-        DataSet ds = null;
+        private const string productFile = "..//../Products.txt";
 
         public Maintenance()
         {
             InitializeComponent();
-        }
-        
-        private void Maintenance_Load(object sender, EventArgs e)
-        {
-            var products = this.productList;
-
-            ProductList.DataSource = products;
+            //get the product list appear from here
         }
 
         private void cashButton_Click(object sender, EventArgs e)
@@ -49,6 +44,13 @@ namespace Final_Project_CS
 
             productList.Add(p);
             ProductList.Rows.Add(p.ID, p.Name, p.Price, p.Quantity);
+            foreach(var products in productList)
+            {
+                File.AppendAllText(productFile, "ID: " + products.ID + "/"
+                                          + "Name: " + products.Name + "/"
+                                          + "Price: " + products.Price + "/"
+                                          + "Quantity: " + products.Quantity + "\n");
+            }
         }
     }
 }

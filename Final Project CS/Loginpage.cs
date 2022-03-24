@@ -20,7 +20,7 @@ namespace Final_Project_CS
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if ((username.Text == "admin") && (password.Text == "IoTstudent"))
+            if ((username.Text == "") && (password.Text == ""))
             {
                 this.Hide();
                 main.Show();

@@ -39,6 +39,10 @@ namespace Final_Project_CS
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ProductList = new System.Windows.Forms.DataGridView();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cashButton = new System.Windows.Forms.Button();
@@ -61,7 +65,7 @@ namespace Final_Project_CS
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(41, 159);
+            this.groupBox1.Location = new System.Drawing.Point(37, 159);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(254, 157);
             this.groupBox1.TabIndex = 1;
@@ -138,6 +142,11 @@ namespace Final_Project_CS
             this.ProductList.AllowUserToDeleteRows = false;
             this.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PID,
+            this.PName,
+            this.PPrice,
+            this.PQuantity});
             this.ProductList.Location = new System.Drawing.Point(327, 159);
             this.ProductList.Name = "ProductList";
             this.ProductList.ReadOnly = true;
@@ -146,11 +155,39 @@ namespace Final_Project_CS
             this.ProductList.Size = new System.Drawing.Size(615, 356);
             this.ProductList.TabIndex = 2;
             // 
+            // PID
+            // 
+            this.PID.HeaderText = "ID";
+            this.PID.MinimumWidth = 6;
+            this.PID.Name = "PID";
+            this.PID.ReadOnly = true;
+            // 
+            // PName
+            // 
+            this.PName.HeaderText = "Name";
+            this.PName.MinimumWidth = 6;
+            this.PName.Name = "PName";
+            this.PName.ReadOnly = true;
+            // 
+            // PPrice
+            // 
+            this.PPrice.HeaderText = "Price";
+            this.PPrice.MinimumWidth = 6;
+            this.PPrice.Name = "PPrice";
+            this.PPrice.ReadOnly = true;
+            // 
+            // PQuantity
+            // 
+            this.PQuantity.HeaderText = "Quantity";
+            this.PQuantity.MinimumWidth = 6;
+            this.PQuantity.Name = "PQuantity";
+            this.PQuantity.ReadOnly = true;
+            // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(114, 322);
+            this.addButton.Location = new System.Drawing.Point(110, 322);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 28);
+            this.addButton.Size = new System.Drawing.Size(91, 28);
             this.addButton.TabIndex = 3;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
@@ -168,7 +205,7 @@ namespace Final_Project_CS
             // 
             // cashButton
             // 
-            this.cashButton.Location = new System.Drawing.Point(501, 29);
+            this.cashButton.Location = new System.Drawing.Point(512, 29);
             this.cashButton.Name = "cashButton";
             this.cashButton.Size = new System.Drawing.Size(140, 45);
             this.cashButton.TabIndex = 1;
@@ -192,9 +229,9 @@ namespace Final_Project_CS
             this.panel1.Controls.Add(this.reportButton);
             this.panel1.Controls.Add(this.cashButton);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 7);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(948, 102);
+            this.panel1.Size = new System.Drawing.Size(954, 109);
             this.panel1.TabIndex = 0;
             // 
             // label6
@@ -217,7 +254,7 @@ namespace Final_Project_CS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 542);
+            this.ClientSize = new System.Drawing.Size(954, 547);
             this.Controls.Add(this.searchPID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.addButton);
@@ -226,7 +263,6 @@ namespace Final_Project_CS
             this.Controls.Add(this.panel1);
             this.Name = "Maintenance";
             this.Text = "Maintenance";
-            this.Load += new System.EventHandler(this.Maintenance_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
@@ -255,5 +291,9 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox searchPID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PQuantity;
     }
 }
