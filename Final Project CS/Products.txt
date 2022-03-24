@@ -1,0 +1,7 @@
+
+ID: 11/Name: Iphone 11 /Price: 600/Quantity: 100
+ID: 11/Name: Iphone 11 /Price: 600/Quantity: 100
+ID: 11P/Name: Iphone 11 Pro/Price: 700/Quantity: 100
+ID: 11/Name: Iphone 11 /Price: 600/Quantity: 100
+ID: 11P/Name: Iphone 11 Pro/Price: 700/Quantity: 100
+ID: 11PM/Name: Iphone 11 Pro Max/Price: 750/Quantity: 100

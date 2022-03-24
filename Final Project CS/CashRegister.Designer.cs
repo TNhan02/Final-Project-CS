@@ -226,10 +226,9 @@ namespace Final_Project_CS
             // 
             // checkoutButton
             // 
-            this.checkoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.checkoutButton.Location = new System.Drawing.Point(694, 539);
+            this.checkoutButton.Location = new System.Drawing.Point(680, 537);
             this.checkoutButton.Name = "checkoutButton";
-            this.checkoutButton.Size = new System.Drawing.Size(130, 45);
+            this.checkoutButton.Size = new System.Drawing.Size(130, 48);
             this.checkoutButton.TabIndex = 11;
             this.checkoutButton.Text = "Pay Here";
             this.checkoutButton.UseVisualStyleBackColor = false;
@@ -238,7 +237,7 @@ namespace Final_Project_CS
             // searchButton
             // 
             this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.searchButton.Location = new System.Drawing.Point(122, 304);
+            this.searchButton.Location = new System.Drawing.Point(122, 301);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(102, 33);
             this.searchButton.TabIndex = 12;
@@ -249,7 +248,7 @@ namespace Final_Project_CS
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 278);
+            this.label7.Location = new System.Drawing.Point(34, 275);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 20);
             this.label7.TabIndex = 13;
@@ -257,7 +256,7 @@ namespace Final_Project_CS
             // 
             // productSearch
             // 
-            this.productSearch.Location = new System.Drawing.Point(128, 275);
+            this.productSearch.Location = new System.Drawing.Point(128, 272);
             this.productSearch.Name = "productSearch";
             this.productSearch.Size = new System.Drawing.Size(191, 26);
             this.productSearch.TabIndex = 14;
