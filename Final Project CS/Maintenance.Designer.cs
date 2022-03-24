@@ -61,74 +61,81 @@ namespace Final_Project_CS
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(41, 159);
+            this.groupBox1.Location = new System.Drawing.Point(46, 199);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(254, 157);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(286, 196);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Product";
             // 
             // addPQuantity
             // 
-            this.addPQuantity.Location = new System.Drawing.Point(73, 120);
+            this.addPQuantity.Location = new System.Drawing.Point(82, 150);
+            this.addPQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addPQuantity.Name = "addPQuantity";
-            this.addPQuantity.Size = new System.Drawing.Size(159, 22);
+            this.addPQuantity.Size = new System.Drawing.Size(178, 26);
             this.addPQuantity.TabIndex = 7;
             // 
             // addPPrice
             // 
-            this.addPPrice.Location = new System.Drawing.Point(73, 89);
+            this.addPPrice.Location = new System.Drawing.Point(82, 111);
+            this.addPPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addPPrice.Name = "addPPrice";
-            this.addPPrice.Size = new System.Drawing.Size(159, 22);
+            this.addPPrice.Size = new System.Drawing.Size(178, 26);
             this.addPPrice.TabIndex = 6;
             // 
             // addPName
             // 
-            this.addPName.Location = new System.Drawing.Point(73, 58);
+            this.addPName.Location = new System.Drawing.Point(82, 72);
+            this.addPName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addPName.Name = "addPName";
-            this.addPName.Size = new System.Drawing.Size(159, 22);
+            this.addPName.Size = new System.Drawing.Size(178, 26);
             this.addPName.TabIndex = 5;
             // 
             // addPID
             // 
-            this.addPID.Location = new System.Drawing.Point(73, 28);
+            this.addPID.Location = new System.Drawing.Point(82, 35);
+            this.addPID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addPID.Name = "addPID";
-            this.addPID.Size = new System.Drawing.Size(159, 22);
+            this.addPID.Size = new System.Drawing.Size(178, 26);
             this.addPID.TabIndex = 4;
+            this.addPID.TextChanged += new System.EventHandler(this.addPID_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 28);
+            this.label5.Location = new System.Drawing.Point(26, 35);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 17);
+            this.label5.Size = new System.Drawing.Size(26, 20);
             this.label5.TabIndex = 3;
             this.label5.Text = "ID";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 120);
+            this.label4.Location = new System.Drawing.Point(7, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 17);
+            this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Quantity";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 89);
+            this.label3.Location = new System.Drawing.Point(15, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 17);
+            this.label3.Size = new System.Drawing.Size(44, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Price";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 58);
+            this.label2.Location = new System.Drawing.Point(15, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
@@ -138,19 +145,21 @@ namespace Final_Project_CS
             this.ProductList.AllowUserToDeleteRows = false;
             this.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductList.Location = new System.Drawing.Point(327, 159);
+            this.ProductList.Location = new System.Drawing.Point(368, 199);
+            this.ProductList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProductList.Name = "ProductList";
             this.ProductList.ReadOnly = true;
             this.ProductList.RowHeadersWidth = 51;
             this.ProductList.RowTemplate.Height = 24;
-            this.ProductList.Size = new System.Drawing.Size(615, 356);
+            this.ProductList.Size = new System.Drawing.Size(692, 445);
             this.ProductList.TabIndex = 2;
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(114, 322);
+            this.addButton.Location = new System.Drawing.Point(128, 402);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 28);
+            this.addButton.Size = new System.Drawing.Size(84, 35);
             this.addButton.TabIndex = 3;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
@@ -160,17 +169,18 @@ namespace Final_Project_CS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 35);
+            this.label1.Location = new System.Drawing.Point(37, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(340, 29);
+            this.label1.Size = new System.Drawing.Size(403, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Product Maintenance Software";
             // 
             // cashButton
             // 
-            this.cashButton.Location = new System.Drawing.Point(501, 29);
+            this.cashButton.Location = new System.Drawing.Point(564, 36);
+            this.cashButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cashButton.Name = "cashButton";
-            this.cashButton.Size = new System.Drawing.Size(140, 45);
+            this.cashButton.Size = new System.Drawing.Size(158, 56);
             this.cashButton.TabIndex = 1;
             this.cashButton.Text = "Cash Register";
             this.cashButton.UseVisualStyleBackColor = true;
@@ -178,9 +188,10 @@ namespace Final_Project_CS
             // 
             // reportButton
             // 
-            this.reportButton.Location = new System.Drawing.Point(679, 29);
+            this.reportButton.Location = new System.Drawing.Point(764, 36);
+            this.reportButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(140, 45);
+            this.reportButton.Size = new System.Drawing.Size(158, 56);
             this.reportButton.TabIndex = 2;
             this.reportButton.Text = "Report";
             this.reportButton.UseVisualStyleBackColor = true;
@@ -192,38 +203,41 @@ namespace Final_Project_CS
             this.panel1.Controls.Add(this.reportButton);
             this.panel1.Controls.Add(this.cashButton);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 7);
+            this.panel1.Location = new System.Drawing.Point(3, 9);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(948, 102);
+            this.panel1.Size = new System.Drawing.Size(1066, 128);
             this.panel1.TabIndex = 0;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(324, 124);
+            this.label6.Location = new System.Drawing.Point(364, 155);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 17);
+            this.label6.Size = new System.Drawing.Size(85, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "Product ID";
             // 
             // searchPID
             // 
-            this.searchPID.Location = new System.Drawing.Point(404, 121);
+            this.searchPID.Location = new System.Drawing.Point(454, 151);
+            this.searchPID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.searchPID.Name = "searchPID";
-            this.searchPID.Size = new System.Drawing.Size(133, 22);
+            this.searchPID.Size = new System.Drawing.Size(149, 26);
             this.searchPID.TabIndex = 5;
             // 
             // Maintenance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 542);
+            this.ClientSize = new System.Drawing.Size(1073, 678);
             this.Controls.Add(this.searchPID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.ProductList);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Maintenance";
             this.Text = "Maintenance";
             this.Load += new System.EventHandler(this.Maintenance_Load);

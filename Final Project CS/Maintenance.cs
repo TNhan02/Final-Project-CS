@@ -50,5 +50,10 @@ namespace Final_Project_CS
             productList.Add(p);
             ProductList.Rows.Add(p.ID, p.Name, p.Price, p.Quantity);
         }
+
+        private void addPID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
