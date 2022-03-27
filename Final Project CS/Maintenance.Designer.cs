@@ -140,9 +140,13 @@ namespace Final_Project_CS
             // ProductList
             // 
             this.ProductList.AllowUserToAddRows = false;
-            this.ProductList.AllowUserToDeleteRows = false;
             this.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PID,
+            this.PName,
+            this.PPrice,
+            this.PQuantity});
             this.ProductList.Location = new System.Drawing.Point(306, 135);
             this.ProductList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProductList.Name = "ProductList";
@@ -155,18 +159,16 @@ namespace Final_Project_CS
             // PID
             // 
             this.PID.HeaderText = "ID";
-            this.PID.MinimumWidth = 6;
+            this.PID.MinimumWidth = 3;
             this.PID.Name = "PID";
             this.PID.ReadOnly = true;
-            this.PID.Width = 125;
             // 
             // PName
             // 
             this.PName.HeaderText = "Name";
-            this.PName.MinimumWidth = 6;
+            this.PName.MinimumWidth = 8;
             this.PName.Name = "PName";
             this.PName.ReadOnly = true;
-            this.PName.Width = 125;
             // 
             // PPrice
             // 
@@ -174,7 +176,6 @@ namespace Final_Project_CS
             this.PPrice.MinimumWidth = 6;
             this.PPrice.Name = "PPrice";
             this.PPrice.ReadOnly = true;
-            this.PPrice.Width = 125;
             // 
             // PQuantity
             // 
@@ -182,14 +183,13 @@ namespace Final_Project_CS
             this.PQuantity.MinimumWidth = 6;
             this.PQuantity.Name = "PQuantity";
             this.PQuantity.ReadOnly = true;
-            this.PQuantity.Width = 125;
             // 
             // addButton
             // 
             this.addButton.Location = new System.Drawing.Point(109, 288);
             this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(67, 22);
+            this.addButton.Size = new System.Drawing.Size(76, 29);
             this.addButton.TabIndex = 3;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
@@ -249,7 +249,7 @@ namespace Final_Project_CS
             // 
             // searchPID
             // 
-            this.searchPID.Location = new System.Drawing.Point(382, 108);
+            this.searchPID.Location = new System.Drawing.Point(382, 105);
             this.searchPID.Name = "searchPID";
             this.searchPID.Size = new System.Drawing.Size(133, 22);
             this.searchPID.TabIndex = 5;

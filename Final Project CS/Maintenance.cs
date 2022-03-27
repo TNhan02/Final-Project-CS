@@ -21,7 +21,22 @@ namespace Final_Project_CS
         public Maintenance()
         {
             InitializeComponent();
-            //get the product list appear from here
+            //get the product list appearead from here
+            string[] lines = File.ReadAllLines(productFile);
+            string[] values;
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split('|');
+                string[] row = new string[values.Length];
+
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim();
+                }
+
+                ProductList.Rows.Add(row);
+            }
         }
 
         private void cashButton_Click(object sender, EventArgs e)
@@ -36,6 +51,7 @@ namespace Final_Project_CS
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            int count = 0;
             Product p = new Product();
             p.ID = addPID.Text;
             p.Name = addPName.Text;
@@ -43,14 +59,16 @@ namespace Final_Project_CS
             p.Quantity = Convert.ToDouble(addPQuantity.Text);
 
             productList.Add(p);
-            ProductList.Rows.Add(p.ID, p.Name, p.Price, p.Quantity);
-            foreach(var products in productList)
+            count++;
+            for(int i = 0; i < count; i++)
             {
-                File.AppendAllText(productFile, "ID: " + products.ID + "/"
-                                              + "Name: " + products.Name + "/"
-                                              + "Price: " + products.Price + "/"
-                                              + "Quantity: " + products.Quantity + "\n");
+                File.AppendAllText(productFile, p.ID + " | "
+                                              + p.Name + " | "
+                                              + p.Price + " | "
+                                              + p.Quantity + "\n");
             }
         }
+
+       
     }
 }

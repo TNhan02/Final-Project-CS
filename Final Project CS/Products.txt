@@ -1,7 +1,20 @@
-
-ID: 11/Name: Iphone 11 /Price: 600/Quantity: 100
-ID: 11/Name: Iphone 11 /Price: 600/Quantity: 100
-ID: 11P/Name: Iphone 11 Pro/Price: 700/Quantity: 100
-ID: 11/Name: Iphone 11 /Price: 600/Quantity: 100
-ID: 11P/Name: Iphone 11 Pro/Price: 700/Quantity: 100
-ID: 11PM/Name: Iphone 11 Pro Max/Price: 750/Quantity: 100
+11 | Iphone 11 | 580 | 100
+11P | Iphone 11 Pro | 650 | 100
+11PM | Iphone 11 Pro Max | 700 | 100
+12 | Iphone 12 | 645 | 100
+12P | Iphone 12 Pro | 880 | 100
+12PM | Iphone 12 Pro Max | 1150 | 100
+13 | Iphone 13 | 800 | 200
+13P | Iphone 13 Pro | 1100 | 200
+13PM | Iphone 13 Pro Max | 1280 | 200
+AP1 | Airpod 1 | 110 | 50
+AP2 | Airpod 2 | 150 | 150
+AP3 | Airpod 3 | 200 | 200
+APP | Airpod Pro | 250 | 200
+IA1 | Ipad Air 1 | 500 | 50
+IA2 | Ipad Air 2 | 740 | 50
+IM1-2021 | Ipad M1 2021 | 800 | 200
+IPro-2021 | Ipad Pro 2021 | 950 | 200
+M1-2021 | Macbook M1 2021 | 1175 | 150
+MP1-2021 | Macbook Pro M1 2021 | 1235 | 200
+M1-2022 | Macbook M1 2022 | 1300 | 50
