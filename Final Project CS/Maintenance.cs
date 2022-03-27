@@ -39,15 +39,16 @@ namespace Final_Project_CS
             }
         }
 
+
         private void cashButton_Click(object sender, EventArgs e)
         {
             cashForm.Show();
         }
-
         private void reportButton_Click(object sender, EventArgs e)
         {
             reportForm.Show();
         }
+
 
         private void addButton_Click(object sender, EventArgs e)
         {
@@ -71,7 +72,6 @@ namespace Final_Project_CS
                                               + p.Quantity + "\n");
             }
         }
-
         private void searchPID_TextChanged(object sender, EventArgs e)
         {
             (ProductList.DataSource as DataTable).DefaultView.RowFilter
