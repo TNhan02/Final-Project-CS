@@ -65,7 +65,7 @@ namespace Final_Project_CS
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(36, 127);
+            this.groupBox1.Location = new System.Drawing.Point(41, 147);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(254, 157);
@@ -147,7 +147,7 @@ namespace Final_Project_CS
             this.PName,
             this.PPrice,
             this.PQuantity});
-            this.ProductList.Location = new System.Drawing.Point(306, 135);
+            this.ProductList.Location = new System.Drawing.Point(306, 147);
             this.ProductList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProductList.Name = "ProductList";
             this.ProductList.ReadOnly = true;
@@ -186,7 +186,7 @@ namespace Final_Project_CS
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(109, 288);
+            this.addButton.Location = new System.Drawing.Point(114, 308);
             this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(76, 29);
@@ -241,7 +241,7 @@ namespace Final_Project_CS
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(302, 108);
+            this.label6.Location = new System.Drawing.Point(302, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 17);
             this.label6.TabIndex = 4;
@@ -249,16 +249,17 @@ namespace Final_Project_CS
             // 
             // searchPID
             // 
-            this.searchPID.Location = new System.Drawing.Point(382, 105);
+            this.searchPID.Location = new System.Drawing.Point(382, 107);
             this.searchPID.Name = "searchPID";
             this.searchPID.Size = new System.Drawing.Size(133, 22);
             this.searchPID.TabIndex = 5;
+            this.searchPID.TextChanged += new System.EventHandler(this.searchPID_TextChanged);
             // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 507);
+            this.ClientSize = new System.Drawing.Size(933, 535);
             this.Controls.Add(this.searchPID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.addButton);

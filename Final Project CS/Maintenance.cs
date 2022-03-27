@@ -51,6 +51,7 @@ namespace Final_Project_CS
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            //add product's information
             int count = 0;
             Product p = new Product();
             p.ID = addPID.Text;
@@ -58,8 +59,10 @@ namespace Final_Project_CS
             p.Price = Convert.ToDouble(addPPrice.Text);
             p.Quantity = Convert.ToDouble(addPQuantity.Text);
 
+            //add to productList
             productList.Add(p);
             count++;
+            //save products' information to Products.txt
             for(int i = 0; i < count; i++)
             {
                 File.AppendAllText(productFile, p.ID + " | "
@@ -69,6 +72,10 @@ namespace Final_Project_CS
             }
         }
 
-       
+        private void searchPID_TextChanged(object sender, EventArgs e)
+        {
+            (ProductList.DataSource as DataTable).DefaultView.RowFilter
+                = string.Format("PID like '%" + searchPID.Text + "%'");
+        }
     }
 }
