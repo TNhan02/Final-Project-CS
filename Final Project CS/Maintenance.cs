@@ -62,6 +62,7 @@ namespace Final_Project_CS
 
             //add to productList
             productList.Add(p);
+            ProductList.Rows.Add(p.ID, p.Name, p.Price, p.Quantity);
             count++;
             //save products' information to Products.txt
             for(int i = 0; i < count; i++)
