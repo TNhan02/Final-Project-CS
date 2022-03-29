@@ -61,7 +61,7 @@ namespace Final_Project_CS
             p.Quantity = Convert.ToDouble(addPQuantity.Text);
 
             //add to productList
-            productList.Add(p);
+            p.AddProduct();
             ProductList.Rows.Add(p.ID, p.Name, p.Price, p.Quantity);
             count++;
             //save products' information to Products.txt
@@ -73,10 +73,12 @@ namespace Final_Project_CS
                                               + p.Quantity + "\n");
             }
         }
-        private void searchPID_TextChanged(object sender, EventArgs e)
+
+        private void searchButton_Click(object sender, EventArgs e)
         {
-            (ProductList.DataSource as DataTable).DefaultView.RowFilter
-                = string.Format("PID like '%" + searchPID.Text + "%'");
+            DataTable table = new DataTable();
+            ProductList.DataSource = table;
+            table.DefaultView.RowFilter = "PID Like '" + searchPID.Text + "'";
         }
     }
 }

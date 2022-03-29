@@ -50,6 +50,7 @@ namespace Final_Project_CS
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.searchPID = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
             this.panel1.SuspendLayout();
@@ -68,7 +69,7 @@ namespace Final_Project_CS
             this.groupBox1.Location = new System.Drawing.Point(41, 147);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(254, 157);
+            this.groupBox1.Size = new System.Drawing.Size(246, 157);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Product";
@@ -207,7 +208,7 @@ namespace Final_Project_CS
             // 
             // cashButton
             // 
-            this.cashButton.Location = new System.Drawing.Point(486, 23);
+            this.cashButton.Location = new System.Drawing.Point(512, 23);
             this.cashButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cashButton.Name = "cashButton";
             this.cashButton.Size = new System.Drawing.Size(140, 45);
@@ -218,7 +219,7 @@ namespace Final_Project_CS
             // 
             // reportButton
             // 
-            this.reportButton.Location = new System.Drawing.Point(670, 23);
+            this.reportButton.Location = new System.Drawing.Point(699, 23);
             this.reportButton.Name = "reportButton";
             this.reportButton.Size = new System.Drawing.Size(140, 45);
             this.reportButton.TabIndex = 2;
@@ -232,10 +233,10 @@ namespace Final_Project_CS
             this.panel1.Controls.Add(this.reportButton);
             this.panel1.Controls.Add(this.cashButton);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 6);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 82);
+            this.panel1.Size = new System.Drawing.Size(931, 87);
             this.panel1.TabIndex = 0;
             // 
             // label6
@@ -253,13 +254,23 @@ namespace Final_Project_CS
             this.searchPID.Name = "searchPID";
             this.searchPID.Size = new System.Drawing.Size(133, 22);
             this.searchPID.TabIndex = 5;
-            this.searchPID.TextChanged += new System.EventHandler(this.searchPID_TextChanged);
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(521, 106);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(85, 23);
+            this.searchButton.TabIndex = 6;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 535);
+            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchPID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.addButton);
@@ -300,5 +311,6 @@ namespace Final_Project_CS
         private System.Windows.Forms.DataGridViewTextBoxColumn PName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn PQuantity;
+        private System.Windows.Forms.Button searchButton;
     }
 }
