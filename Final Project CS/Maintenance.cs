@@ -83,7 +83,7 @@ namespace Final_Project_CS
             }
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        private void searchPID_TextChanged(object sender, EventArgs e)
         {
             DataView dv = new DataView(table);
             dv.RowFilter = string.Format("ID LIKE '%{0}%'", searchPID.Text);

@@ -45,7 +45,6 @@ namespace Final_Project_CS
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.searchPID = new System.Windows.Forms.TextBox();
-            this.searchButton = new System.Windows.Forms.Button();
             this.Product_List = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -203,16 +202,7 @@ namespace Final_Project_CS
             this.searchPID.Name = "searchPID";
             this.searchPID.Size = new System.Drawing.Size(133, 22);
             this.searchPID.TabIndex = 5;
-            // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(521, 106);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(85, 23);
-            this.searchButton.TabIndex = 6;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            this.searchPID.TextChanged += new System.EventHandler(this.searchPID_TextChanged);
             // 
             // Product_List
             // 
@@ -234,7 +224,6 @@ namespace Final_Project_CS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 535);
             this.Controls.Add(this.Product_List);
-            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchPID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.addButton);
@@ -269,7 +258,6 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox searchPID;
-        private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.DataGridView Product_List;
     }
 }
