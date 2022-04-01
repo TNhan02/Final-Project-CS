@@ -85,7 +85,9 @@ namespace Final_Project_CS
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            
+            DataView dv = new DataView(table);
+            dv.RowFilter = string.Format("ID LIKE '%{0}%'", searchPID.Text);
+            Product_List.DataSource = dv;
         }
     }
 }
