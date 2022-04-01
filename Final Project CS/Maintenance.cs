@@ -22,7 +22,7 @@ namespace Final_Project_CS
         public Maintenance()
         {
             InitializeComponent();
-            //create table's columns
+            //create table's columns and datatable for Product_List
             table.Columns.Add("ID", typeof(string));
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Price", typeof(double));
