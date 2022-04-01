@@ -38,11 +38,6 @@ namespace Final_Project_CS
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ProductList = new System.Windows.Forms.DataGridView();
-            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cashButton = new System.Windows.Forms.Button();
@@ -51,9 +46,10 @@ namespace Final_Project_CS
             this.label6 = new System.Windows.Forms.Label();
             this.searchPID = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.Product_List = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Product_List)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -138,53 +134,6 @@ namespace Final_Project_CS
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
-            // ProductList
-            // 
-            this.ProductList.AllowUserToAddRows = false;
-            this.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PID,
-            this.PName,
-            this.PPrice,
-            this.PQuantity});
-            this.ProductList.Location = new System.Drawing.Point(306, 147);
-            this.ProductList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ProductList.Name = "ProductList";
-            this.ProductList.ReadOnly = true;
-            this.ProductList.RowHeadersWidth = 51;
-            this.ProductList.RowTemplate.Height = 24;
-            this.ProductList.Size = new System.Drawing.Size(615, 356);
-            this.ProductList.TabIndex = 2;
-            // 
-            // PID
-            // 
-            this.PID.HeaderText = "ID";
-            this.PID.MinimumWidth = 3;
-            this.PID.Name = "PID";
-            this.PID.ReadOnly = true;
-            // 
-            // PName
-            // 
-            this.PName.HeaderText = "Name";
-            this.PName.MinimumWidth = 8;
-            this.PName.Name = "PName";
-            this.PName.ReadOnly = true;
-            // 
-            // PPrice
-            // 
-            this.PPrice.HeaderText = "Price";
-            this.PPrice.MinimumWidth = 6;
-            this.PPrice.Name = "PPrice";
-            this.PPrice.ReadOnly = true;
-            // 
-            // PQuantity
-            // 
-            this.PQuantity.HeaderText = "Quantity";
-            this.PQuantity.MinimumWidth = 6;
-            this.PQuantity.Name = "PQuantity";
-            this.PQuantity.ReadOnly = true;
-            // 
             // addButton
             // 
             this.addButton.Location = new System.Drawing.Point(114, 308);
@@ -242,7 +191,7 @@ namespace Final_Project_CS
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(302, 110);
+            this.label6.Location = new System.Drawing.Point(300, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 17);
             this.label6.TabIndex = 4;
@@ -265,25 +214,39 @@ namespace Final_Project_CS
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
+            // Product_List
+            // 
+            this.Product_List.AllowUserToAddRows = false;
+            this.Product_List.AllowUserToDeleteRows = false;
+            this.Product_List.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Product_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Product_List.Location = new System.Drawing.Point(303, 147);
+            this.Product_List.Name = "Product_List";
+            this.Product_List.ReadOnly = true;
+            this.Product_List.RowHeadersWidth = 51;
+            this.Product_List.RowTemplate.Height = 24;
+            this.Product_List.Size = new System.Drawing.Size(612, 370);
+            this.Product_List.TabIndex = 7;
+            // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 535);
+            this.Controls.Add(this.Product_List);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchPID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.ProductList);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "Maintenance";
             this.Text = "Maintenance";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Product_List)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,7 +256,6 @@ namespace Final_Project_CS
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView ProductList;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label label1;
@@ -307,10 +269,7 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox searchPID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PQuantity;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.DataGridView Product_List;
     }
 }

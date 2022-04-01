@@ -17,11 +17,20 @@ namespace Final_Project_CS
         Report reportForm = new Report();
         public List<Product> productList = new List<Product>();
         private const string productFile = "..//../Products.txt";
+        DataTable table = new DataTable();
 
         public Maintenance()
         {
             InitializeComponent();
-            //get the product list appearead from here
+            //create table's columns
+            table.Columns.Add("ID", typeof(string));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Price", typeof(double));
+            table.Columns.Add("Quantity", typeof(double));
+            Product_List.DataSource = table;
+
+
+            //get the product list appeared from here
             string[] lines = File.ReadAllLines(productFile);
             string[] values;
 
@@ -35,7 +44,7 @@ namespace Final_Project_CS
                     row[j] = values[j].Trim();
                 }
 
-                ProductList.Rows.Add(row);
+                table.Rows.Add(row);
             }
         }
 
@@ -62,7 +71,7 @@ namespace Final_Project_CS
 
             //add to productList
             p.AddProduct();
-            ProductList.Rows.Add(p.ID, p.Name, p.Price, p.Quantity);
+            Product_List.Rows.Add(p.ID, p.Name, p.Price, p.Quantity);
             count++;
             //save products' information to Products.txt
             for(int i = 0; i < count; i++)
@@ -76,10 +85,7 @@ namespace Final_Project_CS
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            DataTable table = new DataTable();
-            table.Columns.Add("PID");
-            DataView dv = new DataView(table);
-            dv.RowFilter = string.Format("PID LIKE '%{0}%'", searchPID.Text);
+            
         }
     }
 }
