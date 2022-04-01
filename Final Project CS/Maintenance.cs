@@ -77,8 +77,9 @@ namespace Final_Project_CS
         private void searchButton_Click(object sender, EventArgs e)
         {
             DataTable table = new DataTable();
-            ProductList.DataSource = table;
-            table.DefaultView.RowFilter = "PID Like '" + searchPID.Text + "'";
+            table.Columns.Add("PID");
+            DataView dv = new DataView(table);
+            dv.RowFilter = string.Format("PID LIKE '%{0}%'", searchPID.Text);
         }
     }
 }

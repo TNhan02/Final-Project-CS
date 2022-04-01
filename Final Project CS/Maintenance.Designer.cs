@@ -219,7 +219,7 @@ namespace Final_Project_CS
             // 
             // reportButton
             // 
-            this.reportButton.Location = new System.Drawing.Point(699, 23);
+            this.reportButton.Location = new System.Drawing.Point(708, 23);
             this.reportButton.Name = "reportButton";
             this.reportButton.Size = new System.Drawing.Size(140, 45);
             this.reportButton.TabIndex = 2;
