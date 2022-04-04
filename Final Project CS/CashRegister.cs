@@ -17,9 +17,32 @@ namespace Final_Project_CS
         public List<Product> productList { get; set; }
         private const string productFile = "..//../Products.txt";
         string[] lines = File.ReadAllLines(productFile);
+        DataTable table = new DataTable();
         public CashRegister()
         {
             InitializeComponent();
+            //create table's columns
+            table.Columns.Add("ID", typeof(string));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("Price", typeof(double));
+            table.Columns.Add("Quantity", typeof(double));
+
+            //get the product list appeared from here
+            string[] lines = File.ReadAllLines(productFile);
+            string[] values;
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split('|');
+                string[] row = new string[values.Length];
+
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim();
+                }
+
+                table.Rows.Add(row);
+            }
         }
 
         private void checkoutButton_Click(object sender, EventArgs e)
@@ -31,10 +54,11 @@ namespace Final_Project_CS
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            
-
             Product p = new Product();
             p.ID = productSearch.Text;
+            DataView view = new DataView(table);
+            view.Find(productList.Contains(p));
+
             if (productList.Contains(p))
             {
                 MessageBox.Show($"{p.ID} is available in our shop");
