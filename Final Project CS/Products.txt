@@ -19,3 +19,5 @@ M1-2021 | Macbook M1 2021 | 1175 | 150
 MP1-2021 | Macbook Pro M1 2021 | 1235 | 200
 M1-2022 | Macbook M1 2022 | 1300 | 50
 MP1-2022 | Macbook Pro M1 2022 | 1380 | 50
+AW3 | Watch Series 3 | 200 | 20
+AW4 | Watch Series 4 | 250 | 20

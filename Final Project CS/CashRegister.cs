@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using System.IO;
 
 namespace Final_Project_CS
 {
     public partial class CashRegister : Form
     {
         public List<Product> productList { get; set; }
+        private const string productFile = "..//../Products.txt";
+        string[] lines = File.ReadAllLines(productFile);
         public CashRegister()
         {
             InitializeComponent();
@@ -28,6 +31,8 @@ namespace Final_Project_CS
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+            
+
             Product p = new Product();
             p.ID = productSearch.Text;
             if (productList.Contains(p))
@@ -39,7 +44,5 @@ namespace Final_Project_CS
                 MessageBox.Show($"{p.ID} is not available in our shop");
             }
         }
-
-        
     }
 }
