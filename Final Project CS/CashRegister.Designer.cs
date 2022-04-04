@@ -158,7 +158,7 @@ namespace Final_Project_CS
             this.addcartButton.Location = new System.Drawing.Point(122, 192);
             this.addcartButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addcartButton.Name = "addcartButton";
-            this.addcartButton.Size = new System.Drawing.Size(116, 40);
+            this.addcartButton.Size = new System.Drawing.Size(116, 33);
             this.addcartButton.TabIndex = 3;
             this.addcartButton.Text = "Add to Cart";
             this.addcartButton.UseVisualStyleBackColor = true;
@@ -239,7 +239,7 @@ namespace Final_Project_CS
             this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.searchButton.Location = new System.Drawing.Point(122, 301);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(102, 33);
+            this.searchButton.Size = new System.Drawing.Size(116, 33);
             this.searchButton.TabIndex = 12;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -282,6 +282,7 @@ namespace Final_Project_CS
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "CashRegister";
             this.Text = "Cash Register";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
