@@ -15,7 +15,6 @@ namespace Final_Project_CS
     {
         CashRegister cashForm = new CashRegister();
         Report reportForm = new Report();
-        public List<Product> productList = new List<Product>();
         private const string productFile = "..//../Products.txt";
         DataTable table = new DataTable();
 

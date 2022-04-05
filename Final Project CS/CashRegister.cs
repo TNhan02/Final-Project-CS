@@ -14,7 +14,6 @@ namespace Final_Project_CS
 {
     public partial class CashRegister : Form
     {
-        public List<Product> productList { get; set; }
         private const string productFile = "..//../Products.txt";
         string[] lines = File.ReadAllLines(productFile);
         DataTable table = new DataTable();
@@ -57,15 +56,14 @@ namespace Final_Project_CS
         {
             Product ps = new Product();
             ps.ID = productSearch.Text;
-            DataView view = new DataView(table);
 
-            if (view.Find(productList.Contains(ps)) == 1)
+            if (table.Rows.Contains(ps.ID))
             {
-                MessageBox.Show($"{ps.ID} is available in our shop");
+                MessageBox.Show($"{ps.ID} is available in shop");
             }
             else
             {
-                MessageBox.Show($"{ps.ID} is not available in our shop");
+                MessageBox.Show($"{ps.ID} is not available in shop");
             }
         }
 

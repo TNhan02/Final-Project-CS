@@ -61,7 +61,7 @@ namespace Final_Project_CS
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(41, 147);
+            this.groupBox1.Location = new System.Drawing.Point(39, 147);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(246, 157);
@@ -215,14 +215,14 @@ namespace Final_Project_CS
             this.Product_List.ReadOnly = true;
             this.Product_List.RowHeadersWidth = 51;
             this.Product_List.RowTemplate.Height = 24;
-            this.Product_List.Size = new System.Drawing.Size(612, 370);
+            this.Product_List.Size = new System.Drawing.Size(618, 370);
             this.Product_List.TabIndex = 7;
             // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 535);
+            this.ClientSize = new System.Drawing.Size(933, 540);
             this.Controls.Add(this.Product_List);
             this.Controls.Add(this.searchPID);
             this.Controls.Add(this.label6);
