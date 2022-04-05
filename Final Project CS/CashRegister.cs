@@ -18,6 +18,7 @@ namespace Final_Project_CS
         private const string productFile = "..//../Products.txt";
         string[] lines = File.ReadAllLines(productFile);
         DataTable table = new DataTable();
+
         public CashRegister()
         {
             InitializeComponent();
@@ -54,18 +55,29 @@ namespace Final_Project_CS
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            Product p = new Product();
-            p.ID = productSearch.Text;
+            Product ps = new Product();
+            ps.ID = productSearch.Text;
             DataView view = new DataView(table);
-            view.Find(productList.Contains(p));
 
-            if (productList.Contains(p))
+            if (view.Find(productList.Contains(ps)) == 1)
             {
-                MessageBox.Show($"{p.ID} is available in our shop");
+                MessageBox.Show($"{ps.ID} is available in our shop");
             }
             else
             {
-                MessageBox.Show($"{p.ID} is not available in our shop");
+                MessageBox.Show($"{ps.ID} is not available in our shop");
+            }
+        }
+
+        private void addcartButton_Click(object sender, EventArgs e)
+        {
+            Product p = new Product();
+            DataView dv = new DataView(table);
+
+            p.Name = addName.Text;
+            if (dv.Find(table.Rows[1]) == 1)
+            {
+                ShoppingCart.Rows.Add();
             }
         }
     }
