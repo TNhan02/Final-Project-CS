@@ -29,13 +29,12 @@ namespace Final_Project_CS
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.addQuantity = new System.Windows.Forms.TextBox();
-            this.addName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.ShoppingCart = new System.Windows.Forms.DataGridView();
-            this.addcartButton = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,63 +46,31 @@ namespace Final_Project_CS
             this.searchButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.productSearch = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ID_APP = new System.Windows.Forms.Button();
+            this.ID_M1 = new System.Windows.Forms.Button();
+            this.ID_MP1 = new System.Windows.Forms.Button();
+            this.ID_IPro = new System.Windows.Forms.Button();
+            this.ID_IA2 = new System.Windows.Forms.Button();
+            this.ID_IA1 = new System.Windows.Forms.Button();
+            this.ID_IM1 = new System.Windows.Forms.Button();
+            this.ID_AP3 = new System.Windows.Forms.Button();
+            this.ID_AP2 = new System.Windows.Forms.Button();
+            this.ID_AP1 = new System.Windows.Forms.Button();
+            this.ID_13PM = new System.Windows.Forms.Button();
+            this.ID_13P = new System.Windows.Forms.Button();
+            this.ID_13 = new System.Windows.Forms.Button();
+            this.ID_12PM = new System.Windows.Forms.Button();
+            this.ID_12P = new System.Windows.Forms.Button();
+            this.ID_12 = new System.Windows.Forms.Button();
+            this.ID_11PM = new System.Windows.Forms.Button();
+            this.ID_11P = new System.Windows.Forms.Button();
+            this.ID_11 = new System.Windows.Forms.Button();
+            this.ID_AW4 = new System.Windows.Forms.Button();
+            this.ID_AW5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.addQuantity);
-            this.groupBox1.Controls.Add(this.addName);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(34, 51);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(306, 133);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add to Cart";
-            // 
-            // addQuantity
-            // 
-            this.addQuantity.Location = new System.Drawing.Point(94, 81);
-            this.addQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.addQuantity.Name = "addQuantity";
-            this.addQuantity.Size = new System.Drawing.Size(191, 23);
-            this.addQuantity.TabIndex = 3;
-            // 
-            // addName
-            // 
-            this.addName.Location = new System.Drawing.Point(94, 42);
-            this.addName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.addName.Name = "addName";
-            this.addName.Size = new System.Drawing.Size(191, 23);
-            this.addName.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Quantity";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
             // 
             // ShoppingCart
             // 
@@ -127,16 +94,40 @@ namespace Final_Project_CS
             this.ShoppingCart.Size = new System.Drawing.Size(671, 439);
             this.ShoppingCart.TabIndex = 1;
             // 
-            // addcartButton
+            // ID
             // 
-            this.addcartButton.Location = new System.Drawing.Point(122, 192);
-            this.addcartButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.addcartButton.Name = "addcartButton";
-            this.addcartButton.Size = new System.Drawing.Size(116, 33);
-            this.addcartButton.TabIndex = 3;
-            this.addcartButton.Text = "Add to Cart";
-            this.addcartButton.UseVisualStyleBackColor = true;
-            this.addcartButton.Click += new System.EventHandler(this.addcartButton_Click);
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Tax
+            // 
+            this.Tax.HeaderText = "Tax";
+            this.Tax.MinimumWidth = 6;
+            this.Tax.Name = "Tax";
+            this.Tax.ReadOnly = true;
             // 
             // label3
             // 
@@ -212,7 +203,7 @@ namespace Final_Project_CS
             // searchButton
             // 
             this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.searchButton.Location = new System.Drawing.Point(122, 301);
+            this.searchButton.Location = new System.Drawing.Point(107, 503);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(116, 33);
             this.searchButton.TabIndex = 12;
@@ -223,7 +214,7 @@ namespace Final_Project_CS
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 275);
+            this.label7.Location = new System.Drawing.Point(17, 473);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 17);
             this.label7.TabIndex = 13;
@@ -231,51 +222,235 @@ namespace Final_Project_CS
             // 
             // productSearch
             // 
-            this.productSearch.Location = new System.Drawing.Point(128, 272);
+            this.productSearch.Location = new System.Drawing.Point(107, 467);
             this.productSearch.Name = "productSearch";
             this.productSearch.Size = new System.Drawing.Size(191, 23);
             this.productSearch.TabIndex = 14;
             // 
-            // ID
+            // panel1
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.ID_AW5);
+            this.panel1.Controls.Add(this.ID_AW4);
+            this.panel1.Controls.Add(this.ID_APP);
+            this.panel1.Controls.Add(this.ID_M1);
+            this.panel1.Controls.Add(this.ID_MP1);
+            this.panel1.Controls.Add(this.ID_IPro);
+            this.panel1.Controls.Add(this.ID_IA2);
+            this.panel1.Controls.Add(this.ID_IA1);
+            this.panel1.Controls.Add(this.ID_IM1);
+            this.panel1.Controls.Add(this.ID_AP3);
+            this.panel1.Controls.Add(this.ID_AP2);
+            this.panel1.Controls.Add(this.ID_AP1);
+            this.panel1.Controls.Add(this.ID_13PM);
+            this.panel1.Controls.Add(this.ID_13P);
+            this.panel1.Controls.Add(this.ID_13);
+            this.panel1.Controls.Add(this.ID_12PM);
+            this.panel1.Controls.Add(this.ID_12P);
+            this.panel1.Controls.Add(this.ID_12);
+            this.panel1.Controls.Add(this.ID_11PM);
+            this.panel1.Controls.Add(this.ID_11P);
+            this.panel1.Controls.Add(this.ID_11);
+            this.panel1.Location = new System.Drawing.Point(20, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(320, 402);
+            this.panel1.TabIndex = 15;
             // 
-            // Name
+            // ID_APP
             // 
-            this.Name.HeaderText = "Name";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
+            this.ID_APP.Location = new System.Drawing.Point(14, 236);
+            this.ID_APP.Name = "ID_APP";
+            this.ID_APP.Size = new System.Drawing.Size(85, 33);
+            this.ID_APP.TabIndex = 19;
+            this.ID_APP.Text = "APP";
+            this.ID_APP.UseVisualStyleBackColor = true;
             // 
-            // Quantity
+            // ID_M1
             // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
+            this.ID_M1.Location = new System.Drawing.Point(219, 291);
+            this.ID_M1.Name = "ID_M1";
+            this.ID_M1.Size = new System.Drawing.Size(85, 33);
+            this.ID_M1.TabIndex = 17;
+            this.ID_M1.Text = "M1";
+            this.ID_M1.UseVisualStyleBackColor = true;
             // 
-            // Price
+            // ID_MP1
             // 
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
+            this.ID_MP1.Location = new System.Drawing.Point(14, 343);
+            this.ID_MP1.Name = "ID_MP1";
+            this.ID_MP1.Size = new System.Drawing.Size(85, 33);
+            this.ID_MP1.TabIndex = 16;
+            this.ID_MP1.Text = "MP1";
+            this.ID_MP1.UseVisualStyleBackColor = true;
             // 
-            // Tax
+            // ID_IPro
             // 
-            this.Tax.HeaderText = "Tax";
-            this.Tax.MinimumWidth = 6;
-            this.Tax.Name = "Tax";
-            this.Tax.ReadOnly = true;
+            this.ID_IPro.Location = new System.Drawing.Point(119, 291);
+            this.ID_IPro.Name = "ID_IPro";
+            this.ID_IPro.Size = new System.Drawing.Size(85, 33);
+            this.ID_IPro.TabIndex = 15;
+            this.ID_IPro.Text = "IPro";
+            this.ID_IPro.UseVisualStyleBackColor = true;
+            // 
+            // ID_IA2
+            // 
+            this.ID_IA2.Location = new System.Drawing.Point(219, 236);
+            this.ID_IA2.Name = "ID_IA2";
+            this.ID_IA2.Size = new System.Drawing.Size(85, 33);
+            this.ID_IA2.TabIndex = 14;
+            this.ID_IA2.Text = "IA2";
+            this.ID_IA2.UseVisualStyleBackColor = true;
+            // 
+            // ID_IA1
+            // 
+            this.ID_IA1.Location = new System.Drawing.Point(118, 236);
+            this.ID_IA1.Name = "ID_IA1";
+            this.ID_IA1.Size = new System.Drawing.Size(85, 33);
+            this.ID_IA1.TabIndex = 13;
+            this.ID_IA1.Text = "IA1";
+            this.ID_IA1.UseVisualStyleBackColor = true;
+            // 
+            // ID_IM1
+            // 
+            this.ID_IM1.Location = new System.Drawing.Point(14, 291);
+            this.ID_IM1.Name = "ID_IM1";
+            this.ID_IM1.Size = new System.Drawing.Size(85, 33);
+            this.ID_IM1.TabIndex = 12;
+            this.ID_IM1.Text = "IM1";
+            this.ID_IM1.UseVisualStyleBackColor = true;
+            // 
+            // ID_AP3
+            // 
+            this.ID_AP3.Location = new System.Drawing.Point(219, 184);
+            this.ID_AP3.Name = "ID_AP3";
+            this.ID_AP3.Size = new System.Drawing.Size(85, 33);
+            this.ID_AP3.TabIndex = 11;
+            this.ID_AP3.Text = "AP3";
+            this.ID_AP3.UseVisualStyleBackColor = true;
+            // 
+            // ID_AP2
+            // 
+            this.ID_AP2.Location = new System.Drawing.Point(118, 184);
+            this.ID_AP2.Name = "ID_AP2";
+            this.ID_AP2.Size = new System.Drawing.Size(85, 33);
+            this.ID_AP2.TabIndex = 10;
+            this.ID_AP2.Text = "AP2";
+            this.ID_AP2.UseVisualStyleBackColor = true;
+            // 
+            // ID_AP1
+            // 
+            this.ID_AP1.Location = new System.Drawing.Point(14, 184);
+            this.ID_AP1.Name = "ID_AP1";
+            this.ID_AP1.Size = new System.Drawing.Size(85, 33);
+            this.ID_AP1.TabIndex = 9;
+            this.ID_AP1.Text = "AP1";
+            this.ID_AP1.UseVisualStyleBackColor = true;
+            // 
+            // ID_13PM
+            // 
+            this.ID_13PM.Location = new System.Drawing.Point(219, 132);
+            this.ID_13PM.Name = "ID_13PM";
+            this.ID_13PM.Size = new System.Drawing.Size(85, 33);
+            this.ID_13PM.TabIndex = 8;
+            this.ID_13PM.Text = "13PM";
+            this.ID_13PM.UseVisualStyleBackColor = true;
+            // 
+            // ID_13P
+            // 
+            this.ID_13P.Location = new System.Drawing.Point(119, 132);
+            this.ID_13P.Name = "ID_13P";
+            this.ID_13P.Size = new System.Drawing.Size(85, 33);
+            this.ID_13P.TabIndex = 7;
+            this.ID_13P.Text = "13P";
+            this.ID_13P.UseVisualStyleBackColor = true;
+            // 
+            // ID_13
+            // 
+            this.ID_13.Location = new System.Drawing.Point(14, 132);
+            this.ID_13.Name = "ID_13";
+            this.ID_13.Size = new System.Drawing.Size(85, 33);
+            this.ID_13.TabIndex = 6;
+            this.ID_13.Text = "13";
+            this.ID_13.UseVisualStyleBackColor = true;
+            // 
+            // ID_12PM
+            // 
+            this.ID_12PM.Location = new System.Drawing.Point(219, 78);
+            this.ID_12PM.Name = "ID_12PM";
+            this.ID_12PM.Size = new System.Drawing.Size(85, 33);
+            this.ID_12PM.TabIndex = 5;
+            this.ID_12PM.Text = "12PM";
+            this.ID_12PM.UseVisualStyleBackColor = true;
+            // 
+            // ID_12P
+            // 
+            this.ID_12P.Location = new System.Drawing.Point(119, 78);
+            this.ID_12P.Name = "ID_12P";
+            this.ID_12P.Size = new System.Drawing.Size(85, 33);
+            this.ID_12P.TabIndex = 4;
+            this.ID_12P.Text = "12P";
+            this.ID_12P.UseVisualStyleBackColor = true;
+            // 
+            // ID_12
+            // 
+            this.ID_12.Location = new System.Drawing.Point(14, 78);
+            this.ID_12.Name = "ID_12";
+            this.ID_12.Size = new System.Drawing.Size(85, 33);
+            this.ID_12.TabIndex = 3;
+            this.ID_12.Text = "12";
+            this.ID_12.UseVisualStyleBackColor = true;
+            // 
+            // ID_11PM
+            // 
+            this.ID_11PM.Location = new System.Drawing.Point(219, 20);
+            this.ID_11PM.Name = "ID_11PM";
+            this.ID_11PM.Size = new System.Drawing.Size(85, 33);
+            this.ID_11PM.TabIndex = 2;
+            this.ID_11PM.Text = "11PM";
+            this.ID_11PM.UseVisualStyleBackColor = true;
+            // 
+            // ID_11P
+            // 
+            this.ID_11P.Location = new System.Drawing.Point(119, 20);
+            this.ID_11P.Name = "ID_11P";
+            this.ID_11P.Size = new System.Drawing.Size(85, 33);
+            this.ID_11P.TabIndex = 1;
+            this.ID_11P.Text = "11P";
+            this.ID_11P.UseVisualStyleBackColor = true;
+            // 
+            // ID_11
+            // 
+            this.ID_11.Location = new System.Drawing.Point(14, 20);
+            this.ID_11.Name = "ID_11";
+            this.ID_11.Size = new System.Drawing.Size(85, 33);
+            this.ID_11.TabIndex = 0;
+            this.ID_11.Text = "11";
+            this.ID_11.UseVisualStyleBackColor = true;
+            // 
+            // ID_AW4
+            // 
+            this.ID_AW4.Location = new System.Drawing.Point(118, 343);
+            this.ID_AW4.Name = "ID_AW4";
+            this.ID_AW4.Size = new System.Drawing.Size(85, 33);
+            this.ID_AW4.TabIndex = 22;
+            this.ID_AW4.Text = "AW4";
+            this.ID_AW4.UseVisualStyleBackColor = true;
+            // 
+            // ID_AW5
+            // 
+            this.ID_AW5.Location = new System.Drawing.Point(219, 343);
+            this.ID_AW5.Name = "ID_AW5";
+            this.ID_AW5.Size = new System.Drawing.Size(85, 33);
+            this.ID_AW5.TabIndex = 23;
+            this.ID_AW5.Text = "AW5";
+            this.ID_AW5.UseVisualStyleBackColor = true;
             // 
             // CashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 632);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.productSearch);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.searchButton);
@@ -287,29 +462,19 @@ namespace Final_Project_CS
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.addcartButton);
             this.Controls.Add(this.ShoppingCart);
-            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Text = "Cash Register";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView ShoppingCart;
-        private System.Windows.Forms.TextBox addQuantity;
-        private System.Windows.Forms.TextBox addName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button addcartButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -326,5 +491,27 @@ namespace Final_Project_CS
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tax;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button ID_APP;
+        private System.Windows.Forms.Button ID_M1;
+        private System.Windows.Forms.Button ID_MP1;
+        private System.Windows.Forms.Button ID_IPro;
+        private System.Windows.Forms.Button ID_IA2;
+        private System.Windows.Forms.Button ID_IA1;
+        private System.Windows.Forms.Button ID_IM1;
+        private System.Windows.Forms.Button ID_AP3;
+        private System.Windows.Forms.Button ID_AP2;
+        private System.Windows.Forms.Button ID_AP1;
+        private System.Windows.Forms.Button ID_13PM;
+        private System.Windows.Forms.Button ID_13P;
+        private System.Windows.Forms.Button ID_13;
+        private System.Windows.Forms.Button ID_12PM;
+        private System.Windows.Forms.Button ID_12P;
+        private System.Windows.Forms.Button ID_12;
+        private System.Windows.Forms.Button ID_11PM;
+        private System.Windows.Forms.Button ID_11P;
+        private System.Windows.Forms.Button ID_11;
+        private System.Windows.Forms.Button ID_AW5;
+        private System.Windows.Forms.Button ID_AW4;
     }
 }

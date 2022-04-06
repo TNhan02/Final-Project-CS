@@ -56,26 +56,15 @@ namespace Final_Project_CS
         {
             Product ps = new Product();
             ps.ID = productSearch.Text;
+            DataRow[] findID = table.Select("ID = '" + ps.ID + "'");
 
-            if (table.Rows.Contains(ps.ID))
+            if (findID.Length != 0)
             {
                 MessageBox.Show($"{ps.ID} is available in shop");
             }
             else
             {
                 MessageBox.Show($"{ps.ID} is not available in shop");
-            }
-        }
-
-        private void addcartButton_Click(object sender, EventArgs e)
-        {
-            Product p = new Product();
-            DataView dv = new DataView(table);
-
-            p.Name = addName.Text;
-            if (dv.Find(table.Rows[1]) == 1)
-            {
-                ShoppingCart.Rows.Add();
             }
         }
     }

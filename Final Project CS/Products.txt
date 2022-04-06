@@ -13,11 +13,9 @@ AP3 | Airpod 3 | 200 | 200
 APP | Airpod Pro | 250 | 200
 IA1 | Ipad Air 1 | 500 | 50
 IA2 | Ipad Air 2 | 740 | 50
-IM1-2021 | Ipad M1 2021 | 800 | 200
-IPro-2021 | Ipad Pro 2021 | 950 | 200
-M1-2021 | Macbook M1 2021 | 1175 | 150
-MP1-2021 | Macbook Pro M1 2021 | 1235 | 200
-M1-2022 | Macbook M1 2022 | 1300 | 50
-MP1-2022 | Macbook Pro M1 2022 | 1380 | 50
-AW3 | Watch Series 3 | 200 | 20
+IM1 | Ipad M1 | 800 | 200
+IPro | Ipad Pro | 950 | 200
+M1 | Macbook M1 | 1175 | 150
+MP1 | Macbook Pro M1 | 1235 | 200
 AW4 | Watch Series 4 | 250 | 20
+AW5 | Watch Series 5 | 400 | 200
