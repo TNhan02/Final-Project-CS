@@ -45,6 +45,9 @@ namespace Final_Project_CS
             }
         }
 
+        
+
+
         private void checkoutButton_Click(object sender, EventArgs e)
         {
             //adding buyer information

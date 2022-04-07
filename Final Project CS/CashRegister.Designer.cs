@@ -47,6 +47,8 @@ namespace Final_Project_CS
             this.label7 = new System.Windows.Forms.Label();
             this.productSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ID_AW5 = new System.Windows.Forms.Button();
+            this.ID_AW4 = new System.Windows.Forms.Button();
             this.ID_APP = new System.Windows.Forms.Button();
             this.ID_M1 = new System.Windows.Forms.Button();
             this.ID_MP1 = new System.Windows.Forms.Button();
@@ -66,8 +68,6 @@ namespace Final_Project_CS
             this.ID_11PM = new System.Windows.Forms.Button();
             this.ID_11P = new System.Windows.Forms.Button();
             this.ID_11 = new System.Windows.Forms.Button();
-            this.ID_AW4 = new System.Windows.Forms.Button();
-            this.ID_AW5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -214,7 +214,7 @@ namespace Final_Project_CS
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 473);
+            this.label7.Location = new System.Drawing.Point(17, 467);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 17);
             this.label7.TabIndex = 13;
@@ -222,7 +222,7 @@ namespace Final_Project_CS
             // 
             // productSearch
             // 
-            this.productSearch.Location = new System.Drawing.Point(107, 467);
+            this.productSearch.Location = new System.Drawing.Point(107, 464);
             this.productSearch.Name = "productSearch";
             this.productSearch.Size = new System.Drawing.Size(191, 23);
             this.productSearch.TabIndex = 14;
@@ -230,6 +230,7 @@ namespace Final_Project_CS
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.ID_AW5);
             this.panel1.Controls.Add(this.ID_AW4);
             this.panel1.Controls.Add(this.ID_APP);
@@ -253,8 +254,26 @@ namespace Final_Project_CS
             this.panel1.Controls.Add(this.ID_11);
             this.panel1.Location = new System.Drawing.Point(20, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 402);
+            this.panel1.Size = new System.Drawing.Size(321, 399);
             this.panel1.TabIndex = 15;
+            // 
+            // ID_AW5
+            // 
+            this.ID_AW5.Location = new System.Drawing.Point(219, 343);
+            this.ID_AW5.Name = "ID_AW5";
+            this.ID_AW5.Size = new System.Drawing.Size(85, 33);
+            this.ID_AW5.TabIndex = 23;
+            this.ID_AW5.Text = "AW5";
+            this.ID_AW5.UseVisualStyleBackColor = true;
+            // 
+            // ID_AW4
+            // 
+            this.ID_AW4.Location = new System.Drawing.Point(118, 343);
+            this.ID_AW4.Name = "ID_AW4";
+            this.ID_AW4.Size = new System.Drawing.Size(85, 33);
+            this.ID_AW4.TabIndex = 22;
+            this.ID_AW4.Text = "AW4";
+            this.ID_AW4.UseVisualStyleBackColor = true;
             // 
             // ID_APP
             // 
@@ -426,24 +445,6 @@ namespace Final_Project_CS
             this.ID_11.TabIndex = 0;
             this.ID_11.Text = "11";
             this.ID_11.UseVisualStyleBackColor = true;
-            // 
-            // ID_AW4
-            // 
-            this.ID_AW4.Location = new System.Drawing.Point(118, 343);
-            this.ID_AW4.Name = "ID_AW4";
-            this.ID_AW4.Size = new System.Drawing.Size(85, 33);
-            this.ID_AW4.TabIndex = 22;
-            this.ID_AW4.Text = "AW4";
-            this.ID_AW4.UseVisualStyleBackColor = true;
-            // 
-            // ID_AW5
-            // 
-            this.ID_AW5.Location = new System.Drawing.Point(219, 343);
-            this.ID_AW5.Name = "ID_AW5";
-            this.ID_AW5.Size = new System.Drawing.Size(85, 33);
-            this.ID_AW5.TabIndex = 23;
-            this.ID_AW5.Text = "AW5";
-            this.ID_AW5.UseVisualStyleBackColor = true;
             // 
             // CashRegister
             // 
