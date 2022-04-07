@@ -24,8 +24,8 @@ namespace Final_Project_CS
             //create table's columns
             table.Columns.Add("ID", typeof(string));
             table.Columns.Add("Name", typeof(string));
-            table.Columns.Add("Price", typeof(double));
             table.Columns.Add("Quantity", typeof(double));
+            table.Columns.Add("Price", typeof(double));
 
             //get the product list appeared from here
             string[] lines = File.ReadAllLines(productFile);
@@ -44,9 +44,6 @@ namespace Final_Project_CS
                 table.Rows.Add(row);
             }
         }
-
-        
-
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
@@ -69,6 +66,23 @@ namespace Final_Project_CS
             {
                 MessageBox.Show($"{ps.ID} is not available in shop");
             }
+        }
+
+
+        //add products to shopping cart via clicking buttons
+        private void ID_11_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[0].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
         }
     }
 }

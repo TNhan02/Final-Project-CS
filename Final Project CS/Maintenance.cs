@@ -24,8 +24,8 @@ namespace Final_Project_CS
             //create table's columns and datatable for Product_List
             table.Columns.Add("ID", typeof(string));
             table.Columns.Add("Name", typeof(string));
-            table.Columns.Add("Price", typeof(double));
             table.Columns.Add("Quantity", typeof(double));
+            table.Columns.Add("Price", typeof(double));
             Product_List.DataSource = table;
 
 
