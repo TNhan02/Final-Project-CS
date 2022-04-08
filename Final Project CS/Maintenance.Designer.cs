@@ -200,6 +200,7 @@ namespace Final_Project_CS
             // 
             this.searchPID.Location = new System.Drawing.Point(382, 107);
             this.searchPID.Name = "searchPID";
+            this.searchPID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.searchPID.Size = new System.Drawing.Size(133, 22);
             this.searchPID.TabIndex = 5;
             this.searchPID.TextChanged += new System.EventHandler(this.searchPID_TextChanged);

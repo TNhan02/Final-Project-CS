@@ -26,6 +26,7 @@ namespace Final_Project_CS
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Quantity", typeof(double));
             table.Columns.Add("Price", typeof(double));
+            table.Columns.Add("Tax", typeof(double));
 
             //get the product list appeared from here
             string[] lines = File.ReadAllLines(productFile);
@@ -76,6 +77,21 @@ namespace Final_Project_CS
             string[] value;
 
             value = lines[0].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_11P_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[1].ToString().Split('|');
             string[] row = new string[value.Length];
             for (int i = 0; i < value.Length; i++)
             {

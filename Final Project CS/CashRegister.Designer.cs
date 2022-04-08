@@ -30,6 +30,11 @@ namespace Final_Project_CS
         private void InitializeComponent()
         {
             this.ShoppingCart = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,11 +68,6 @@ namespace Final_Project_CS
             this.ID_11PM = new System.Windows.Forms.Button();
             this.ID_11P = new System.Windows.Forms.Button();
             this.ID_11 = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +93,41 @@ namespace Final_Project_CS
             this.ShoppingCart.RowTemplate.Height = 24;
             this.ShoppingCart.Size = new System.Drawing.Size(671, 439);
             this.ShoppingCart.TabIndex = 1;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Tax
+            // 
+            this.Tax.HeaderText = "Tax";
+            this.Tax.MinimumWidth = 6;
+            this.Tax.Name = "Tax";
+            this.Tax.ReadOnly = true;
             // 
             // label3
             // 
@@ -401,6 +436,7 @@ namespace Final_Project_CS
             this.ID_11P.TabIndex = 1;
             this.ID_11P.Text = "11P";
             this.ID_11P.UseVisualStyleBackColor = true;
+            this.ID_11P.Click += new System.EventHandler(this.ID_11P_Click);
             // 
             // ID_11
             // 
@@ -411,41 +447,6 @@ namespace Final_Project_CS
             this.ID_11.Text = "11";
             this.ID_11.UseVisualStyleBackColor = true;
             this.ID_11.Click += new System.EventHandler(this.ID_11_Click);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Tax
-            // 
-            this.Tax.HeaderText = "Tax";
-            this.Tax.MinimumWidth = 6;
-            this.Tax.Name = "Tax";
-            this.Tax.ReadOnly = true;
             // 
             // CashRegister
             // 
