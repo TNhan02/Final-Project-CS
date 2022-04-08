@@ -265,6 +265,7 @@ namespace Final_Project_CS
             this.ID_AW5.TabIndex = 23;
             this.ID_AW5.Text = "AW5";
             this.ID_AW5.UseVisualStyleBackColor = true;
+            this.ID_AW5.Click += new System.EventHandler(this.ID_AW5_Click);
             // 
             // ID_AW4
             // 
@@ -274,6 +275,7 @@ namespace Final_Project_CS
             this.ID_AW4.TabIndex = 22;
             this.ID_AW4.Text = "AW4";
             this.ID_AW4.UseVisualStyleBackColor = true;
+            this.ID_AW4.Click += new System.EventHandler(this.ID_AW4_Click);
             // 
             // ID_APP
             // 
@@ -283,6 +285,7 @@ namespace Final_Project_CS
             this.ID_APP.TabIndex = 19;
             this.ID_APP.Text = "APP";
             this.ID_APP.UseVisualStyleBackColor = true;
+            this.ID_APP.Click += new System.EventHandler(this.ID_APP_Click);
             // 
             // ID_M1
             // 
@@ -292,6 +295,7 @@ namespace Final_Project_CS
             this.ID_M1.TabIndex = 17;
             this.ID_M1.Text = "M1";
             this.ID_M1.UseVisualStyleBackColor = true;
+            this.ID_M1.Click += new System.EventHandler(this.ID_M1_Click);
             // 
             // ID_MP1
             // 
@@ -301,6 +305,7 @@ namespace Final_Project_CS
             this.ID_MP1.TabIndex = 16;
             this.ID_MP1.Text = "MP1";
             this.ID_MP1.UseVisualStyleBackColor = true;
+            this.ID_MP1.Click += new System.EventHandler(this.ID_MP1_Click);
             // 
             // ID_IPro
             // 
@@ -310,6 +315,7 @@ namespace Final_Project_CS
             this.ID_IPro.TabIndex = 15;
             this.ID_IPro.Text = "IPro";
             this.ID_IPro.UseVisualStyleBackColor = true;
+            this.ID_IPro.Click += new System.EventHandler(this.ID_IPro_Click);
             // 
             // ID_IA2
             // 
@@ -319,6 +325,7 @@ namespace Final_Project_CS
             this.ID_IA2.TabIndex = 14;
             this.ID_IA2.Text = "IA2";
             this.ID_IA2.UseVisualStyleBackColor = true;
+            this.ID_IA2.Click += new System.EventHandler(this.ID_IA2_Click);
             // 
             // ID_IA1
             // 
@@ -328,6 +335,7 @@ namespace Final_Project_CS
             this.ID_IA1.TabIndex = 13;
             this.ID_IA1.Text = "IA1";
             this.ID_IA1.UseVisualStyleBackColor = true;
+            this.ID_IA1.Click += new System.EventHandler(this.ID_IA1_Click);
             // 
             // ID_IM1
             // 
@@ -337,6 +345,7 @@ namespace Final_Project_CS
             this.ID_IM1.TabIndex = 12;
             this.ID_IM1.Text = "IM1";
             this.ID_IM1.UseVisualStyleBackColor = true;
+            this.ID_IM1.Click += new System.EventHandler(this.ID_IM1_Click);
             // 
             // ID_AP3
             // 
@@ -346,6 +355,7 @@ namespace Final_Project_CS
             this.ID_AP3.TabIndex = 11;
             this.ID_AP3.Text = "AP3";
             this.ID_AP3.UseVisualStyleBackColor = true;
+            this.ID_AP3.Click += new System.EventHandler(this.ID_AP3_Click);
             // 
             // ID_AP2
             // 
@@ -355,6 +365,7 @@ namespace Final_Project_CS
             this.ID_AP2.TabIndex = 10;
             this.ID_AP2.Text = "AP2";
             this.ID_AP2.UseVisualStyleBackColor = true;
+            this.ID_AP2.Click += new System.EventHandler(this.ID_AP2_Click);
             // 
             // ID_AP1
             // 
@@ -364,6 +375,7 @@ namespace Final_Project_CS
             this.ID_AP1.TabIndex = 9;
             this.ID_AP1.Text = "AP1";
             this.ID_AP1.UseVisualStyleBackColor = true;
+            this.ID_AP1.Click += new System.EventHandler(this.ID_AP1_Click);
             // 
             // ID_13PM
             // 
@@ -373,6 +385,7 @@ namespace Final_Project_CS
             this.ID_13PM.TabIndex = 8;
             this.ID_13PM.Text = "13PM";
             this.ID_13PM.UseVisualStyleBackColor = true;
+            this.ID_13PM.Click += new System.EventHandler(this.ID_13PM_Click);
             // 
             // ID_13P
             // 
@@ -382,6 +395,7 @@ namespace Final_Project_CS
             this.ID_13P.TabIndex = 7;
             this.ID_13P.Text = "13P";
             this.ID_13P.UseVisualStyleBackColor = true;
+            this.ID_13P.Click += new System.EventHandler(this.ID_13P_Click);
             // 
             // ID_13
             // 
@@ -391,6 +405,7 @@ namespace Final_Project_CS
             this.ID_13.TabIndex = 6;
             this.ID_13.Text = "13";
             this.ID_13.UseVisualStyleBackColor = true;
+            this.ID_13.Click += new System.EventHandler(this.ID_13_Click);
             // 
             // ID_12PM
             // 
@@ -400,6 +415,7 @@ namespace Final_Project_CS
             this.ID_12PM.TabIndex = 5;
             this.ID_12PM.Text = "12PM";
             this.ID_12PM.UseVisualStyleBackColor = true;
+            this.ID_12PM.Click += new System.EventHandler(this.ID_12PM_Click);
             // 
             // ID_12P
             // 
@@ -409,6 +425,7 @@ namespace Final_Project_CS
             this.ID_12P.TabIndex = 4;
             this.ID_12P.Text = "12P";
             this.ID_12P.UseVisualStyleBackColor = true;
+            this.ID_12P.Click += new System.EventHandler(this.ID_12P_Click);
             // 
             // ID_12
             // 
@@ -418,6 +435,7 @@ namespace Final_Project_CS
             this.ID_12.TabIndex = 3;
             this.ID_12.Text = "12";
             this.ID_12.UseVisualStyleBackColor = true;
+            this.ID_12.Click += new System.EventHandler(this.ID_12_Click);
             // 
             // ID_11PM
             // 
@@ -427,6 +445,7 @@ namespace Final_Project_CS
             this.ID_11PM.TabIndex = 2;
             this.ID_11PM.Text = "11PM";
             this.ID_11PM.UseVisualStyleBackColor = true;
+            this.ID_11PM.Click += new System.EventHandler(this.ID_11PM_Click);
             // 
             // ID_11P
             // 
@@ -452,6 +471,7 @@ namespace Final_Project_CS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1043, 632);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.productSearch);

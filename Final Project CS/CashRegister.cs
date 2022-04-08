@@ -59,7 +59,7 @@ namespace Final_Project_CS
             ps.ID = productSearch.Text;
             DataRow[] findID = table.Select("ID = '" + ps.ID + "'");
 
-            if (findID.Length != 0)
+            if ((findID.Length != 0) && (ps.Quantity >= 0))
             {
                 MessageBox.Show($"{ps.ID} is available in shop");
             }
@@ -68,6 +68,7 @@ namespace Final_Project_CS
                 MessageBox.Show($"{ps.ID} is not available in shop");
             }
         }
+
 
 
         //add products to shopping cart via clicking buttons
@@ -92,6 +93,291 @@ namespace Final_Project_CS
             string[] value;
 
             value = lines[1].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_11PM_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[2].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_12_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[3].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_12P_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[4].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_12PM_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[5].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_13_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[6].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_13P_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[7].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_13PM_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[8].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_AP1_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[9].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_AP2_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[10].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_AP3_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[11].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_APP_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[12].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_IA1_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[13].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_IA2_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[14].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_IM1_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[15].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_IPro_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[16].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_M1_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[17].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_MP1_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[18].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_AW4_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[19].ToString().Split('|');
+            string[] row = new string[value.Length];
+            for (int i = 0; i < value.Length; i++)
+            {
+                row[i] = value[i].Trim();
+            }
+
+            ShoppingCart.Rows.Add(row);
+        }
+
+        private void ID_AW5_Click(object sender, EventArgs e)
+        {
+            string[] lines = File.ReadAllLines(productFile);
+            string[] value;
+
+            value = lines[20].ToString().Split('|');
             string[] row = new string[value.Length];
             for (int i = 0; i < value.Length; i++)
             {
