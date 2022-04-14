@@ -15,8 +15,8 @@ namespace Final_Project_CS
     public partial class CashRegister : Form
     {
         private const string productFile = "..//../Products.txt";
-        string[] lines = File.ReadAllLines(productFile);
         DataTable table = new DataTable();
+        List<Product> productList = new List<Product>();
 
         public CashRegister()
         {
