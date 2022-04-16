@@ -262,7 +262,7 @@ namespace Final_Project_CS
             this.ID_AW5.Location = new System.Drawing.Point(219, 343);
             this.ID_AW5.Name = "ID_AW5";
             this.ID_AW5.Size = new System.Drawing.Size(85, 33);
-            this.ID_AW5.TabIndex = 23;
+            this.ID_AW5.TabIndex = 20;
             this.ID_AW5.Text = "AW5";
             this.ID_AW5.UseVisualStyleBackColor = true;
             this.ID_AW5.Click += new System.EventHandler(this.ID_AW5_Click);
@@ -272,7 +272,7 @@ namespace Final_Project_CS
             this.ID_AW4.Location = new System.Drawing.Point(118, 343);
             this.ID_AW4.Name = "ID_AW4";
             this.ID_AW4.Size = new System.Drawing.Size(85, 33);
-            this.ID_AW4.TabIndex = 22;
+            this.ID_AW4.TabIndex = 19;
             this.ID_AW4.Text = "AW4";
             this.ID_AW4.UseVisualStyleBackColor = true;
             this.ID_AW4.Click += new System.EventHandler(this.ID_AW4_Click);
@@ -282,7 +282,7 @@ namespace Final_Project_CS
             this.ID_APP.Location = new System.Drawing.Point(14, 236);
             this.ID_APP.Name = "ID_APP";
             this.ID_APP.Size = new System.Drawing.Size(85, 33);
-            this.ID_APP.TabIndex = 19;
+            this.ID_APP.TabIndex = 12;
             this.ID_APP.Text = "APP";
             this.ID_APP.UseVisualStyleBackColor = true;
             this.ID_APP.Click += new System.EventHandler(this.ID_APP_Click);
@@ -302,7 +302,7 @@ namespace Final_Project_CS
             this.ID_MP1.Location = new System.Drawing.Point(14, 343);
             this.ID_MP1.Name = "ID_MP1";
             this.ID_MP1.Size = new System.Drawing.Size(85, 33);
-            this.ID_MP1.TabIndex = 16;
+            this.ID_MP1.TabIndex = 18;
             this.ID_MP1.Text = "MP1";
             this.ID_MP1.UseVisualStyleBackColor = true;
             this.ID_MP1.Click += new System.EventHandler(this.ID_MP1_Click);
@@ -312,7 +312,7 @@ namespace Final_Project_CS
             this.ID_IPro.Location = new System.Drawing.Point(119, 291);
             this.ID_IPro.Name = "ID_IPro";
             this.ID_IPro.Size = new System.Drawing.Size(85, 33);
-            this.ID_IPro.TabIndex = 15;
+            this.ID_IPro.TabIndex = 16;
             this.ID_IPro.Text = "IPro";
             this.ID_IPro.UseVisualStyleBackColor = true;
             this.ID_IPro.Click += new System.EventHandler(this.ID_IPro_Click);
@@ -342,7 +342,7 @@ namespace Final_Project_CS
             this.ID_IM1.Location = new System.Drawing.Point(14, 291);
             this.ID_IM1.Name = "ID_IM1";
             this.ID_IM1.Size = new System.Drawing.Size(85, 33);
-            this.ID_IM1.TabIndex = 12;
+            this.ID_IM1.TabIndex = 15;
             this.ID_IM1.Text = "IM1";
             this.ID_IM1.UseVisualStyleBackColor = true;
             this.ID_IM1.Click += new System.EventHandler(this.ID_IM1_Click);

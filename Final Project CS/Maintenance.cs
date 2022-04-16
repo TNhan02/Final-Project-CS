@@ -17,6 +17,7 @@ namespace Final_Project_CS
         Report reportForm = new Report();
         private const string productFile = "..//../Products.txt";
         DataTable table = new DataTable();
+        List<Product> productList = new List<Product>();
 
         public Maintenance()
         {
