@@ -27,6 +27,7 @@ namespace Final_Project_CS
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Quantity", typeof(double));
             table.Columns.Add("Price", typeof(double));
+            table.Columns.Add("Tax", typeof(double));
             Product_List.DataSource = table;
 
 

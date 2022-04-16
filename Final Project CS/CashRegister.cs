@@ -46,16 +46,16 @@ namespace Final_Project_CS
             }
 
             //add Datatable to List
-            //for (int j = 0; j < table.Rows.Count; j++)
-            //{
-            //    Product p = new Product();
-            //    p.ID = table.Rows[j]["ID"].ToString();
-            //    p.Name = table.Rows[j]["Name"].ToString();
-            //    p.Quantity = Convert.ToDouble(table.Rows[j]["Quantity"].ToString());
-            //    p.Price = Convert.ToDouble(table.Rows[j]["Price"].ToString());
-            //    p.Tax = Convert.ToDouble(table.Rows[j]["Tax"].ToString());
-            //    productList.Add(p);
-            //}
+            for (int j = 0; j < table.Rows.Count; j++)
+            {
+                Product p = new Product();
+                p.ID = table.Rows[j]["ID"].ToString();
+                p.Name = table.Rows[j]["Name"].ToString();
+                p.Quantity = Convert.ToDouble(table.Rows[j]["Quantity"].ToString());
+                p.Price = Convert.ToDouble(table.Rows[j]["Price"].ToString());
+                p.Tax = Convert.ToDouble(table.Rows[j]["Tax"].ToString());
+                productList.Add(p);
+            }
         }
 
         private void checkoutButton_Click(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace Final_Project_CS
             }
         }
 
-
+        //inserting product's info to Shopping Cart
         private void buttonClick(Button b)
         {
             Product pd = new Product();
