@@ -87,18 +87,18 @@ namespace Final_Project_CS
             Product pd = new Product();
             pd = productList[b.TabIndex];
 
+            bool ifExist = false;
             if (b.Enabled)
             {
                 for(int i = 0; i < ShoppingCart.Rows.Count; i++)
                 {
-                    string product = ShoppingCart.Rows[i].Cells[0].Value.ToString();
-                    if (!ShoppingCart.Rows.Contains(ShoppingCart.Rows[i]))
+                    if ((ShoppingCart.Rows[i].Cells[1].Value == pd.Name) && (ShoppingCart.Rows.Count > 0))
                     {
-                        count++;
-                        pd.Quantity = count;
-                        pd.Price *= count;
+                        pd.Quantity += 1;
+                        pd.Price *= pd.Quantity;
                         pd.Tax = pd.Price * 0.01;
-                        ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, pd.Tax);
+                        ifExist = true;
+                        break;
                     }
                     else
                     {
@@ -106,7 +106,7 @@ namespace Final_Project_CS
                         pd.Quantity = count;
                         pd.Price *= count;
                         pd.Tax = pd.Price * 0.01;
-                        ShoppingCart.Rows[i].Cells[i].ToString();
+                        ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, pd.Tax);
                     }
                 }
             }
