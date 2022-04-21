@@ -86,28 +86,36 @@ namespace Final_Project_CS
         {
             Product pd = new Product();
             pd = productList[b.TabIndex];
+            bool Found = false;
 
-            bool ifExist = false;
             if (b.Enabled)
             {
-                for(int i = 0; i < ShoppingCart.Rows.Count; i++)
+                count++; //count how many times a button is clicked 
+                if (ShoppingCart.Rows.Count > 0)
                 {
-                    if ((ShoppingCart.Rows[i].Cells[1].Value == pd.Name) && (ShoppingCart.Rows.Count > 0))
+                    foreach(DataGridViewRow row in ShoppingCart.Rows)
                     {
-                        pd.Quantity += 1;
-                        pd.Price *= pd.Quantity;
-                        pd.Tax = pd.Price * 0.01;
-                        ifExist = true;
-                        break;
+                        //check if the product ID already exists
+                        if (row.Cells[0].Value == pd.ID)
+                        {
+                            //update the quantity of the found row
+                            row.Cells[2].Value = Convert.ToDouble(1 + pd.Quantity);
+                            row.Cells[3].Value = Convert.ToDouble(pd.Price * pd.Quantity);
+                            row.Cells[4].Value = Convert.ToDouble(0.01 * pd.Price * pd.Quantity);
+                            Found = true;
+                        }
                     }
-                    else
+                    if (!Found)
                     {
-                        count++;
-                        pd.Quantity = count;
-                        pd.Price *= count;
-                        pd.Tax = pd.Price * 0.01;
+                        pd.Quantity = 1;
                         ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, pd.Tax);
                     }
+                }
+                else
+                {
+                    //add the row to shopping cart for the 1st time
+                    pd.Quantity = 1;
+                    ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, pd.Tax);
                 }
             }
         }
