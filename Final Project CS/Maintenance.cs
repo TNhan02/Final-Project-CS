@@ -27,7 +27,6 @@ namespace Final_Project_CS
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Quantity", typeof(double));
             table.Columns.Add("Price", typeof(double));
-            table.Columns.Add("Tax", typeof(double));
             Product_List.DataSource = table;
 
 
@@ -81,8 +80,7 @@ namespace Final_Project_CS
                 File.AppendAllText(productFile, p.ID + " | "
                                               + p.Name + " | "
                                               + p.Price + " | "
-                                              + p.Quantity + " | "
-                                              + p.Tax + "\n");
+                                              + p.Quantity + "\n");
             }
         }
 

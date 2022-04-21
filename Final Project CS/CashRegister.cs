@@ -16,7 +16,6 @@ namespace Final_Project_CS
         private const string productFile = "..//../Products.txt";
         DataTable table = new DataTable();
         List<Product> productList = new List<Product>();
-        static int count = 0;
 
         public CashRegister()
         {
@@ -63,6 +62,7 @@ namespace Final_Project_CS
             //adding buyer information
             //and then transfer transaction information to the report folder
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
+            //renew shopping cart
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -81,6 +81,16 @@ namespace Final_Project_CS
             }
         }
 
+        private void totalPay_TextChanged(object sender, EventArgs e)
+        {
+            int totalpay = 0;
+            foreach (DataGridViewRow row in ShoppingCart.Rows)
+            {
+                totalpay += Convert.ToInt32(row.Cells[4].Value);
+            }
+            totalPay.Text = Convert.ToString(totalpay);
+        }
+
         //inserting product's info to Shopping Cart
         private void buttonClick(Button b)
         {
@@ -90,7 +100,7 @@ namespace Final_Project_CS
 
             if (b.Enabled)
             {
-                count++; //count how many times a button is clicked 
+                double total = 0;
                 if (ShoppingCart.Rows.Count > 0)
                 {
                     foreach(DataGridViewRow row in ShoppingCart.Rows)
@@ -99,26 +109,28 @@ namespace Final_Project_CS
                         if (row.Cells[0].Value == pd.ID)
                         {
                             pd.Quantity = 1 + pd.Quantity;
-                            pd.Price = pd.Quantity * productList[b.TabIndex].Price;
-                            pd.Tax = pd.Quantity * pd.Price * 0.01;
+                            pd.Price = productList[b.TabIndex].Price;
+                            total = pd.Quantity * pd.Price;                            
                             //update the quantity of the found row
                             row.Cells[2].Value = Convert.ToDouble(pd.Quantity);
                             row.Cells[3].Value = Convert.ToDouble(pd.Price);
-                            row.Cells[4].Value = Convert.ToDouble(pd.Tax);
+                            row.Cells[4].Value = Convert.ToDouble(total);
                             Found = true;
                         }
                     }
                     if (!Found)
                     {
                         pd.Quantity = 1;
-                        ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, pd.Tax);
+                        total = pd.Quantity * pd.Price;
+                        ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
                     }
                 }
                 else
                 {
                     //add the row to shopping cart for the 1st time
                     pd.Quantity = 1;
-                    ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, pd.Tax);
+                    total = pd.Quantity * pd.Price;
+                    ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
                 }
             }
         }

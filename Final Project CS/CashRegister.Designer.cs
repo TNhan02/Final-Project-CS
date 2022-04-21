@@ -34,13 +34,11 @@ namespace Final_Project_CS
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.itemsCount = new System.Windows.Forms.TextBox();
-            this.TaxAmount = new System.Windows.Forms.TextBox();
             this.totalPay = new System.Windows.Forms.TextBox();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
@@ -84,7 +82,7 @@ namespace Final_Project_CS
             this.Name,
             this.Quantity,
             this.Price,
-            this.Tax});
+            this.Total});
             this.ShoppingCart.Location = new System.Drawing.Point(360, 51);
             this.ShoppingCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ShoppingCart.Name = "ShoppingCart";
@@ -122,12 +120,12 @@ namespace Final_Project_CS
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
             // 
-            // Tax
+            // Total
             // 
-            this.Tax.HeaderText = "Tax";
-            this.Tax.MinimumWidth = 6;
-            this.Tax.Name = "Tax";
-            this.Tax.ReadOnly = true;
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
             // label3
             // 
@@ -149,21 +147,11 @@ namespace Final_Project_CS
             this.label4.TabIndex = 5;
             this.label4.Text = "Items Amount:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(378, 551);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 18);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Tax Amount:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(378, 594);
+            this.label6.Location = new System.Drawing.Point(365, 553);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 17);
             this.label6.TabIndex = 7;
@@ -176,23 +164,17 @@ namespace Final_Project_CS
             this.itemsCount.Size = new System.Drawing.Size(111, 23);
             this.itemsCount.TabIndex = 8;
             // 
-            // TaxAmount
-            // 
-            this.TaxAmount.Location = new System.Drawing.Point(540, 550);
-            this.TaxAmount.Name = "TaxAmount";
-            this.TaxAmount.Size = new System.Drawing.Size(111, 23);
-            this.TaxAmount.TabIndex = 9;
-            // 
             // totalPay
             // 
-            this.totalPay.Location = new System.Drawing.Point(540, 588);
+            this.totalPay.Location = new System.Drawing.Point(540, 553);
             this.totalPay.Name = "totalPay";
             this.totalPay.Size = new System.Drawing.Size(111, 23);
             this.totalPay.TabIndex = 10;
+            this.totalPay.TextChanged += new System.EventHandler(this.totalPay_TextChanged);
             // 
             // checkoutButton
             // 
-            this.checkoutButton.Location = new System.Drawing.Point(680, 537);
+            this.checkoutButton.Location = new System.Drawing.Point(679, 522);
             this.checkoutButton.Name = "checkoutButton";
             this.checkoutButton.Size = new System.Drawing.Size(130, 48);
             this.checkoutButton.TabIndex = 11;
@@ -479,10 +461,8 @@ namespace Final_Project_CS
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.checkoutButton);
             this.Controls.Add(this.totalPay);
-            this.Controls.Add(this.TaxAmount);
             this.Controls.Add(this.itemsCount);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ShoppingCart);
@@ -500,10 +480,8 @@ namespace Final_Project_CS
         private System.Windows.Forms.DataGridView ShoppingCart;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox itemsCount;
-        private System.Windows.Forms.TextBox TaxAmount;
         private System.Windows.Forms.TextBox totalPay;
         private System.Windows.Forms.Button checkoutButton;
         private System.Windows.Forms.Button searchButton;
@@ -535,6 +513,6 @@ namespace Final_Project_CS
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }
