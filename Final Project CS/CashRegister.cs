@@ -53,6 +53,20 @@ namespace Final_Project_CS
                 p.Price = Convert.ToDouble(table.Rows[j]["Price"].ToString());
                 productList.Add(p);
             }
+
+            double total = 0;
+            for (int i = 0; i < ShoppingCart.Rows.Count; i++)
+            {
+                try
+                {
+                    total += double.Parse(ShoppingCart.Rows[i].Cells[4].Value.ToString());
+                }
+                catch
+                {
+                    MessageBox.Show("Cannot calculate the total");
+                }
+                totalPay.Text = total.ToString();
+            }
         }
 
         private void checkoutButton_Click(object sender, EventArgs e)
@@ -61,6 +75,10 @@ namespace Final_Project_CS
             //and then transfer transaction information to the report folder
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
             //renew shopping cart
+            foreach (DataGridViewRow row in ShoppingCart.Rows)
+            {
+                ShoppingCart.Rows.Remove(row);
+            }
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -79,30 +97,9 @@ namespace Final_Project_CS
             }
         }
 
-        private void totalPay_TextChanged(object sender, EventArgs e)
-        {
-            /* totalPay.Text = (from DataGridViewRow row in ShoppingCart.Rows
-                              where row.Cells[4].FormattedValue.ToString() != string.Empty
-                              select Convert.ToDouble(row.Cells[4].FormattedValue)).Sum().ToString();*/
-
-
-            //totalPay for a transaction
-            double total = 0;
-            for (int i = 0; i < ShoppingCart.Rows.Count; i++)
-            {
-                try
-                {
-                    total += double.Parse(ShoppingCart.Rows[i].Cells[4].Value.ToString());
-                }
-                catch
-                {
-                    MessageBox.Show("Cannot calculate the total");
-                }
-                totalPay.Text = total.ToString();
-            }
-        }
 
         //inserting product's info to Shopping Cart
+        //add Total Amount to pay the bill
         private void buttonClick(Button b)
         {
             Product pd = new Product();
@@ -142,6 +139,36 @@ namespace Final_Project_CS
                     pd.Quantity = 1;
                     total = pd.Quantity * pd.Price;
                     ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
+                }
+
+
+                //add Items Count for each transaction
+                double totalP1 = 0;
+                for (int i = 0; i < ShoppingCart.Rows.Count; i++)
+                {
+                    try
+                    {
+                        totalP1 += double.Parse(ShoppingCart.Rows[i].Cells[2].Value.ToString());
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    itemsCount.Text = totalP1.ToString();
+                }
+                //add Total Amount for each transaction
+                double totalP2 = 0;
+                for (int i = 0; i < ShoppingCart.Rows.Count; i++)
+                {
+                    try
+                    {
+                        totalP2 += double.Parse(ShoppingCart.Rows[i].Cells[4].Value.ToString());
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    totalPay.Text = totalP2.ToString();
                 }
             }
         }

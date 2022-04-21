@@ -94,7 +94,7 @@ namespace Final_Project_CS
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(365, 553);
+            this.label6.Location = new System.Drawing.Point(378, 553);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 17);
             this.label6.TabIndex = 7;
@@ -102,22 +102,21 @@ namespace Final_Project_CS
             // 
             // itemsCount
             // 
-            this.itemsCount.Location = new System.Drawing.Point(540, 508);
+            this.itemsCount.Location = new System.Drawing.Point(528, 508);
             this.itemsCount.Name = "itemsCount";
-            this.itemsCount.Size = new System.Drawing.Size(111, 23);
+            this.itemsCount.Size = new System.Drawing.Size(123, 23);
             this.itemsCount.TabIndex = 8;
             // 
             // totalPay
             // 
-            this.totalPay.Location = new System.Drawing.Point(540, 553);
+            this.totalPay.Location = new System.Drawing.Point(528, 550);
             this.totalPay.Name = "totalPay";
-            this.totalPay.Size = new System.Drawing.Size(111, 23);
+            this.totalPay.Size = new System.Drawing.Size(123, 23);
             this.totalPay.TabIndex = 10;
-            this.totalPay.TextChanged += new System.EventHandler(this.totalPay_TextChanged);
             // 
             // checkoutButton
             // 
-            this.checkoutButton.Location = new System.Drawing.Point(679, 522);
+            this.checkoutButton.Location = new System.Drawing.Point(674, 513);
             this.checkoutButton.Name = "checkoutButton";
             this.checkoutButton.Size = new System.Drawing.Size(130, 48);
             this.checkoutButton.TabIndex = 11;
