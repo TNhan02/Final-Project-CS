@@ -12,7 +12,7 @@ namespace Final_Project_CS
         public string Name { get; set; }
         public double Quantity { get; set; }
         public double Price { get; set; }
-        public double Tax { get; set; }
+
 
         List<Product> productList = new List<Product>();
         public void AddProduct()
@@ -23,7 +23,6 @@ namespace Final_Project_CS
             p.Name = Name;
             p.Quantity = Quantity;
             p.Price = Price;
-            p.Tax = 0.01 * p.Price;
 
             productList.Add(p);
         }

@@ -139,6 +139,9 @@
   <ItemGroup>
     <Folder Include="Transactions\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Products.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

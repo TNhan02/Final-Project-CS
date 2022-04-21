@@ -29,12 +29,6 @@ namespace Final_Project_CS
         /// </summary>
         private void InitializeComponent()
         {
-            this.ShoppingCart = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,66 +60,15 @@ namespace Final_Project_CS
             this.ID_11PM = new System.Windows.Forms.Button();
             this.ID_11P = new System.Windows.Forms.Button();
             this.ID_11 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
+            this.ShoppingCart = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ShoppingCart
-            // 
-            this.ShoppingCart.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.ShoppingCart.AllowUserToAddRows = false;
-            this.ShoppingCart.AllowUserToDeleteRows = false;
-            this.ShoppingCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ShoppingCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ShoppingCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Name,
-            this.Quantity,
-            this.Price,
-            this.Total});
-            this.ShoppingCart.Location = new System.Drawing.Point(360, 51);
-            this.ShoppingCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ShoppingCart.Name = "ShoppingCart";
-            this.ShoppingCart.ReadOnly = true;
-            this.ShoppingCart.RowHeadersWidth = 51;
-            this.ShoppingCart.RowTemplate.Height = 24;
-            this.ShoppingCart.Size = new System.Drawing.Size(671, 439);
-            this.ShoppingCart.TabIndex = 1;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
             // 
             // label3
             // 
@@ -449,12 +392,72 @@ namespace Final_Project_CS
             this.ID_11.UseVisualStyleBackColor = true;
             this.ID_11.Click += new System.EventHandler(this.ID_11_Click);
             // 
+            // ShoppingCart
+            // 
+            this.ShoppingCart.AllowUserToAddRows = false;
+            this.ShoppingCart.AllowUserToDeleteRows = false;
+            this.ShoppingCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ShoppingCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Name,
+            this.Quantity,
+            this.Price,
+            this.Total});
+            this.ShoppingCart.Location = new System.Drawing.Point(370, 52);
+            this.ShoppingCart.Name = "ShoppingCart";
+            this.ShoppingCart.ReadOnly = true;
+            this.ShoppingCart.RowHeadersWidth = 51;
+            this.ShoppingCart.RowTemplate.Height = 24;
+            this.ShoppingCart.Size = new System.Drawing.Size(658, 434);
+            this.ShoppingCart.TabIndex = 16;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 125;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            this.Name.Width = 125;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            this.Quantity.Width = 125;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 125;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 125;
+            // 
             // CashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1043, 632);
+            this.Controls.Add(this.ShoppingCart);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.productSearch);
             this.Controls.Add(this.label7);
@@ -465,19 +468,17 @@ namespace Final_Project_CS
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.ShoppingCart);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Text = "Cash Register";
-            ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView ShoppingCart;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -509,6 +510,7 @@ namespace Final_Project_CS
         private System.Windows.Forms.Button ID_11;
         private System.Windows.Forms.Button ID_AW5;
         private System.Windows.Forms.Button ID_AW4;
+        private System.Windows.Forms.DataGridView ShoppingCart;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;

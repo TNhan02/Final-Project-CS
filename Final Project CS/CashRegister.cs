@@ -25,18 +25,17 @@ namespace Final_Project_CS
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Quantity", typeof(double));
             table.Columns.Add("Price", typeof(double));
-            table.Columns.Add("Tax", typeof(double));
 
             //get the product list appeared from here
             string[] lines = File.ReadAllLines(productFile);
             string[] values;
 
-            for (int i = 0; i < lines.Length; i++)
+            for(int i = 0; i < lines.Length; i++)
             {
                 values = lines[i].ToString().Split('|');
                 string[] row = new string[values.Length];
 
-                for (int j = 0; j < values.Length; j++)
+                for(int j = 0; j < values.Length; j++)
                 {
                     row[j] = values[j].Trim();
                 }
@@ -52,7 +51,6 @@ namespace Final_Project_CS
                 p.Name = table.Rows[j]["Name"].ToString();
                 p.Quantity = Convert.ToDouble(table.Rows[j]["Quantity"].ToString());
                 p.Price = Convert.ToDouble(table.Rows[j]["Price"].ToString());
-                p.Tax = Convert.ToDouble(table.Rows[j]["Tax"].ToString());
                 productList.Add(p);
             }
         }

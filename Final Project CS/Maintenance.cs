@@ -76,7 +76,6 @@ namespace Final_Project_CS
             //save products' information to Products.txt
             for(int i = 0; i < count; i++)
             {
-                p.Tax = p.Quantity * 0.01;
                 File.AppendAllText(productFile, p.ID + " | "
                                               + p.Name + " | "
                                               + p.Price + " | "
