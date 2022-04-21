@@ -98,10 +98,13 @@ namespace Final_Project_CS
                         //check if the product ID already exists
                         if (row.Cells[0].Value == pd.ID)
                         {
+                            pd.Quantity = 1 + pd.Quantity;
+                            pd.Price = pd.Quantity * productList[b.TabIndex].Price;
+                            pd.Tax = pd.Quantity * pd.Price * 0.01;
                             //update the quantity of the found row
-                            row.Cells[2].Value = Convert.ToDouble(1 + pd.Quantity);
-                            row.Cells[3].Value = Convert.ToDouble(pd.Price * pd.Quantity);
-                            row.Cells[4].Value = Convert.ToDouble(0.01 * pd.Price * pd.Quantity);
+                            row.Cells[2].Value = Convert.ToDouble(pd.Quantity);
+                            row.Cells[3].Value = Convert.ToDouble(pd.Price);
+                            row.Cells[4].Value = Convert.ToDouble(pd.Tax);
                             Found = true;
                         }
                     }
