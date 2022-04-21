@@ -81,12 +81,25 @@ namespace Final_Project_CS
 
         private void totalPay_TextChanged(object sender, EventArgs e)
         {
-            int totalpay = 0;
-            foreach (DataGridViewRow row in ShoppingCart.Rows)
+            /* totalPay.Text = (from DataGridViewRow row in ShoppingCart.Rows
+                              where row.Cells[4].FormattedValue.ToString() != string.Empty
+                              select Convert.ToDouble(row.Cells[4].FormattedValue)).Sum().ToString();*/
+
+
+            //totalPay for a transaction
+            double total = 0;
+            for (int i = 0; i < ShoppingCart.Rows.Count; i++)
             {
-                totalpay += Convert.ToInt32(row.Cells[4].Value);
+                try
+                {
+                    total += double.Parse(ShoppingCart.Rows[i].Cells[4].Value.ToString());
+                }
+                catch
+                {
+                    MessageBox.Show("Cannot calculate the total");
+                }
+                totalPay.Text = total.ToString();
             }
-            totalPay.Text = Convert.ToString(totalpay);
         }
 
         //inserting product's info to Shopping Cart
@@ -101,14 +114,14 @@ namespace Final_Project_CS
                 double total = 0;
                 if (ShoppingCart.Rows.Count > 0)
                 {
-                    foreach(DataGridViewRow row in ShoppingCart.Rows)
+                    foreach (DataGridViewRow row in ShoppingCart.Rows)
                     {
                         //check if the product ID already exists
                         if (row.Cells[0].Value == pd.ID)
                         {
                             pd.Quantity = 1 + pd.Quantity;
                             pd.Price = productList[b.TabIndex].Price;
-                            total = pd.Quantity * pd.Price;                            
+                            total = pd.Quantity * pd.Price;
                             //update the quantity of the found row
                             row.Cells[2].Value = Convert.ToDouble(pd.Quantity);
                             row.Cells[3].Value = Convert.ToDouble(pd.Price);
