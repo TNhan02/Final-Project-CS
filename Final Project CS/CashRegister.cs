@@ -60,11 +60,21 @@ namespace Final_Project_CS
             //adding buyer information
             //and then transfer transaction information to the report folder
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
+
             //renew shopping cart
-            foreach (DataGridViewRow row in ShoppingCart.Rows)
+            do
             {
-                ShoppingCart.Rows.Remove(row);
-            }
+                foreach(DataGridViewRow row in ShoppingCart.Rows)
+                {
+                    try
+                    {
+                        ShoppingCart.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (ShoppingCart.Rows.Count > 1);
+            itemsCount.Clear();
+            totalPay.Clear();
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -89,10 +99,6 @@ namespace Final_Project_CS
             Product p = new Product();
             p = productList[b.TabIndex];
 
-            if (File.Exists(p.ID))
-            {
-                
-            }
         }
 
         //inserting product's info to Shopping Cart
@@ -122,7 +128,7 @@ namespace Final_Project_CS
                             row.Cells[4].Value = Convert.ToDouble(total);
                             Found = true;
 
-                            UpdateQty(b);
+                            //UpdateQty(b);
                         }
                     }
                     if (!Found)
@@ -131,7 +137,7 @@ namespace Final_Project_CS
                         total = pd.Quantity * pd.Price;
                         ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
 
-                        UpdateQty(b);
+                        //UpdateQty(b);
                     }
                 }
                 else
@@ -141,7 +147,7 @@ namespace Final_Project_CS
                     total = pd.Quantity * pd.Price;
                     ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
 
-                    UpdateQty(b);
+                    //UpdateQty(b);
                 }
 
 
