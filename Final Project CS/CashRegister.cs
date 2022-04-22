@@ -53,20 +53,6 @@ namespace Final_Project_CS
                 p.Price = Convert.ToDouble(table.Rows[j]["Price"].ToString());
                 productList.Add(p);
             }
-
-            double total = 0;
-            for (int i = 0; i < ShoppingCart.Rows.Count; i++)
-            {
-                try
-                {
-                    total += double.Parse(ShoppingCart.Rows[i].Cells[4].Value.ToString());
-                }
-                catch
-                {
-                    MessageBox.Show("Cannot calculate the total");
-                }
-                totalPay.Text = total.ToString();
-            }
         }
 
         private void checkoutButton_Click(object sender, EventArgs e)
@@ -97,6 +83,17 @@ namespace Final_Project_CS
             }
         }
 
+        //update quantity in the Product List table
+        public void UpdateQty(Button b)
+        {
+            Product p = new Product();
+            p = productList[b.TabIndex];
+
+            if (File.Exists(p.ID))
+            {
+                
+            }
+        }
 
         //inserting product's info to Shopping Cart
         //add Total Amount to pay the bill
@@ -124,6 +121,8 @@ namespace Final_Project_CS
                             row.Cells[3].Value = Convert.ToDouble(pd.Price);
                             row.Cells[4].Value = Convert.ToDouble(total);
                             Found = true;
+
+                            UpdateQty(b);
                         }
                     }
                     if (!Found)
@@ -131,6 +130,8 @@ namespace Final_Project_CS
                         pd.Quantity = 1;
                         total = pd.Quantity * pd.Price;
                         ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
+
+                        UpdateQty(b);
                     }
                 }
                 else
@@ -139,6 +140,8 @@ namespace Final_Project_CS
                     pd.Quantity = 1;
                     total = pd.Quantity * pd.Price;
                     ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
+
+                    UpdateQty(b);
                 }
 
 
