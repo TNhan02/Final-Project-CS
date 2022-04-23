@@ -395,6 +395,7 @@ namespace Final_Project_CS
             // 
             this.ShoppingCart.AllowUserToAddRows = false;
             this.ShoppingCart.AllowUserToDeleteRows = false;
+            this.ShoppingCart.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ShoppingCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ShoppingCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,

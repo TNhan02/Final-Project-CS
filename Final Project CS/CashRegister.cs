@@ -72,7 +72,7 @@ namespace Final_Project_CS
                     }
                     catch (Exception) { }
                 }
-            } while (ShoppingCart.Rows.Count > 1);
+            } while (ShoppingCart.Rows.Count > 0);
             itemsCount.Clear();
             totalPay.Clear();
         }
@@ -83,9 +83,13 @@ namespace Final_Project_CS
             ps.ID = productSearch.Text;
             DataRow[] findID = table.Select("ID = '" + ps.ID + "'");
 
-            if ((findID.Length != 0) && (ps.Quantity >= 0))
+            if ((findID.Length != 0) && (ps.Quantity > 0))
             {
-                MessageBox.Show($"{ps.ID} is available in shop");
+                MessageBox.Show($"{ps.ID} {ps.Name} {ps.Quantity} {ps.Price}");
+            }
+            else if (ps.Quantity == 0)
+            {
+                MessageBox.Show($"{ps.ID} out of stock");
             }
             else
             {
@@ -96,9 +100,10 @@ namespace Final_Project_CS
         //update quantity in the Product List table
         public void UpdateQty(Button b)
         {
-            Product p = new Product();
-            p = productList[b.TabIndex];
-
+            //not finished
+            string line = File.ReadAllText(productFile);
+            line = line.Replace($"{productList[b.TabIndex].Quantity}",$"{productList[b.TabIndex].Quantity-1}");
+            File.WriteAllText(productFile, line);
         }
 
         //inserting product's info to Shopping Cart
