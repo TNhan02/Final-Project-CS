@@ -66,20 +66,20 @@ namespace Final_Project_CS
             Product p = new Product();
             p.ID = addPID.Text;
             p.Name = addPName.Text;
-            p.Price = Convert.ToDouble(addPPrice.Text);
             p.Quantity = Convert.ToDouble(addPQuantity.Text);
+            p.Price = Convert.ToDouble(addPPrice.Text);
 
             //add to productList
             p.AddProduct();
-            table.Rows.Add(p.ID, p.Name, p.Price, p.Quantity);
+            table.Rows.Add(p.ID, p.Name, p.Quantity, p.Price);
             count++;
-            //save products' information to Products.txt
-            for(int i = 0; i < count; i++)
+            //save product's information to Products.txt
+            for (int i = 0; i < count; i++)
             {
                 File.AppendAllText(productFile, p.ID + " | "
                                               + p.Name + " | "
-                                              + p.Price + " | "
-                                              + p.Quantity + "\n");
+                                              + p.Quantity + " | "
+                                              + p.Price + "\n");
             }
         }
 

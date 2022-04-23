@@ -30,10 +30,6 @@ namespace Final_Project_CS
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.addPQuantity = new System.Windows.Forms.TextBox();
-            this.addPPrice = new System.Windows.Forms.TextBox();
-            this.addPName = new System.Windows.Forms.TextBox();
-            this.addPID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +42,10 @@ namespace Final_Project_CS
             this.label6 = new System.Windows.Forms.Label();
             this.searchPID = new System.Windows.Forms.TextBox();
             this.Product_List = new System.Windows.Forms.DataGridView();
+            this.addPID = new System.Windows.Forms.TextBox();
+            this.addPName = new System.Windows.Forms.TextBox();
+            this.addPQuantity = new System.Windows.Forms.TextBox();
+            this.addPPrice = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Product_List)).BeginInit();
@@ -53,8 +53,8 @@ namespace Final_Project_CS
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.addPQuantity);
             this.groupBox1.Controls.Add(this.addPPrice);
+            this.groupBox1.Controls.Add(this.addPQuantity);
             this.groupBox1.Controls.Add(this.addPName);
             this.groupBox1.Controls.Add(this.addPID);
             this.groupBox1.Controls.Add(this.label5);
@@ -69,34 +69,6 @@ namespace Final_Project_CS
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Product";
             // 
-            // addPQuantity
-            // 
-            this.addPQuantity.Location = new System.Drawing.Point(73, 120);
-            this.addPQuantity.Name = "addPQuantity";
-            this.addPQuantity.Size = new System.Drawing.Size(159, 22);
-            this.addPQuantity.TabIndex = 7;
-            // 
-            // addPPrice
-            // 
-            this.addPPrice.Location = new System.Drawing.Point(73, 89);
-            this.addPPrice.Name = "addPPrice";
-            this.addPPrice.Size = new System.Drawing.Size(159, 22);
-            this.addPPrice.TabIndex = 6;
-            // 
-            // addPName
-            // 
-            this.addPName.Location = new System.Drawing.Point(73, 58);
-            this.addPName.Name = "addPName";
-            this.addPName.Size = new System.Drawing.Size(159, 22);
-            this.addPName.TabIndex = 5;
-            // 
-            // addPID
-            // 
-            this.addPID.Location = new System.Drawing.Point(73, 28);
-            this.addPID.Name = "addPID";
-            this.addPID.Size = new System.Drawing.Size(159, 22);
-            this.addPID.TabIndex = 4;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -109,20 +81,20 @@ namespace Final_Project_CS
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 120);
+            this.label4.Location = new System.Drawing.Point(13, 120);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 17);
+            this.label4.Size = new System.Drawing.Size(40, 17);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Quantity";
+            this.label4.Text = "Price";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 89);
+            this.label3.Location = new System.Drawing.Point(6, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 17);
+            this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Price";
+            this.label3.Text = "Quantity";
             // 
             // label2
             // 
@@ -219,6 +191,34 @@ namespace Final_Project_CS
             this.Product_List.Size = new System.Drawing.Size(618, 370);
             this.Product_List.TabIndex = 7;
             // 
+            // addPID
+            // 
+            this.addPID.Location = new System.Drawing.Point(75, 28);
+            this.addPID.Name = "addPID";
+            this.addPID.Size = new System.Drawing.Size(149, 22);
+            this.addPID.TabIndex = 4;
+            // 
+            // addPName
+            // 
+            this.addPName.Location = new System.Drawing.Point(75, 58);
+            this.addPName.Name = "addPName";
+            this.addPName.Size = new System.Drawing.Size(149, 22);
+            this.addPName.TabIndex = 5;
+            // 
+            // addPQuantity
+            // 
+            this.addPQuantity.Location = new System.Drawing.Point(75, 89);
+            this.addPQuantity.Name = "addPQuantity";
+            this.addPQuantity.Size = new System.Drawing.Size(149, 22);
+            this.addPQuantity.TabIndex = 6;
+            // 
+            // addPPrice
+            // 
+            this.addPPrice.Location = new System.Drawing.Point(75, 120);
+            this.addPPrice.Name = "addPPrice";
+            this.addPPrice.Size = new System.Drawing.Size(149, 22);
+            this.addPPrice.TabIndex = 7;
+            // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,13 +252,13 @@ namespace Final_Project_CS
         private System.Windows.Forms.Button cashButton;
         private System.Windows.Forms.Button reportButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox addPQuantity;
-        private System.Windows.Forms.TextBox addPPrice;
-        private System.Windows.Forms.TextBox addPName;
-        private System.Windows.Forms.TextBox addPID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox searchPID;
         private System.Windows.Forms.DataGridView Product_List;
+        private System.Windows.Forms.TextBox addPPrice;
+        private System.Windows.Forms.TextBox addPQuantity;
+        private System.Windows.Forms.TextBox addPName;
+        private System.Windows.Forms.TextBox addPID;
     }
 }
