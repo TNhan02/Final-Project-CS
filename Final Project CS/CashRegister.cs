@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using System.IO;
 
 namespace Final_Project_CS
@@ -98,14 +99,25 @@ namespace Final_Project_CS
         }
 
         //update quantity in the Product List table
-        public void UpdateQty(Button b)
+        public void UpdateQTy(string filename, Button b)
         {
-            //not finished
-            string line = File.ReadAllText(productFile);
-            line = line.Replace($"{productList[b.TabIndex].Quantity}",$"{productList[b.TabIndex].Quantity-1}");
-            File.WriteAllText(productFile, line);
-        }
+            StreamReader sr = new StreamReader(filename);
+            string[] rows = Regex.Split(sr.ReadToEnd(), "\r\n");
+            sr.Close();
 
+            string search = Convert.ToString(productList[b.TabIndex].Quantity);
+            string replace = Convert.ToString(productList[b.TabIndex].Quantity - 1);
+            StreamWriter sw = new StreamWriter(filename);
+            for (int i = 0; i < rows.Length; i++)
+            {
+                if (rows[i].Contains(search))
+                {
+                    rows[i] = rows[i].Replace(search, replace);
+                }
+                sw.Write(rows[i]);
+            }
+            sw.Close();
+        }
         //inserting product's info to Shopping Cart
         //add Total Amount to pay the bill
         private void buttonClick(Button b)
@@ -133,7 +145,7 @@ namespace Final_Project_CS
                             row.Cells[4].Value = Convert.ToDouble(total);
                             Found = true;
 
-                            //UpdateQty(b);
+                            UpdateQTy(productFile, b);
                         }
                     }
                     if (!Found)
@@ -142,7 +154,7 @@ namespace Final_Project_CS
                         total = pd.Quantity * pd.Price;
                         ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
 
-                        //UpdateQty(b);
+                        UpdateQTy(productFile, b);
                     }
                 }
                 else
@@ -152,7 +164,7 @@ namespace Final_Project_CS
                     total = pd.Quantity * pd.Price;
                     ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
 
-                    //UpdateQty(b);
+                    UpdateQTy(productFile, b);
                 }
 
 
