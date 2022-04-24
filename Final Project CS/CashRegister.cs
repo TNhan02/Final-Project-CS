@@ -98,25 +98,11 @@ namespace Final_Project_CS
             }
         }
 
-        //update quantity in the Product List table
-        public void UpdateQTy(string filename, Button b)
+        public void UpdateQTy(string filename, string replace, Button b)
         {
-            StreamReader sr = new StreamReader(filename);
-            string[] rows = Regex.Split(sr.ReadToEnd(), "\r\n");
-            sr.Close();
-
-            string search = Convert.ToString(productList[b.TabIndex].Quantity);
-            string replace = Convert.ToString(productList[b.TabIndex].Quantity - 1);
-            StreamWriter sw = new StreamWriter(filename);
-            for (int i = 0; i < rows.Length; i++)
-            {
-                if (rows[i].Contains(search))
-                {
-                    rows[i] = rows[i].Replace(search, replace);
-                }
-                sw.Write(rows[i]);
-            }
-            sw.Close();
+            string[] arrline = File.ReadAllLines(productFile);
+            arrline[b.TabIndex] = Convert.ToString(replace);
+            File.WriteAllLines(filename, arrline);
         }
         //inserting product's info to Shopping Cart
         //add Total Amount to pay the bill
@@ -145,7 +131,7 @@ namespace Final_Project_CS
                             row.Cells[4].Value = Convert.ToDouble(total);
                             Found = true;
 
-                            UpdateQTy(productFile, b);
+                            UpdateQTy(productFile, Convert.ToString(productList[b.TabIndex].Quantity),b);
                         }
                     }
                     if (!Found)
@@ -154,7 +140,7 @@ namespace Final_Project_CS
                         total = pd.Quantity * pd.Price;
                         ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
 
-                        UpdateQTy(productFile, b);
+                        UpdateQTy(productFile, Convert.ToString(productList[b.TabIndex].Quantity), b);
                     }
                 }
                 else
@@ -164,7 +150,7 @@ namespace Final_Project_CS
                     total = pd.Quantity * pd.Price;
                     ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
 
-                    UpdateQTy(productFile, b);
+                    UpdateQTy(productFile, Convert.ToString(productList[b.TabIndex].Quantity), b);
                 }
 
 
