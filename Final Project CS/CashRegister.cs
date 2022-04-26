@@ -99,6 +99,7 @@ namespace Final_Project_CS
             }
         }
 
+
         //update quantity in the product list
         public void UpdateQTy(string filename, Button b)
         {
@@ -108,13 +109,10 @@ namespace Final_Project_CS
             {
                 foreach(DataGridViewRow row in ShoppingCart.Rows)
                 {
-                    if (productList.Contains(row.Cells[0].Value))
-                    {
-                        pro.Quantity = productList[0].Quantity - Convert.ToDouble(row.Cells[2].Value);
-                        string[] arr = File.ReadAllLines(productFile);
-                        arr[b.TabIndex] = Convert.ToString($"{pro.ID} | {pro.Name} | {pro.Quantity} | {pro.Price}");
-                        File.WriteAllLines(productFile, arr);
-                    }
+                    pro.Quantity = productList[0].Quantity - Convert.ToDouble(row.Cells[2].Value);
+                    string[] arr = File.ReadAllLines(productFile);
+                    arr[0] = Convert.ToString($"{pro.ID} | {pro.Name} | {pro.Quantity} | {pro.Price}");
+                    File.WriteAllLines(productFile, arr);
                 }
             }
         }
