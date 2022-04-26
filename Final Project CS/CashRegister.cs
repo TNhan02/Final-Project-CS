@@ -61,6 +61,7 @@ namespace Final_Project_CS
             //adding buyer information
             //and then transfer transaction information to the report folder
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
+            //UpdateQTy(productFile, pro, b);
 
             //renew shopping cart
             do
@@ -98,11 +99,18 @@ namespace Final_Project_CS
             }
         }
 
-        public void UpdateQTy(string filename, string replace, Button b)
+        //update quantity in the product list
+        public void UpdateQTy(string filename, Product pro, Button b)
         {
-            string[] arrline = File.ReadAllLines(productFile);
-            arrline[b.TabIndex] = Convert.ToString(replace);
-            File.WriteAllLines(filename, arrline);
+            pro = productList[b.TabIndex];
+            
+            if (b.Enabled)
+            {
+                pro.Quantity = productList[b.TabIndex].Quantity - 1;
+                string[] arrline = File.ReadAllLines(productFile);
+                arrline[b.TabIndex] = Convert.ToString($"{pro.ID} | {pro.Name} | {pro.Quantity} | {pro.Price}");
+                File.WriteAllLines(filename, arrline);
+            }
         }
         //inserting product's info to Shopping Cart
         //add Total Amount to pay the bill
@@ -110,6 +118,7 @@ namespace Final_Project_CS
         {
             Product pd = new Product();
             pd = productList[b.TabIndex];
+            double qty = 1;
             bool Found = false;
 
             if (b.Enabled)
@@ -122,35 +131,29 @@ namespace Final_Project_CS
                         //check if the product ID already exists
                         if (row.Cells[0].Value == pd.ID)
                         {
-                            pd.Quantity = 1 + pd.Quantity;
+                            qty++;
                             pd.Price = productList[b.TabIndex].Price;
-                            total = pd.Quantity * pd.Price;
+                            total = qty * pd.Price;
                             //update the quantity of the found row
-                            row.Cells[2].Value = Convert.ToDouble(pd.Quantity);
+                            row.Cells[2].Value = Convert.ToDouble(qty);
                             row.Cells[3].Value = Convert.ToDouble(pd.Price);
                             row.Cells[4].Value = Convert.ToDouble(total);
                             Found = true;
-
-                            UpdateQTy(productFile, Convert.ToString(productList[b.TabIndex].Quantity),b);
                         }
                     }
                     if (!Found)
                     {
-                        pd.Quantity = 1;
-                        total = pd.Quantity * pd.Price;
-                        ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
-
-                        UpdateQTy(productFile, Convert.ToString(productList[b.TabIndex].Quantity), b);
+                        qty = 1;
+                        total = qty * pd.Price;
+                        ShoppingCart.Rows.Add(pd.ID, pd.Name, qty, pd.Price, total);
                     }
                 }
                 else
                 {
                     //add the row to shopping cart for the 1st time
-                    pd.Quantity = 1;
-                    total = pd.Quantity * pd.Price;
-                    ShoppingCart.Rows.Add(pd.ID, pd.Name, pd.Quantity, pd.Price, total);
-
-                    UpdateQTy(productFile, Convert.ToString(productList[b.TabIndex].Quantity), b);
+                    qty = 1;
+                    total = qty * pd.Price;
+                    ShoppingCart.Rows.Add(pd.ID, pd.Name, qty, pd.Price, total);
                 }
 
 
