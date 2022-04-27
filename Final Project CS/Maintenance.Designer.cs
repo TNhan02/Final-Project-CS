@@ -30,6 +30,10 @@ namespace Final_Project_CS
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addPPrice = new System.Windows.Forms.TextBox();
+            this.addPQuantity = new System.Windows.Forms.TextBox();
+            this.addPName = new System.Windows.Forms.TextBox();
+            this.addPID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,10 +46,6 @@ namespace Final_Project_CS
             this.label6 = new System.Windows.Forms.Label();
             this.searchPID = new System.Windows.Forms.TextBox();
             this.Product_List = new System.Windows.Forms.DataGridView();
-            this.addPID = new System.Windows.Forms.TextBox();
-            this.addPName = new System.Windows.Forms.TextBox();
-            this.addPQuantity = new System.Windows.Forms.TextBox();
-            this.addPPrice = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Product_List)).BeginInit();
@@ -68,6 +68,34 @@ namespace Final_Project_CS
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Product";
+            // 
+            // addPPrice
+            // 
+            this.addPPrice.Location = new System.Drawing.Point(75, 120);
+            this.addPPrice.Name = "addPPrice";
+            this.addPPrice.Size = new System.Drawing.Size(149, 22);
+            this.addPPrice.TabIndex = 7;
+            // 
+            // addPQuantity
+            // 
+            this.addPQuantity.Location = new System.Drawing.Point(75, 89);
+            this.addPQuantity.Name = "addPQuantity";
+            this.addPQuantity.Size = new System.Drawing.Size(149, 22);
+            this.addPQuantity.TabIndex = 6;
+            // 
+            // addPName
+            // 
+            this.addPName.Location = new System.Drawing.Point(75, 58);
+            this.addPName.Name = "addPName";
+            this.addPName.Size = new System.Drawing.Size(149, 22);
+            this.addPName.TabIndex = 5;
+            // 
+            // addPID
+            // 
+            this.addPID.Location = new System.Drawing.Point(75, 28);
+            this.addPID.Name = "addPID";
+            this.addPID.Size = new System.Drawing.Size(149, 22);
+            this.addPID.TabIndex = 4;
             // 
             // label5
             // 
@@ -190,34 +218,6 @@ namespace Final_Project_CS
             this.Product_List.RowTemplate.Height = 24;
             this.Product_List.Size = new System.Drawing.Size(618, 370);
             this.Product_List.TabIndex = 7;
-            // 
-            // addPID
-            // 
-            this.addPID.Location = new System.Drawing.Point(75, 28);
-            this.addPID.Name = "addPID";
-            this.addPID.Size = new System.Drawing.Size(149, 22);
-            this.addPID.TabIndex = 4;
-            // 
-            // addPName
-            // 
-            this.addPName.Location = new System.Drawing.Point(75, 58);
-            this.addPName.Name = "addPName";
-            this.addPName.Size = new System.Drawing.Size(149, 22);
-            this.addPName.TabIndex = 5;
-            // 
-            // addPQuantity
-            // 
-            this.addPQuantity.Location = new System.Drawing.Point(75, 89);
-            this.addPQuantity.Name = "addPQuantity";
-            this.addPQuantity.Size = new System.Drawing.Size(149, 22);
-            this.addPQuantity.TabIndex = 6;
-            // 
-            // addPPrice
-            // 
-            this.addPPrice.Location = new System.Drawing.Point(75, 120);
-            this.addPPrice.Name = "addPPrice";
-            this.addPPrice.Size = new System.Drawing.Size(149, 22);
-            this.addPPrice.TabIndex = 7;
             // 
             // Maintenance
             // 
