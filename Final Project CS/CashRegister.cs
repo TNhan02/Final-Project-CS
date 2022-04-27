@@ -55,6 +55,7 @@ namespace Final_Project_CS
                 productList.Add(p);
             }
         }
+        
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
@@ -109,10 +110,10 @@ namespace Final_Project_CS
                 for(int i = 0; i < ShoppingCart.Rows.Count; i++)
                 {
                     double initialQTY = Convert.ToDouble(table.Rows[i]["Quantity"].ToString());
-                    pro.ID = table.Rows[i]["ID"].ToString();
-                    pro.Name = table.Rows[i]["Name"].ToString();
+                    pro.ID = productList[b.TabIndex].ID;
+                    pro.Name = productList[b.TabIndex].Name;
                     pro.Quantity = initialQTY - productList[b.TabIndex].Quantity;
-                    pro.Price = Convert.ToDouble(table.Rows[i]["Price"].ToString());
+                    pro.Price = productList[b.TabIndex].Price;
 
                     string[] arr = File.ReadAllLines(productFile);
                     arr[b.TabIndex] = Convert.ToString($"{pro.ID} | {pro.Name} | {pro.Quantity} | {pro.Price}");
@@ -128,7 +129,7 @@ namespace Final_Project_CS
             pd = productList[b.TabIndex];
             bool Found = false;
 
-            if (b.Enabled)
+            if ((b.Enabled) & (pd.Quantity > 0))
             {
                 double total = 0;
                 if (ShoppingCart.Rows.Count > 0)
@@ -199,6 +200,10 @@ namespace Final_Project_CS
                     }
                     totalPay.Text = totalP2.ToString();
                 }
+            }
+            else
+            {
+                MessageBox.Show($"{b.Name} out of stock");
             }
         }
         //add products to shopping cart via clicking buttons
