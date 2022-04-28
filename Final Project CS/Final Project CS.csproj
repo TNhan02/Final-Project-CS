@@ -69,6 +69,7 @@
     <Compile Include="CashRegister.Designer.cs">
       <DependentUpon>CashRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="importText.cs" />
     <Compile Include="Loginpage.cs">
       <SubType>Form</SubType>
     </Compile>
