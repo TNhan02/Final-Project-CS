@@ -30,11 +30,6 @@ namespace Final_Project_CS
         private void InitializeComponent()
         {
             this.Transactions_Table = new System.Windows.Forms.DataGridView();
-            this.TransactionNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Buyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sale_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -42,6 +37,12 @@ namespace Final_Project_CS
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.TransactionNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Buyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sale_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Transactions_Table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@ namespace Final_Project_CS
             this.Transactions_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Transactions_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TransactionNo,
+            this.Date_Time,
             this.Buyer,
             this.Product,
             this.Sale_Amount,
@@ -62,36 +64,6 @@ namespace Final_Project_CS
             this.Transactions_Table.RowTemplate.Height = 28;
             this.Transactions_Table.Size = new System.Drawing.Size(865, 327);
             this.Transactions_Table.TabIndex = 0;
-            // 
-            // TransactionNo
-            // 
-            this.TransactionNo.HeaderText = "Transaction";
-            this.TransactionNo.MinimumWidth = 6;
-            this.TransactionNo.Name = "TransactionNo";
-            // 
-            // Buyer
-            // 
-            this.Buyer.HeaderText = "Buyer";
-            this.Buyer.MinimumWidth = 6;
-            this.Buyer.Name = "Buyer";
-            // 
-            // Product
-            // 
-            this.Product.HeaderText = "Product";
-            this.Product.MinimumWidth = 6;
-            this.Product.Name = "Product";
-            // 
-            // Sale_Amount
-            // 
-            this.Sale_Amount.HeaderText = "Sale Amount";
-            this.Sale_Amount.MinimumWidth = 6;
-            this.Sale_Amount.Name = "Sale_Amount";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
             // 
             // label1
             // 
@@ -161,6 +133,42 @@ namespace Final_Project_CS
             this.button2.Text = "Least Sold Products";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // TransactionNo
+            // 
+            this.TransactionNo.HeaderText = "Transaction";
+            this.TransactionNo.MinimumWidth = 6;
+            this.TransactionNo.Name = "TransactionNo";
+            // 
+            // Date_Time
+            // 
+            this.Date_Time.HeaderText = "Date Time";
+            this.Date_Time.MinimumWidth = 6;
+            this.Date_Time.Name = "Date_Time";
+            // 
+            // Buyer
+            // 
+            this.Buyer.HeaderText = "Buyer";
+            this.Buyer.MinimumWidth = 6;
+            this.Buyer.Name = "Buyer";
+            // 
+            // Product
+            // 
+            this.Product.HeaderText = "Product";
+            this.Product.MinimumWidth = 6;
+            this.Product.Name = "Product";
+            // 
+            // Sale_Amount
+            // 
+            this.Sale_Amount.HeaderText = "Sale Amount";
+            this.Sale_Amount.MinimumWidth = 6;
+            this.Sale_Amount.Name = "Sale_Amount";
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,6 +203,7 @@ namespace Final_Project_CS
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn TransactionNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn Buyer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sale_Amount;
