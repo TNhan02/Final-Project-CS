@@ -15,7 +15,6 @@ namespace Final_Project_CS
     public partial class CashRegister : Form
     {
         int number = 0;
-        string fileName = "Transaction";
         private const string productFile = "..//../Products.txt";
         public string transaction = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions\";
         DataTable table = new DataTable();
@@ -65,20 +64,22 @@ namespace Final_Project_CS
             //adding buyer information
             //and then transfer transaction information to the report folder
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
+            string Date = DateTime.Now.ToLongDateString();
+            string Time = DateTime.Now.ToLongTimeString();
 
             if (checkoutButton.Enabled)
             {
                 number++;
-                transaction = transaction + fileName + Convert.ToString(number);
-                for(int i = 0; i < ShoppingCart.Rows.Count; i++)
+                transaction = transaction + Date + " " + "(" + Convert.ToString(number) + ")";
+                File.AppendAllText(transaction, buyer + "| "
+                                              + Time + " | ");
+                for (int i = 0; i < ShoppingCart.Rows.Count; i++)
                 {
-                    File.AppendAllText(transaction, "Buyer: " + buyer + "\n"
-                                                 + "Product: " + ShoppingCart.Rows[i].Cells[1].Value + ShoppingCart.Rows[i].Cells[2].Value + "\n"
-                                                 + "Sale Amount: " + itemsCount.Text + "\n"
-                                                 + "Total: " + totalPay.Text);
+                    File.AppendAllText(transaction, ShoppingCart.Rows[i].Cells[1].Value + "\t" + ShoppingCart.Rows[i].Cells[2].Value + " | ");
                 }
+                File.AppendAllText(transaction, itemsCount.Text + " | "
+                                              + totalPay.Text);
             }
-
         }
 
         private void searchButton_Click(object sender, EventArgs e)

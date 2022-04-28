@@ -35,8 +35,9 @@ namespace Final_Project_CS
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.mostSoldProducts = new System.Windows.Forms.Button();
             this.Buyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sale_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +50,11 @@ namespace Final_Project_CS
             this.Transactions_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Transactions_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Buyer,
+            this.Date_Time,
             this.Product,
             this.Sale_Amount,
             this.Total});
-            this.Transactions_Table.Location = new System.Drawing.Point(269, 31);
+            this.Transactions_Table.Location = new System.Drawing.Point(239, 25);
             this.Transactions_Table.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Transactions_Table.Name = "Transactions_Table";
             this.Transactions_Table.RowHeadersWidth = 62;
@@ -104,37 +106,31 @@ namespace Final_Project_CS
             this.label4.TabIndex = 7;
             this.label4.Text = "Total Sale";
             // 
-            // button1
+            // mostSoldProducts
+            // 
+            this.mostSoldProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.mostSoldProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostSoldProducts.Location = new System.Drawing.Point(28, 154);
+            this.mostSoldProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mostSoldProducts.Name = "mostSoldProducts";
+            this.mostSoldProducts.Size = new System.Drawing.Size(180, 45);
+            this.mostSoldProducts.TabIndex = 8;
+            this.mostSoldProducts.Text = "Most Sold Products";
+            this.mostSoldProducts.UseVisualStyleBackColor = false;
+            // 
+            // Buyer
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(32, 192);
+            this.button1.Location = new System.Drawing.Point(28, 154);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 56);
+            this.button1.Size = new System.Drawing.Size(180, 45);
             this.button1.TabIndex = 8;
             this.button1.Text = "Most Sold Products";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // Buyer
-            // 
-            this.Buyer.HeaderText = "Buyer";
-            this.Buyer.MinimumWidth = 6;
-            this.Buyer.Name = "Buyer";
-            // 
-            // Product
-            // 
-            this.Product.HeaderText = "Product";
-            this.Product.MinimumWidth = 6;
-            this.Product.Name = "Product";
-            // 
-            // Sale_Amount
-            // 
-            this.Sale_Amount.HeaderText = "Sale Amount";
-            this.Sale_Amount.MinimumWidth = 6;
-            this.Sale_Amount.Name = "Sale_Amount";
-            // 
-            // Total
+            // button2
             // 
             this.Total.HeaderText = "Total";
             this.Total.MinimumWidth = 6;
@@ -144,7 +140,8 @@ namespace Final_Project_CS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 538);
+            this.ClientSize = new System.Drawing.Size(1126, 430);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -155,7 +152,6 @@ namespace Final_Project_CS
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Report";
             this.Text = "Report";
-            this.Load += new System.EventHandler(this.Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Transactions_Table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,7 +167,10 @@ namespace Final_Project_CS
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TransactionNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Buyer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sale_Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
