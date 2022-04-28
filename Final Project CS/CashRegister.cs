@@ -14,7 +14,10 @@ namespace Final_Project_CS
 {
     public partial class CashRegister : Form
     {
+        int number = 0;
+        string fileName = "Transaction";
         private const string productFile = "..//../Products.txt";
+        public string transaction = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions\";
         DataTable table = new DataTable();
         List<Product> productList = new List<Product>();
 
@@ -63,20 +66,19 @@ namespace Final_Project_CS
             //and then transfer transaction information to the report folder
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
 
-            //renew shopping cart
-            do
+            if (checkoutButton.Enabled)
             {
-                foreach(DataGridViewRow row in ShoppingCart.Rows)
+                number++;
+                transaction = transaction + fileName + Convert.ToString(number);
+                for(int i = 0; i < ShoppingCart.Rows.Count; i++)
                 {
-                    try
-                    {
-                        ShoppingCart.Rows.Remove(row);
-                    }
-                    catch (Exception) { }
+                    File.AppendAllText(transaction, "Buyer: " + buyer + "\n"
+                                                 + "Product: " + ShoppingCart.Rows[i].Cells[1].Value + ShoppingCart.Rows[i].Cells[2].Value + "\n"
+                                                 + "Sale Amount: " + itemsCount.Text + "\n"
+                                                 + "Total: " + totalPay.Text);
                 }
-            } while (ShoppingCart.Rows.Count > 0);
-            itemsCount.Clear();
-            totalPay.Clear();
+            }
+
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -309,6 +311,24 @@ namespace Final_Project_CS
         private void ID_AW5_Click(object sender, EventArgs e)
         {
             buttonClick(ID_AW5);
+        }
+
+        //renew Shopping Cart
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            do
+            {
+                foreach (DataGridViewRow row in ShoppingCart.Rows)
+                {
+                    try
+                    {
+                        ShoppingCart.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (ShoppingCart.Rows.Count > 0);
+            itemsCount.Clear();
+            totalPay.Clear();
         }
     }
 }

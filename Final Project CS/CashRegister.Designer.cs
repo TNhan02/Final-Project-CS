@@ -66,6 +66,7 @@ namespace Final_Project_CS
             this.ID_11PM = new System.Windows.Forms.Button();
             this.ID_11P = new System.Windows.Forms.Button();
             this.ID_11 = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ShoppingCart)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -450,12 +451,23 @@ namespace Final_Project_CS
             this.ID_11.UseVisualStyleBackColor = true;
             this.ID_11.Click += new System.EventHandler(this.ID_11_Click);
             // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(892, 9);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(155, 31);
+            this.clearButton.TabIndex = 17;
+            this.clearButton.Text = "Clear All";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // CashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1062, 632);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.productSearch);
@@ -515,5 +527,6 @@ namespace Final_Project_CS
         private System.Windows.Forms.Button ID_11PM;
         private System.Windows.Forms.Button ID_11P;
         private System.Windows.Forms.Button ID_11;
+        private System.Windows.Forms.Button clearButton;
     }
 }
