@@ -14,14 +14,14 @@ namespace Final_Project_CS
 {
     public partial class CashRegister : Form
     {
-        private const string productFile = "..//../Products.txt";
+        public const string productFile = "..//../Products.txt";
         DataTable table = new DataTable();
         List<Product> productList = new List<Product>();
 
         public CashRegister()
         {
             InitializeComponent();
-            //add table's columns
+            //create table's columns
             table.Columns.Add("ID", typeof(string));
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Quantity", typeof(double));
@@ -31,12 +31,12 @@ namespace Final_Project_CS
             string[] lines = File.ReadAllLines(productFile);
             string[] values;
 
-            for(int i = 0; i < lines.Length; i++)
+            for (int i = 0; i < lines.Length; i++)
             {
                 values = lines[i].ToString().Split('|');
                 string[] row = new string[values.Length];
 
-                for(int j = 0; j < values.Length; j++)
+                for (int j = 0; j < values.Length; j++)
                 {
                     row[j] = values[j].Trim();
                 }
@@ -55,7 +55,7 @@ namespace Final_Project_CS
                 productList.Add(p);
             }
         }
-        
+
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
@@ -73,8 +73,7 @@ namespace Final_Project_CS
             {
                 File.AppendAllText(path, ShoppingCart.Rows[i].Cells[1].Value + "\t" + ShoppingCart.Rows[i].Cells[2].Value + " | ");
             }
-            File.AppendAllText(path, itemsCount.Text + " | "
-                                   + totalPay.Text);
+            File.AppendAllText(path, itemsCount.Text + " | " + totalPay.Text);
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -106,7 +105,7 @@ namespace Final_Project_CS
             {
                 for(int i = 0; i < ShoppingCart.Rows.Count; i++)
                 {
-                    double initialQTY = Convert.ToDouble(table.Rows[i]["Quantity"].ToString());
+                    double initialQTY = Convert.ToDouble(table.Rows[b.TabIndex]["Quantity"].ToString());
                     pro.ID = productList[b.TabIndex].ID;
                     pro.Name = productList[b.TabIndex].Name;
                     pro.Quantity = initialQTY - productList[b.TabIndex].Quantity;
@@ -166,7 +165,6 @@ namespace Final_Project_CS
 
                     UpdateQTy(productFile, b);
                 }
-                
 
 
                 //add Items Count for each transaction

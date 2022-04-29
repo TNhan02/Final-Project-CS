@@ -21,7 +21,7 @@ namespace Final_Project_CS
         public double Price { get; set; }
 
 
-        List<Product> productList = new List<Product>();
+        public List<Product> productList = new List<Product>();
         public void AddProduct()
         {
             Product p = new Product();

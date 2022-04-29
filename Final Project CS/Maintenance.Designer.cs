@@ -46,6 +46,7 @@ namespace Final_Project_CS
             this.label6 = new System.Windows.Forms.Label();
             this.searchPID = new System.Windows.Forms.TextBox();
             this.Product_List = new System.Windows.Forms.DataGridView();
+            this.updateButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Product_List)).BeginInit();
@@ -218,13 +219,23 @@ namespace Final_Project_CS
             this.Product_List.RowTemplate.Height = 24;
             this.Product_List.Size = new System.Drawing.Size(618, 370);
             this.Product_List.TabIndex = 7;
-            this.Product_List.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Product_List_CellContentClick);
+            // 
+            // updateButton
+            // 
+            this.updateButton.Location = new System.Drawing.Point(798, 101);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(100, 35);
+            this.updateButton.TabIndex = 8;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // Maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 540);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.Product_List);
             this.Controls.Add(this.searchPID);
             this.Controls.Add(this.label6);
@@ -261,5 +272,6 @@ namespace Final_Project_CS
         private System.Windows.Forms.TextBox addPQuantity;
         private System.Windows.Forms.TextBox addPName;
         private System.Windows.Forms.TextBox addPID;
+        private System.Windows.Forms.Button updateButton;
     }
 }
