@@ -14,7 +14,6 @@ namespace Final_Project_CS
 {
     public partial class CashRegister : Form
     {
-        int number = 0;
         private const string productFile = "..//../Products.txt";
         DataTable table = new DataTable();
         List<Product> productList = new List<Product>();
@@ -62,24 +61,20 @@ namespace Final_Project_CS
         {
             //adding buyer information
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
-            string Time = DateTime.Now.ToLongTimeString();
-            string transaction = @"C:\Users\Admin\Source\Repos\Final-Project-CS\Final Project CS\Transactions\";
-            string Date = DateTime.Now.ToLongDateString();
-
-            string path = transaction + Date + " (" + number + ")";
-            if (File.Exists(path))
-            {
-                number++;
-                File.AppendAllText(path, buyer + " | "
-                                       + Time + " | ");
-                for (int i = 0; i < ShoppingCart.Rows.Count; i++)
-                {
-                    File.AppendAllText(path, ShoppingCart.Rows[i].Cells[1].Value + "\t" + ShoppingCart.Rows[i].Cells[2].Value + " | ");
-                }
-                File.AppendAllText(path, itemsCount.Text + " | "
-                                       + totalPay.Text);
-            }
             
+            //create a text file for a transaction
+            string transaction = @"C:\Users\Admin\Source\Repos\Final-Project-CS\Final Project CS\Transactions\";
+            string date_ = string.Format(DateTime.UtcNow.ToString("yyyyMMdd-HHmm"));
+            string fileName = date_;
+            string path = Path.Combine(transaction, fileName);
+
+            File.AppendAllText(path, buyer + " | ");
+            for (int i = 0; i < ShoppingCart.Rows.Count; i++)
+            {
+                File.AppendAllText(path, ShoppingCart.Rows[i].Cells[1].Value + "\t" + ShoppingCart.Rows[i].Cells[2].Value + " | ");
+            }
+            File.AppendAllText(path, itemsCount.Text + " | "
+                                   + totalPay.Text);
         }
 
         private void searchButton_Click(object sender, EventArgs e)

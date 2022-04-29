@@ -218,6 +218,7 @@ namespace Final_Project_CS
             this.Product_List.RowTemplate.Height = 24;
             this.Product_List.Size = new System.Drawing.Size(618, 370);
             this.Product_List.TabIndex = 7;
+            this.Product_List.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Product_List_CellContentClick);
             // 
             // Maintenance
             // 

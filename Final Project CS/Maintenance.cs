@@ -89,5 +89,10 @@ namespace Final_Project_CS
             dv.RowFilter = string.Format("ID + NAME LIKE '%{0}%'", searchPID.Text);
             Product_List.DataSource = dv;
         }
+
+        private void Product_List_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
