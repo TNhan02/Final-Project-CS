@@ -16,7 +16,7 @@ namespace Final_Project_CS
     {
         CashRegister cashForm = new CashRegister();
         Report reportForm = new Report();
-        private const string productFile = "..//../Products.txt";
+        public const string productFile = "..//../Products.txt";
         public DataTable table = new DataTable();
         public List<Product> productList = new List<Product>();
         public Maintenance()
@@ -90,9 +90,35 @@ namespace Final_Project_CS
             Product_List.DataSource = dv;
         }
 
-        private void Product_List_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void updateButton_Click(object sender, EventArgs e)
         {
+            do
+            {
+                foreach (DataGridViewRow row in Product_List.Rows)
+                {
+                    try
+                    {
+                        Product_List.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (Product_List.Rows.Count > 0);
 
+            string[] lines = File.ReadAllLines(productFile);
+            string[] values;
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split('|');
+                string[] row = new string[values.Length];
+
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim();
+                }
+
+                table.Rows.Add(row);
+            }
         }
     }
 }
