@@ -1,4 +1,4 @@
-11 | Iphone 11 | 88 | 580
+11 | Iphone 11 | 87 | 580
 11P | Iphone 11 Pro | 97 | 650
 11PM | Iphone 11 Pro Max | 95 | 700
 12 | Iphone 12 | 95 | 645
@@ -9,7 +9,7 @@
 13PM | Iphone 13 Pro Max | 97 | 1280
 AP1 | Airpod 1 | 97 | 110
 AP2 | Airpod 2 | 99 | 150
-AP3 | Airpod 3 | 99 | 200
+AP3 | Airpod 3 | 97 | 200
 APP | Airpod Pro | 97 | 250
 IA1 | Ipad Air 1 | 97 | 500
 IA2 | Ipad Air 2 | 50 | 740

@@ -31,18 +31,17 @@ namespace Final_Project_CS
         {
             this.components = new System.ComponentModel.Container();
             this.Transactions_Table = new System.Windows.Forms.DataGridView();
+            this.Buyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sale_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.SaleAmount = new System.Windows.Forms.TextBox();
+            this.TotalCost = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.mostSoldProducts = new System.Windows.Forms.Button();
             this.importButton = new System.Windows.Forms.Button();
-            this.Buyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cashRegisterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Transactions_Table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cashRegisterBindingSource)).BeginInit();
@@ -54,66 +53,90 @@ namespace Final_Project_CS
             this.Transactions_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Transactions_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Buyer,
-            this.Date_Time,
             this.Product,
-            this.Amount,
-            this.Total});
-            this.Transactions_Table.Location = new System.Drawing.Point(212, 20);
+            this.Sale_Amount,
+            this.Total_Cost});
+            this.Transactions_Table.Location = new System.Drawing.Point(216, 51);
             this.Transactions_Table.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Transactions_Table.Name = "Transactions_Table";
             this.Transactions_Table.RowHeadersWidth = 62;
             this.Transactions_Table.RowTemplate.Height = 28;
             this.Transactions_Table.Size = new System.Drawing.Size(865, 327);
             this.Transactions_Table.TabIndex = 0;
-            this.Transactions_Table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Transactions_Table_CellContentClick);
+            // 
+            // Buyer
+            // 
+            this.Buyer.HeaderText = "Buyer";
+            this.Buyer.MinimumWidth = 6;
+            this.Buyer.Name = "Buyer";
+            // 
+            // Product
+            // 
+            this.Product.HeaderText = "Product";
+            this.Product.MinimumWidth = 6;
+            this.Product.Name = "Product";
+            // 
+            // Sale_Amount
+            // 
+            this.Sale_Amount.HeaderText = "Sale Amount";
+            this.Sale_Amount.MinimumWidth = 6;
+            this.Sale_Amount.Name = "Sale_Amount";
+            // 
+            // Total_Cost
+            // 
+            this.Total_Cost.HeaderText = "Total Cost";
+            this.Total_Cost.MinimumWidth = 6;
+            this.Total_Cost.Name = "Total_Cost";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(248, 386);
+            this.label1.Location = new System.Drawing.Point(247, 402);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "GRAND TOTAL-->";
             // 
-            // textBox1
+            // SaleAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(787, 386);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(89, 22);
-            this.textBox1.TabIndex = 2;
+            this.SaleAmount.Location = new System.Drawing.Point(711, 399);
+            this.SaleAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SaleAmount.Name = "SaleAmount";
+            this.SaleAmount.Size = new System.Drawing.Size(89, 22);
+            this.SaleAmount.TabIndex = 2;
+            this.SaleAmount.TextChanged += new System.EventHandler(this.SaleAmount_TextChanged);
             // 
-            // textBox3
+            // TotalCost
             // 
-            this.textBox3.Location = new System.Drawing.Point(960, 386);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(89, 22);
-            this.textBox3.TabIndex = 4;
+            this.TotalCost.Location = new System.Drawing.Point(909, 399);
+            this.TotalCost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TotalCost.Name = "TotalCost";
+            this.TotalCost.Size = new System.Drawing.Size(89, 22);
+            this.TotalCost.TabIndex = 4;
+            this.TotalCost.TextChanged += new System.EventHandler(this.TotalCost_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(784, 367);
+            this.label2.Location = new System.Drawing.Point(712, 380);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 16);
+            this.label2.Size = new System.Drawing.Size(88, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Sale Amount";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(966, 367);
+            this.label4.Location = new System.Drawing.Point(915, 380);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 16);
+            this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Total Sale";
+            this.label4.Text = "Total Cost";
             // 
             // mostSoldProducts
             // 
-            this.mostSoldProducts.Location = new System.Drawing.Point(21, 130);
+            this.mostSoldProducts.Location = new System.Drawing.Point(30, 104);
             this.mostSoldProducts.Name = "mostSoldProducts";
             this.mostSoldProducts.Size = new System.Drawing.Size(156, 44);
             this.mostSoldProducts.TabIndex = 8;
@@ -122,43 +145,13 @@ namespace Final_Project_CS
             // 
             // importButton
             // 
-            this.importButton.Location = new System.Drawing.Point(21, 20);
+            this.importButton.Location = new System.Drawing.Point(216, 14);
             this.importButton.Name = "importButton";
             this.importButton.Size = new System.Drawing.Size(156, 32);
             this.importButton.TabIndex = 9;
             this.importButton.Text = "Import";
             this.importButton.UseVisualStyleBackColor = true;
             this.importButton.Click += new System.EventHandler(this.importButton_Click);
-            // 
-            // Buyer
-            // 
-            this.Buyer.HeaderText = "Buyer";
-            this.Buyer.MinimumWidth = 6;
-            this.Buyer.Name = "Buyer";
-            // 
-            // Date_Time
-            // 
-            this.Date_Time.HeaderText = "Date & Time";
-            this.Date_Time.MinimumWidth = 6;
-            this.Date_Time.Name = "Date_Time";
-            // 
-            // Product
-            // 
-            this.Product.HeaderText = "Product";
-            this.Product.MinimumWidth = 6;
-            this.Product.Name = "Product";
-            // 
-            // Amount
-            // 
-            this.Amount.HeaderText = "Cost Per Unit";
-            this.Amount.MinimumWidth = 6;
-            this.Amount.Name = "Amount";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total Cost";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
             // 
             // cashRegisterBindingSource
             // 
@@ -173,14 +166,13 @@ namespace Final_Project_CS
             this.Controls.Add(this.mostSoldProducts);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TotalCost);
+            this.Controls.Add(this.SaleAmount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Transactions_Table);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Report";
             this.Text = "Report";
-            this.Load += new System.EventHandler(this.Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Transactions_Table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cashRegisterBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -192,8 +184,8 @@ namespace Final_Project_CS
 
         private System.Windows.Forms.DataGridView Transactions_Table;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox SaleAmount;
+        private System.Windows.Forms.TextBox TotalCost;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
@@ -201,11 +193,10 @@ namespace Final_Project_CS
         private System.Windows.Forms.DataGridViewTextBoxColumn TransactionNo;
         private System.Windows.Forms.Button mostSoldProducts;
         private System.Windows.Forms.Button importButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Buyer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date_Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.BindingSource cashRegisterBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Buyer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sale_Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Cost;
     }
 }

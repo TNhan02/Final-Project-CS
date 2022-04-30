@@ -61,10 +61,10 @@ namespace Final_Project_CS
         {
             //adding buyer information
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
-            
+
             //create a text file for a transaction
-            string transaction = @"C:\Users\tinua_h6hcjv0\source\repos\Final-Project-CS\Final Project CS\Transactions\";
-            string date_ = string.Format(DateTime.UtcNow.ToString("yyyyMMdd-HHmm"));
+            string transaction = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions";
+            string date_ = string.Format(DateTime.Now.ToString("yyyyMMdd-HHmm"));
             string fileName = date_;
             string path = Path.Combine(transaction, fileName);
 
