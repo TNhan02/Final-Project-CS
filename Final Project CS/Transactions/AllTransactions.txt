@@ -1,0 +1,14 @@
+Habeeb | Airpod 3	| 1 | 200
+Stephen | Iphone 13, Pro Max	 | 2 | 2560
+Dung | Iphone 13	 | 1 | 800
+Japheth | Iphone 11	 | 2 | 1160
+Queen | Airpod 3	 | 2 | 1350
+HIen | Iphone 12 Pro	 | 1 | 880
+Nhan | Iphone 13 Pro Max	 | 2 | 2560
+Ahmed | Iphone 11	 | 1 | 580
+Mayowa | Iphone 12	 | 1 | 645 
+Queen | Iphone 12 Pro Max	 | 1 | 1150
+Kate | Airpod Pro	 | 1 | 250
+Vlad | Ipad Air 1	 | 1 | 500
+Lina | Macbook M1	 | 1 | 1175
+Stas | Iphone 13 Pro Max	 | 1 | 1280

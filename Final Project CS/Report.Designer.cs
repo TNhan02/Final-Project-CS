@@ -33,7 +33,7 @@ namespace Final_Project_CS
             this.Transactions_Table = new System.Windows.Forms.DataGridView();
             this.Buyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sale_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity_Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.SaleAmount = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@ namespace Final_Project_CS
             this.Transactions_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Buyer,
             this.Product,
-            this.Sale_Amount,
+            this.Quantity_Qty,
             this.Total_Cost});
             this.Transactions_Table.Location = new System.Drawing.Point(216, 51);
             this.Transactions_Table.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -76,11 +76,11 @@ namespace Final_Project_CS
             this.Product.MinimumWidth = 6;
             this.Product.Name = "Product";
             // 
-            // Sale_Amount
+            // Quantity_Qty
             // 
-            this.Sale_Amount.HeaderText = "Sale Amount";
-            this.Sale_Amount.MinimumWidth = 6;
-            this.Sale_Amount.Name = "Sale_Amount";
+            this.Quantity_Qty.HeaderText = "Quantity";
+            this.Quantity_Qty.MinimumWidth = 6;
+            this.Quantity_Qty.Name = "Quantity_Qty";
             // 
             // Total_Cost
             // 
@@ -105,7 +105,7 @@ namespace Final_Project_CS
             this.SaleAmount.Name = "SaleAmount";
             this.SaleAmount.Size = new System.Drawing.Size(89, 22);
             this.SaleAmount.TabIndex = 2;
-            this.SaleAmount.TextChanged += new System.EventHandler(this.SaleAmount_TextChanged);
+            this.SaleAmount.TextChanged += new System.EventHandler(this.Quantity_Qty_TextChanged);
             // 
             // TotalCost
             // 
@@ -121,7 +121,7 @@ namespace Final_Project_CS
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(712, 380);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 17);
+            this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Sale Amount";
             // 
@@ -130,7 +130,7 @@ namespace Final_Project_CS
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(915, 380);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.Size = new System.Drawing.Size(68, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Total Cost";
             // 
@@ -142,6 +142,7 @@ namespace Final_Project_CS
             this.mostSoldProducts.TabIndex = 8;
             this.mostSoldProducts.Text = "Most Sold Products";
             this.mostSoldProducts.UseVisualStyleBackColor = true;
+            this.mostSoldProducts.Click += new System.EventHandler(this.mostSoldProducts_Click);
             // 
             // importButton
             // 
@@ -196,7 +197,7 @@ namespace Final_Project_CS
         private System.Windows.Forms.BindingSource cashRegisterBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn Buyer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sale_Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity_Qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Cost;
     }
 }

@@ -15,9 +15,11 @@ using System.Globalization;
 
 namespace Final_Project_CS
 {
+    
     public partial class Report : Form
     {
-        string rootPath = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions";
+
+
         public Report()
         {
             InitializeComponent();
@@ -25,55 +27,39 @@ namespace Final_Project_CS
 
         private void importButton_Click(object sender, EventArgs e)
         {
-            string[] paths = Directory.GetFiles(rootPath, "*", SearchOption.AllDirectories);
+            string[] lines = File.ReadAllLines(@"C:\Users\tinua_h6hcjv0\source\repos\Final-Project-CS\Final Project CS\Transactions\AllTransactions.txt");
+            string[] values;
 
-            foreach (var filePath in paths)
+            for (int i = 0; i < lines.Length; i++)
+
             {
-                string[] lines = File.ReadAllLines(filePath);
-                string[] values = lines.ToString().Split('|');
+                values = lines[i].ToString().Split('|');
                 string[] row = new string[values.Length];
 
-                for (int j = 0; j < lines.Length; j++)
+                for (int j = 0; j < values.Length; j++)
                 {
                     row[j] = values[j].Trim();
                 }
 
                 Transactions_Table.Rows.Add(row);
+
             }
         }
-
-        private void SaleAmount_TextChanged(object sender, EventArgs e)
+            
+        private void Quantity_Qty_TextChanged(object sender, EventArgs e)
         {
-            double Sale = 0;
-            for (int i = 0; i < Transactions_Table.Rows.Count; i++)
-            {
-                try
-                {
-                    Sale += double.Parse(Transactions_Table.Rows[i].Cells[2].Value.ToString());
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                SaleAmount.Text = SaleAmount.ToString();
-            }
+            
         }
 
         private void TotalCost_TextChanged(object sender, EventArgs e)
         {
-            double Total = 0;
-            for (int i = 0; i < Transactions_Table.Rows.Count; i++)
-            {
-                try
-                {
-                    Total += double.Parse(Transactions_Table.Rows[i].Cells[3].Value.ToString());
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                TotalCost.Text = TotalCost.ToString();
-            }
+            
+        }
+
+        private void mostSoldProducts_Click(object sender, EventArgs e)
+
+        {
+            
         }
     }
 }
