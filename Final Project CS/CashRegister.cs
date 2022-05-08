@@ -68,12 +68,11 @@ namespace Final_Project_CS
             string fileName = date_;
             string path = Path.Combine(transaction, fileName);
 
-            File.AppendAllText(path, buyer + " | ");
+            File.AppendAllText(path, totalPay.Text);
             for (int i = 0; i < ShoppingCart.Rows.Count; i++)
             {
-                File.AppendAllText(path, ShoppingCart.Rows[i].Cells[1].Value + "\t" + ShoppingCart.Rows[i].Cells[2].Value + " | ");
+                File.AppendAllText(path, ShoppingCart.Rows[i].Cells[1].Value + " | " + ShoppingCart.Rows[i].Cells[2].Value + "\n");
             }
-            File.AppendAllText(path, itemsCount.Text + " | " + totalPay.Text);
         }
 
         private void searchButton_Click(object sender, EventArgs e)
