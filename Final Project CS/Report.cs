@@ -15,11 +15,10 @@ using System.Globalization;
 
 namespace Final_Project_CS
 {
-    
     public partial class Report : Form
     {
-        string rootPath = @"C:\Users\Admin\source\repos\Final Project CS\Final Project CS\Transactions";
-        string productPath = @"C:\Users\Admin\source\repos\Final Project CS\Final Project CS\Products.txt";
+        string rootPath = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions";
+        string productPath = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Products.txt";
         public DataTable table = new DataTable();
 
         public Report()
@@ -35,7 +34,7 @@ namespace Final_Project_CS
 
         private void CalculateTotalCost()
         {
-            if (Transactions_Table.Rows.Count == 0)
+            if (table.Rows.Count == 0)
             {
                 TotalCost.Text = "0";
                 return;
@@ -43,9 +42,9 @@ namespace Final_Project_CS
             else
             {
                 double Total = 0;
-                for(int i = 0; i < Transactions_Table.Rows.Count; i++)
+                for(int i = 0; i < table.Rows.Count; i++)
                 {
-                    Total += double.Parse(Transactions_Table.Rows[i].Cells[4].Value.ToString());
+                    Total += double.Parse(table.Rows[i]["Grand Total"].ToString());
                 }
                 TotalCost.Text = Total.ToString();
             }

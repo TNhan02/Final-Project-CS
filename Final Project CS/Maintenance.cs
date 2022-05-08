@@ -46,8 +46,40 @@ namespace Final_Project_CS
 
                 table.Rows.Add(row);
             }
-        }
 
+            cashForm.Checkout_ButtonWasClicked += new CashRegister.ClickButton(Update);
+        }
+        public void Update()
+        {
+            do
+            {
+                foreach (DataGridViewRow row in Product_List.Rows)
+                {
+                    try
+                    {
+                        Product_List.Rows.Remove(row);
+                    }
+                    catch (Exception) { }
+                }
+            } while (Product_List.Rows.Count > 0);
+
+            string[] lines = File.ReadAllLines(productFile);
+            string[] values;
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                values = lines[i].ToString().Split('|');
+                string[] row = new string[values.Length];
+
+                for (int j = 0; j < values.Length; j++)
+                {
+                    row[j] = values[j].Trim();
+                }
+
+                table.Rows.Add(row);
+            }
+        }
+        
 
         private void cashButton_Click(object sender, EventArgs e)
         {
@@ -92,33 +124,7 @@ namespace Final_Project_CS
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            do
-            {
-                foreach (DataGridViewRow row in Product_List.Rows)
-                {
-                    try
-                    {
-                        Product_List.Rows.Remove(row);
-                    }
-                    catch (Exception) { }
-                }
-            } while (Product_List.Rows.Count > 0);
-
-            string[] lines = File.ReadAllLines(productFile);
-            string[] values;
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                values = lines[i].ToString().Split('|');
-                string[] row = new string[values.Length];
-
-                for (int j = 0; j < values.Length; j++)
-                {
-                    row[j] = values[j].Trim();
-                }
-
-                table.Rows.Add(row);
-            }
+            Update();
         }
     }
 }

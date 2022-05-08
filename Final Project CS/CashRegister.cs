@@ -18,6 +18,9 @@ namespace Final_Project_CS
         DataTable table = new DataTable();
         List<Product> productList = new List<Product>();
 
+        public delegate void ClickButton();
+        public event ClickButton Checkout_ButtonWasClicked;
+
         public CashRegister()
         {
             InitializeComponent();
@@ -57,10 +60,11 @@ namespace Final_Project_CS
         }
 
 
-        private void checkoutButton_Click(object sender, EventArgs e)
+        public void checkoutButton_Click(object sender, EventArgs e)
         {
             //adding buyer information
             string buyer = Buyer.ShowDialog("Buyer", "Asking Buyer Information");
+            Checkout_ButtonWasClicked();
 
             //create a text file for a transaction
             string transaction = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions";

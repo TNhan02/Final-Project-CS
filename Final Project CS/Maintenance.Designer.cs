@@ -191,7 +191,7 @@ namespace Final_Project_CS
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(300, 110);
+            this.label6.Location = new System.Drawing.Point(302, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 17);
             this.label6.TabIndex = 4;
@@ -199,7 +199,7 @@ namespace Final_Project_CS
             // 
             // searchPID
             // 
-            this.searchPID.Location = new System.Drawing.Point(382, 107);
+            this.searchPID.Location = new System.Drawing.Point(382, 116);
             this.searchPID.Name = "searchPID";
             this.searchPID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.searchPID.Size = new System.Drawing.Size(133, 22);
@@ -222,7 +222,7 @@ namespace Final_Project_CS
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(798, 101);
+            this.updateButton.Location = new System.Drawing.Point(799, 106);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(100, 35);
             this.updateButton.TabIndex = 8;
