@@ -68,14 +68,14 @@ namespace Final_Project_CS
 
             //create a text file for a transaction
             string transaction = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions";
-            string date_ = string.Format(DateTime.Now.ToString("yyyyMMdd-HHmm"));
+            string date_ = string.Format(DateTime.Now.ToString("yyyyMMdd-HHmmss"));
             string fileName = date_;
             string path = Path.Combine(transaction, fileName);
 
-            File.AppendAllText(path, totalPay.Text);
+            File.AppendAllText(path , totalPay.Text + "\n");
             for (int i = 0; i < ShoppingCart.Rows.Count; i++)
             {
-                File.AppendAllText(path, ShoppingCart.Rows[i].Cells[1].Value + " | " + ShoppingCart.Rows[i].Cells[2].Value + "\n");
+                File.AppendAllText(path, buyer + " | " + ShoppingCart.Rows[i].Cells[1].Value + " | " + ShoppingCart.Rows[i].Cells[2].Value + "\n");
             }
         }
 

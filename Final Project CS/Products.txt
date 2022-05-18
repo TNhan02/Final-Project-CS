@@ -2,10 +2,10 @@
 11P | Iphone 11 Pro | 96 | 650
 11PM | Iphone 11 Pro Max | 95 | 700
 12 | Iphone 12 | 95 | 645
-12P | Iphone 12 Pro | 98 | 880
+12P | Iphone 12 Pro | 96 | 880
 12PM | Iphone 12 Pro Max | 94 | 1150
 13 | Iphone 13 | 95 | 800
-13P | Iphone 13 Pro | 200 | 1100
+13P | Iphone 13 Pro | 197 | 1100
 13PM | Iphone 13 Pro Max | 97 | 1280
 AP1 | Airpod 1 | 97 | 110
 AP2 | Airpod 2 | 99 | 150
@@ -18,4 +18,4 @@ IPro | Ipad Pro | 97 | 950
 M1 | Macbook M1 | 97 | 1175
 MP1 | Macbook Pro M1 | 95 | 1235
 AW4 | Watch Series 4 | 20 | 250
-AW5 | Watch Series 5 | 150 | 400
+AW5 | Watch Series 5 | 149 | 400
