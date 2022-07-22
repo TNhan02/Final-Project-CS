@@ -157,10 +157,10 @@ namespace Final_Project_CS
             // 
             // cashButton
             // 
-            this.cashButton.Location = new System.Drawing.Point(512, 23);
+            this.cashButton.Location = new System.Drawing.Point(530, 23);
             this.cashButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cashButton.Name = "cashButton";
-            this.cashButton.Size = new System.Drawing.Size(140, 45);
+            this.cashButton.Size = new System.Drawing.Size(170, 45);
             this.cashButton.TabIndex = 1;
             this.cashButton.Text = "Cash Register";
             this.cashButton.UseVisualStyleBackColor = true;
@@ -168,9 +168,9 @@ namespace Final_Project_CS
             // 
             // reportButton
             // 
-            this.reportButton.Location = new System.Drawing.Point(708, 23);
+            this.reportButton.Location = new System.Drawing.Point(764, 23);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(140, 45);
+            this.reportButton.Size = new System.Drawing.Size(170, 45);
             this.reportButton.TabIndex = 2;
             this.reportButton.Text = "Report";
             this.reportButton.UseVisualStyleBackColor = true;
@@ -185,7 +185,7 @@ namespace Final_Project_CS
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 87);
+            this.panel1.Size = new System.Drawing.Size(956, 87);
             this.panel1.TabIndex = 0;
             // 
             // label6
@@ -217,14 +217,14 @@ namespace Final_Project_CS
             this.Product_List.ReadOnly = true;
             this.Product_List.RowHeadersWidth = 51;
             this.Product_List.RowTemplate.Height = 24;
-            this.Product_List.Size = new System.Drawing.Size(618, 370);
+            this.Product_List.Size = new System.Drawing.Size(632, 370);
             this.Product_List.TabIndex = 7;
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(799, 106);
+            this.updateButton.Location = new System.Drawing.Point(822, 106);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(100, 35);
+            this.updateButton.Size = new System.Drawing.Size(113, 35);
             this.updateButton.TabIndex = 8;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
@@ -234,7 +234,7 @@ namespace Final_Project_CS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 540);
+            this.ClientSize = new System.Drawing.Size(953, 540);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.Product_List);
             this.Controls.Add(this.searchPID);

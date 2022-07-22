@@ -29,20 +29,17 @@ namespace Final_Project_CS
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.Transactions_Table = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.TotalCost = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.mostSoldProducts = new System.Windows.Forms.Button();
             this.importButton = new System.Windows.Forms.Button();
-            this.cashRegisterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.fillButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Transactions_Table)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cashRegisterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Transactions_Table
@@ -159,7 +156,6 @@ namespace Final_Project_CS
             this.Name = "Report";
             this.Text = "Report";
             ((System.ComponentModel.ISupportInitialize)(this.Transactions_Table)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cashRegisterBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,7 +172,6 @@ namespace Final_Project_CS
         private System.Windows.Forms.DataGridViewTextBoxColumn TransactionNo;
         private System.Windows.Forms.Button mostSoldProducts;
         private System.Windows.Forms.Button importButton;
-        private System.Windows.Forms.BindingSource cashRegisterBindingSource;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button fillButton;

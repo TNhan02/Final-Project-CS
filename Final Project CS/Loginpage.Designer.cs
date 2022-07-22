@@ -49,7 +49,7 @@ namespace Final_Project_CS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(464, 238);
+            this.label1.Location = new System.Drawing.Point(495, 236);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 0;
@@ -59,7 +59,7 @@ namespace Final_Project_CS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(467, 262);
+            this.label2.Location = new System.Drawing.Point(495, 262);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 1;
@@ -67,14 +67,14 @@ namespace Final_Project_CS
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(563, 236);
+            this.username.Location = new System.Drawing.Point(600, 236);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(140, 22);
             this.username.TabIndex = 2;
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(563, 262);
+            this.password.Location = new System.Drawing.Point(600, 262);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(140, 22);
             this.password.TabIndex = 3;
@@ -82,7 +82,7 @@ namespace Final_Project_CS
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(520, 290);
+            this.loginButton.Location = new System.Drawing.Point(571, 290);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(103, 35);
             this.loginButton.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace Final_Project_CS
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(395, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(430, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(369, 209);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@ namespace Final_Project_CS
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(776, 387);
+            this.ClientSize = new System.Drawing.Size(824, 387);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);

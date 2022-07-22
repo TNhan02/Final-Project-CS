@@ -17,14 +17,18 @@ namespace Final_Project_CS
 {
     public partial class Report : Form
     {
+        //define paths
         string rootPath = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions";
         string productPath = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Products.txt";
+        string original_productPath = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Original Products.txt"; 
         public DataTable table = new DataTable();
+        Top10 Top10Table = new Top10();
 
         public Report()
         {
             InitializeComponent();
 
+            //add table's columns
             table.Columns.Add("Date", typeof(string));
             table.Columns.Add("Buyer", typeof(string));
             table.Columns.Add("Product", typeof(string));
@@ -108,7 +112,7 @@ namespace Final_Project_CS
             DataView dv = new DataView(table);
             DateTime StartDate = dateTimePicker1.Value;
             DateTime EndDate = dateTimePicker2.Value;
-            dv.RowFilter = string.Format("Date >= #{0:MM/dd/yyyy}# AND Date <=#{1:MM/dd/yyyy}#", StartDate, EndDate);
+            dv.RowFilter = string.Format("Date >= #{0:MM/dd/yyyy}# AND Date <= #{1:MM/dd/yyyy}#", StartDate, EndDate);
             Transactions_Table.DataSource = dv;
 
             CalculateTotalCost();
@@ -116,23 +120,73 @@ namespace Final_Project_CS
 
         private void mostSoldProducts_Click(object sender, EventArgs e)
         {
-            DataView dv = new DataView(table);
-            dv.Sort = "Item Amount DESC";
+            string[] original_storage = File.ReadAllLines(original_productPath);
+            string[] current_storage = File.ReadAllLines(productPath);
 
-            while (dv.Count > 10)
+            List<string[]> original_quantity = new List<string[]>();
+            List<string[]> current_quantity = new List<string[]>();
+            List<ProductSold> QuantitySoldList = new List<ProductSold>();
+
+            //transfer 2 textfiles to 2 lists 
+            foreach (var original_products in original_storage)
             {
-                dv.Delete(dv.Count - 1);
+                string[] temp1 = original_products.Split('|');
+                original_quantity.Add(temp1);
             }
-            Transactions_Table.DataSource = dv;
+            foreach (var current_products in current_storage)
+            {
+                string[] temp2 = current_products.Split('|');
+                current_quantity.Add(temp2);
+            }
 
-            CalculateTotalCost();
+            //calculate quantity sold per product
+            int quantity_sold = 0;
+            for (int i = 0; i < original_quantity.Count; i++)
+            {
+                ProductSold ps = new ProductSold();
+                for (int j = 0; j < current_quantity.Count; j++)
+                {
+                    quantity_sold = Convert.ToInt32(original_quantity[i][2]) - Convert.ToInt32(current_quantity[i][2]);
+
+                    if (quantity_sold != 0)
+                    {
+                        ps.Name = current_quantity[i][1];
+                        ps.Quantity_Sold = quantity_sold;
+
+                        QuantitySoldList.Add(ps);
+                        break;
+                    }
+                    else
+                    {
+                        quantity_sold = Convert.ToInt32(original_quantity[i+1][2]) - Convert.ToInt32(current_quantity[i+1][2]);
+
+                        ps.Name = current_quantity[i+1][1];
+                        ps.Quantity_Sold = quantity_sold;
+
+                        QuantitySoldList.Add(ps);
+                        break;
+                    }
+                }
+
+                //sort QuantityList in descending order
+                string[] row = new string[2];
+                for (int l = 0; l < Top10Table.top10Table.Rows.Count; l++)
+                {
+                    row[0] = QuantitySoldList[l].Name;
+                    row[1] = Convert.ToString(QuantitySoldList[l].Quantity_Sold);
+                }
+                Top10Table.top10Table.Rows.Add(row);
+
+                //this.Top10Table.top10Table.Sort(this.Top10Table.top10Table.Columns["Quantity Sold"], ListSortDirection.Descending);
+            }
+            Top10Table.ShowDialog();
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
             while (Transactions_Table.Rows.Count > 0)
             {
-                foreach (DataGridViewRow row in Transactions_Table.Rows)
+                foreach(DataGridViewRow row in Transactions_Table.Rows)
                 {
                     Transactions_Table.Rows.Remove(row);
                 }

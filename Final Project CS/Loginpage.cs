@@ -27,7 +27,7 @@ namespace Final_Project_CS
             }
             else
             {
-                MessageBox.Show("Wrong username of password input");
+                MessageBox.Show("Wrong username or password input");
             }
         }
     }
