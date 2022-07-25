@@ -39,11 +39,14 @@ namespace Final_Project_CS
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.fillButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TotalAmount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Transactions_Table)).BeginInit();
             this.SuspendLayout();
             // 
             // Transactions_Table
             // 
+            this.Transactions_Table.AllowUserToAddRows = false;
             this.Transactions_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Transactions_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Transactions_Table.Location = new System.Drawing.Point(216, 51);
@@ -137,11 +140,29 @@ namespace Final_Project_CS
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(762, 380);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Total Amount";
+            // 
+            // TotalAmount
+            // 
+            this.TotalAmount.Location = new System.Drawing.Point(765, 399);
+            this.TotalAmount.Name = "TotalAmount";
+            this.TotalAmount.Size = new System.Drawing.Size(89, 22);
+            this.TotalAmount.TabIndex = 15;
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 466);
+            this.Controls.Add(this.TotalAmount);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.fillButton);
             this.Controls.Add(this.dateTimePicker2);
@@ -176,5 +197,7 @@ namespace Final_Project_CS
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button fillButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TotalAmount;
     }
 }

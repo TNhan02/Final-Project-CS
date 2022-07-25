@@ -83,10 +83,18 @@ namespace Final_Project_CS
 
         private void cashButton_Click(object sender, EventArgs e)
         {
+            if (cashForm.IsDisposed == true)
+            {
+                cashForm = new CashRegister();
+            }
             cashForm.Show();
         }
         private void reportButton_Click(object sender, EventArgs e)
         {
+            if (reportForm.IsDisposed == true)
+            {
+                reportForm = new Report();
+            }
             reportForm.Show();
         }
 

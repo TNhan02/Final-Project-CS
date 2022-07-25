@@ -53,6 +53,23 @@ namespace Final_Project_CS
                 TotalCost.Text = Total.ToString();
             }
         }
+        private void CalculateTotalAmount()
+        {
+            if (table.Rows.Count == 0)
+            {
+                TotalAmount.Text = "0";
+                return;
+            }
+            else
+            {
+                double Total = 0;
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    Total += double.Parse(table.Rows[i]["Item Amount"].ToString());
+                }
+                TotalAmount.Text = Total.ToString();
+            }
+        }
 
         private void importButton_Click(object sender, EventArgs e)
         {
@@ -103,6 +120,7 @@ namespace Final_Project_CS
                     Transactions_Table.DataSource = dv;
 
                     CalculateTotalCost();
+                    CalculateTotalAmount();
                 }
             }
         }
@@ -116,6 +134,7 @@ namespace Final_Project_CS
             Transactions_Table.DataSource = dv;
 
             CalculateTotalCost();
+            CalculateTotalAmount();
         }
 
         private void mostSoldProducts_Click(object sender, EventArgs e)
@@ -148,38 +167,35 @@ namespace Final_Project_CS
                 {
                     quantity_sold = Convert.ToInt32(original_quantity[i][2]) - Convert.ToInt32(current_quantity[i][2]);
 
-                    if (quantity_sold != 0)
-                    {
-                        ps.Name = current_quantity[i][1];
-                        ps.Quantity_Sold = quantity_sold;
+                    ps.Name = current_quantity[i][1];
+                    ps.Quantity_Sold = quantity_sold;
 
-                        QuantitySoldList.Add(ps);
-                        break;
-                    }
-                    else
-                    {
-                        quantity_sold = Convert.ToInt32(original_quantity[i+1][2]) - Convert.ToInt32(current_quantity[i+1][2]);
-
-                        ps.Name = current_quantity[i+1][1];
-                        ps.Quantity_Sold = quantity_sold;
-
-                        QuantitySoldList.Add(ps);
-                        break;
-                    }
+                    QuantitySoldList.Add(ps);
+                    break;
                 }
 
-                //sort QuantityList in descending order
-                string[] row = new string[2];
+                ProductSold productSold = new ProductSold();
                 for (int l = 0; l < Top10Table.top10Table.Rows.Count; l++)
                 {
-                    row[0] = QuantitySoldList[l].Name;
-                    row[1] = Convert.ToString(QuantitySoldList[l].Quantity_Sold);
+                    productSold.Name = QuantitySoldList[l].Name;
+                    productSold.Quantity_Sold = QuantitySoldList[l].Quantity_Sold;
                 }
-                Top10Table.top10Table.Rows.Add(row);
-
-                //this.Top10Table.top10Table.Sort(this.Top10Table.top10Table.Columns["Quantity Sold"], ListSortDirection.Descending);
+                Top10Table.Table.Rows.Add(productSold.Name, productSold.Quantity_Sold);
             }
-            Top10Table.ShowDialog();
+            //sort QuantityList in descending order
+            this.Top10Table.top10Table.Sort(this.Top10Table.top10Table.Columns[1], ListSortDirection.Descending);
+            DataView view = new DataView(Top10Table.Table);
+            while (view.Count > 10)
+            {
+                view.Delete(view.Count - 1);
+            }
+            Top10Table.top10Table.DataSource = Top10Table.Table;
+
+            if (Top10Table.IsDisposed == true)
+            {
+                Top10Table = new Top10();
+            }
+            Top10Table.Show();
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -193,6 +209,7 @@ namespace Final_Project_CS
             }
 
             CalculateTotalCost();
+            CalculateTotalAmount();
         }
     }
 }
