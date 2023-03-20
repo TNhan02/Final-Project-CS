@@ -67,7 +67,7 @@ namespace Final_Project_CS
             Checkout_ButtonWasClicked();
 
             //create a text file for a transaction
-            string transaction = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions";
+            string transaction = @"D:\source\repos\Final-Project-CS\Final Project CS\Transactions";
             string date_ = string.Format(DateTime.Now.ToString("MMddyyyy-HHmmss"));
             string fileName = date_;
             string path = Path.Combine(transaction, fileName);

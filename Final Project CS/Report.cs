@@ -18,9 +18,9 @@ namespace Final_Project_CS
     public partial class Report : Form
     {
         //define paths
-        string rootPath = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Transactions";
-        string productPath = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Products.txt";
-        string original_productPath = @"C:\Users\Admin\source\repos\Final-Project-CS\Final Project CS\Original Products.txt"; 
+        string rootPath = @"D:\source\repos\Final-Project-CS\Final Project CS\Transactions";
+        string productPath = @"D:\source\repos\Final-Project-CS\Final Project CS\Products.txt";
+        string original_productPath = @"D:\source\repos\Final-Project-CS\Final Project CS\Original Products.txt"; 
         public DataTable table = new DataTable();
         Top10 Top10Table = new Top10();
 
@@ -35,10 +35,10 @@ namespace Final_Project_CS
             table.Columns.Add("Item Amount", typeof(double));
             table.Columns.Add("Grand Total", typeof(double));
         }
-
+        
         private void CalculateTotalCost()
         {
-            if (table.Rows.Count == 0)
+            if (Transactions_Table.Rows.Count == 0)
             {
                 TotalCost.Text = "0";
                 return;
@@ -46,16 +46,16 @@ namespace Final_Project_CS
             else
             {
                 double Total = 0;
-                for(int i = 0; i < table.Rows.Count; i++)
+                for(int i = 0; i < Transactions_Table.Rows.Count; i++)
                 {
-                    Total += double.Parse(table.Rows[i]["Grand Total"].ToString());
+                    Total += double.Parse(Transactions_Table.Rows[i].Cells[4].Value.ToString());
                 }
                 TotalCost.Text = Total.ToString();
             }
         }
         private void CalculateTotalAmount()
         {
-            if (table.Rows.Count == 0)
+            if (Transactions_Table.Rows.Count == 0)
             {
                 TotalAmount.Text = "0";
                 return;
@@ -63,9 +63,9 @@ namespace Final_Project_CS
             else
             {
                 double Total = 0;
-                for (int i = 0; i < table.Rows.Count; i++)
+                for (int i = 0; i < Transactions_Table.Rows.Count; i++)
                 {
-                    Total += double.Parse(table.Rows[i]["Item Amount"].ToString());
+                    Total += double.Parse(Transactions_Table.Rows[i].Cells[3].Value.ToString());
                 }
                 TotalAmount.Text = Total.ToString();
             }
